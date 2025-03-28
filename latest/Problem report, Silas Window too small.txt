@@ -1,0 +1,56 @@
+Problem report with Silas, 
+  Smart Interactive Layout Assistant for Scripture
+==================================================
+
+If you have a problem with Silas, please fill in the details in this form
+and send it to BOTH of:
+  kblewett@Gmail.com
+  Jim.Henderson44@Gmail.com
+
+From:
+  Name: Steven Ttopoqogo
+  Email address:steven_ttopoqogo@wycliffe.org
+
+Computer operating system:
+
+Windows XP Pro SP2
+
+  (eg. Windows XP Pro SP2, Windows Vista)
+    (To find this information, 
+       right-click "My Computer" and select Properties.)
+
+Version of MS Word:
+
+Word 2003 (11.8026.8036) SP2
+
+  (eg. Word 2003 (11.8125.8122) SP2)
+    (To find this information, 
+       when Word is open, 
+         open the Help menu and 
+         send the details in the item called "About".)
+
+Version of Silas: 2.103, build 1.04
+
+  (eg. version 2.103, build 1.02)
+    (To find this information, 
+      when Silas is attached to a file, 
+        open the menu called ScrLanguages and 
+        select the item "Show Template version".)
+
+Please be very specific about error messages -- the exact wording or a screen shot help a lot.
+Please answer the following questions:
+
+What did you do and what happened? did scripture menu, job 1
+Silas couldn't finisf formating the page footer, see attached screen shot.
+Tried the same thing and word crushed 
+
+  (eg. Exported text from Paratext and used the Tools menu item to attach Silas.)
+
+
+  (eg. Silas asked me to "Set language and paper size" but nothing happened.)
+
+
+What did you expect to happen?
+
+  (eg. Silas should have recognised the language name from the ID line.)
+

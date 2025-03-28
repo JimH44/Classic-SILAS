@@ -1,0 +1,29 @@
+2.05_Styles.txt -- control file for standardizing old version 2.05 style names.
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+rq - Cross Reference - Inline Quotation References; rq...rq* - Cross Reference - Inline Quotation References
+ca - Chapter Number - Alternate; ca...ca* - Chapter Number - Alternate
+va - Verse Number - Alternate; va...va* - Verse Number - Alternate
+vp - Verse Number - Publishing Alternate; vp...vp* - Verse Number - Publishing Alternate
+dc - Special Text - Deuterocanonical/LXX Additions; dc...dc* - Special Text - Deuterocanonical/LXX Additions
+
+imte - Introduction - [Uncommon] Major Title at Introduction End; imte - Introduction - [Uncommon] Major Title at Introduction End Level 1
+
+pro...pro* - Special Text - CJK Prounciation; pro...pro* - Special Text - CJK Pronunciation
+
+conc Peripherals - Back Matter Concordance; OBSOLETE conc Peripherals - Back Matter Concordance
+cov Peripherals - Other - Cover; OBSOLETE cov Peripherals - Other - Cover
+glo Peripherals - Back Matter Glossary; OBSOLETE glo Peripherals - Back Matter Glossary
+idx Peripherals - Back Matter Index; OBSOLETE idx Peripherals - Back Matter Index
+intro Peripherals - Front Matter Introduction; OBSOLETE intro Peripherals - Front Matter Introduction
+maps Peripherals - Back Matter Map Index; OBSOLETE maps Peripherals - Back Matter Map Index
+pref Peripherals - Front Matter Preface; OBSOLETE pref Peripherals - Front Matter Preface
+pub Peripherals - Front Matter Publication Data; OBSOLETE pub Peripherals - Front Matter Publication Data
+spine Peripherals - Other - Spine; OBSOLETE spine Peripherals - Other - Spine
+toc Peripherals - Front Matter Table of Contents; OBSOLETE toc Peripherals - Front Matter Table of Contents
+
+psi - Paragraph - Indented - No Break with Next; pi - Paragraph - Indented - Level 1 - First Line Indent

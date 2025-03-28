@@ -1,0 +1,50 @@
+Recent_Styles.txt -- control file for updating older USFM style names
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+ca - Chapter Number - Alternate; ca...ca* - Chapter Number - Alternate
+va - Verse Number - Alternate; va...va* - Verse Number - Alternate
+vp - Verse Number - Publishing Alternate; vp...vp* - Verse Number - Publishing Alternate
+dc - Special Text - Deuterocanonical/LXX Additions; dc...dc* - Special Text - Deuterocanonical/LXX Additions
+dc - Special - Deuterocanonical/LXX Additions; dc...dc* - Special Text - Deuterocanonical/LXX Additions
+
+pro...pro* - Special Text - CJK Prounciation; pro...pro* - Special Text - CJK Pronunciation
+
+imte - Introduction - [Uncommon] Major Title at Introduction End; imte - Introduction - [Uncommon] Major Title at Introduction End Level 1
+
+OBSOLETE (phi) Paragraph - Indented - Hanging Indent; li - List Entry - Level 1
+OBSOLETE (tr1) Table - Row - Level 1; tr - Table - Row
+OBSOLETE (tr2) Table - Row - Level 2; tr - Table - Row
+
+conc Peripherals - Back Matter Concordance; OBSOLETE conc Peripherals - Back Matter Concordance
+cov Peripherals - Other - Cover; OBSOLETE cov Peripherals - Other - Cover
+glo Peripherals - Back Matter Glossary; OBSOLETE glo Peripherals - Back Matter Glossary
+idx Peripherals - Back Matter Index; OBSOLETE idx Peripherals - Back Matter Index
+intro Peripherals - Front Matter Introduction; OBSOLETE intro Peripherals - Front Matter Introduction
+maps Peripherals - Back Matter Map Index; OBSOLETE maps Peripherals - Back Matter Map Index
+pref Peripherals - Front Matter Preface; OBSOLETE pref Peripherals - Front Matter Preface
+pub Peripherals - Front Matter Publication Data; OBSOLETE pub Peripherals - Front Matter Publication Data
+spine Peripherals - Other - Spine; OBSOLETE spine Peripherals - Other - Spine
+toc Peripherals - Front Matter Table of Contents; OBSOLETE toc Peripherals - Front Matter Table of Contents
+
+efm - Extended Note - ID/Caller; efm - Study Note - ID/Caller
+h - Heading - Header; h - File - Header
+mr - Heading - Major Section References; mr - Heading - Major Section Range References
+ndx...ndx* - Auxiliary - Subject Index Entry; ndx...ndx* - Peripheral Ref - Subject Index Entry
+pc - Paragraph - Centered (for Insription); pc - Paragraph - Centered (for Inscription)
+pc - Paragraph - Centered; pc - Paragraph - Centered (for Inscription)
+pde - Paragraph - Dialogue closing statement(s); pmc - Paragraph - Embedded Text Closing
+pdi - Paragraph - Dialogue introduction statement(s); pmo - Paragraph - Embedded Text Opening
+ph - Paragraph - Hanging Indent - Level 1; li - List Entry - Level 1
+ph1 - Paragraph - Hanging Indent - Level 1; li1 - List Entry - Level 1
+ph2 - Paragraph - Hanging Indent - Level 2; li2 - List Entry - Level 2
+ph3 - Paragraph - Hanging Indent - Level 3; li3 - List Entry - Level 3
+pr - Paragraph - Right Aligned; pmr - Paragraph - Embedded Text Refrain
+ps - Paragraph - No Break with Next Paragraph; p - Paragraph - Normal - First Line Indent
+psi - Paragraph - Indented - No Break with Next; pi - Paragraph - Indented - Level 1 - First Line Indent
+wg...wg* - Auxiliary - Greek Wordlist Entry; wg...wg* - Peripheral Ref - Greek Wordlist Entry
+wh...wh* - Auxiliary - Hebrew Wordlist Entry; wh...wh* - Peripheral Ref - Hebrew Wordlist Entry
+wr...wr* - Auxiliary - Wordlist/Glossary Reference; w...w* - Peripheral Ref - Wordlist Entry

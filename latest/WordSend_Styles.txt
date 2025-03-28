@@ -1,0 +1,151 @@
+WordSend_Styles.txt -- control file for converting WordSend style names
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+     WordSend has ps produce the same as p, namely "Normal"
+     so there is no way to get paragraphs in the style
+
+          "OBSOLETE ps - Paragraph - No Break with Next Paragraph"
+Acrostic heading; qa - Poetry - Acrostic Heading/Marker 
+Acrostic letter; qac...qac* - Poetry Text - Acrostic Letter 
+Alternate Reading; fqa - Footnote - Alternate Translation Rendering
+Bold italic; bdit...bdit* - Character - BoldItalic Text 
+Bold; bd...bd* - Character - Bold Text 
+Bold;bd...bd* - Character - Bold Text
+Book Title 1; mt1 - Title - Major Title Level 1 
+Book Title 2; mt2 - Title - Major Title Level 2 
+Book Title 3; mt3 - Title - Major Title Level 3 
+Book Title In Text; bk...bk* - Special Text - Quoted book title 
+Book Title at Ending; mte1 - Title - [Uncommon] Major Title Ending Level 1
+Book marker; h - File - Header  
+Canonical Reference; ior...ior* - Introduction - Outline References Range 
+Chapter Label; c - Chapter Number
+Chapter description; cd - Chapter - Description 
+Concordance;OBSOLETE conc Peripherals - Back Matter Concordance
+Congregational Response; lit - Special Text - Liturgical note 
+Cover;OBSOLETE cov Peripherals - Other - Cover
+Crossreference Deuterocanon;xdc...xdc* - Cross Reference - DC Target Refs
+Crossreference Scripture quote;xq - Cross Reference - Quotation
+Crossreference keywords;xk - Cross Reference - Keyword
+Crossreference origin;xo - Cross Reference - Origin Reference
+Crossreference target references;xt - Cross Reference - Target References
+Deuterocanon;dc...dc* - Special Text - Deuterocanonical/LXX Additions
+Doxology; qc - Poetry - Centered 
+Embedded Closing;pmc - Paragraph - Embedded Text Closing
+Embedded Opening; pmo - Paragraph - Embedded Text Opening 
+Embedded Paragraph; pm - Paragraph - Embedded Text 
+Embedded Poetry 1; qm1 - Poetry - Embedded Text - Indent Level 1 
+Embedded Poetry 2; qm2 - Poetry - Embedded Text - Indent Level 2 
+Embedded Poetry 3; qm3 - Poetry - Embedded Text - Indent Level 3 
+Embedded Refrain; pmr - Paragraph - Embedded Text Refrain 
+Emphasized; em...em* - Character - Emphasized Text 
+Endnote;fe...fe* - Endnote
+Figure Caption;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Copyright;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Description;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Filename;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Location;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Reference;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure Size;  fig...fig* - Auxiliary - Figure/Illustration/Map
+Figure;fig...fig* - Auxiliary - Figure/Illustration/Map
+Footnote Deuterocanon;fdc...fdc* - Footnote - DC text
+Footnote Label;fl - Footnote - Label Text
+Footnote marker;fm - Footnote - Additional Caller to Previous Note
+Footnote normal;ft - Footnote - Text
+Footnote;f...f* - Footnote 
+Footnote Text; ft - Footnote - Text
+Foreign; tl...tl* - Special Text - Transliterated Word 
+Glossary;OBSOLETE glo Peripherals - Back Matter Glossary
+Greeting; cls - Paragraph - Closure of an Epistle 
+Hand; sig...sig* - Special Text - Author's Signature (Epistles) 
+Hebrew Title; d - Heading - Descriptive Title - Hebrew Subtitle 
+INSCRIPTION; SC...SC* - CHARACTER - SMALL CAPS 
+Indented hanging indent;li4 - List Entry - Level 4
+Index;OBSOLETE idx Peripherals - Back Matter Index
+Inscription Paragraph; pc - Paragraph - Centered (for Inscription) 
+Inscription;sc...sc* - Character - Small Caps
+Interlude; qs...qs* - Poetry Text - Selah 
+Intro Citation Line 1; iq1 - Introduction - Poetry Level 1 
+Intro Citation Line 2; iq2 - Introduction - Poetry Level 2 
+Intro Citation Line 3; iq3 - Introduction - Poetry Level 3 
+Intro Citation Paragraph; imi - Introduction - Indented Para - no first line indent 
+Intro Citation Reference; ipr - Introduction - Paragraph - right aligned 
+Intro List Item 1; io1 - Introduction - Outline Level 1 
+Intro List Item 2; io2 - Introduction - Outline Level 2 
+Intro List Item 3; io3 - Introduction - Outline Level 3 
+Intro List Item 4; io4 - Introduction - Outline Level 4
+Intro Outline Title; iot - Introduction - Outline Title 
+Intro Paragraph Continuation; im - Introduction - Paragraph - no first line indent 
+Intro Paragraph Indented; ipi - Introduction - Indented Para - first line indent 
+Intro Paragraph Quote; ipq - Introduction - Paragraph - quote from text 
+Intro Paragraph; ip - Introduction - Paragraph 
+Intro Section Head 1; is1 - Introduction - Section Heading Level 1 
+Intro Section Head 2; is2 - Introduction - Section Heading Level 2 
+Intro Stanza Break; ib - Introduction - Blank Line 
+Intro Title End; imte1 - Introduction - [Uncommon] Major Title at Introduction End Level 1 
+Intro Title End; imte2 - Introduction - [Uncommon] Major Title at Introduction End Level 2 
+Intro Title Main 1; imt1 - Introduction - Major Title Level 1
+Intro Title Main 2; imt2 - Introduction - Major Title Level 2
+Intro Title Main 3; imt3 - Introduction - Major Title Level 3
+Intro;OBSOLETE intro Peripherals - Front Matter Introduction
+Introduction block quote; imq - Introduction - Paragraph - quote from text - no first line indent 
+Introduction end; ie - Introduction - End Marker 
+Introduction explanatory text; iex - Introduction - Explanatory or Bridge Text 
+Invisible Paragraph;id - File - Identification
+     WordSend has id and ide and rem all going to "Invisible Paragraph", 
+     so there is no way to change anything to the style "ide - File - Encoding"
+     or "rem - File - Remark"
+Italics; it...it* - Character - Italic Text 
+Key Word; k...k* - Special Text - Keyword 
+Letter Greeting; mi - Paragraph - Indented - No First Line Indent 
+Letter Paragraph 1; pi1 - Paragraph - Indented - Level 1 - First Line Indent 
+Letter Paragraph 2; pi2 - Paragraph - Indented - Level 2 - First Line Indent 
+Letter Paragraph 3; pi3 - Paragraph - Indented - Level 3 - First Line Indent 
+List Item 1; li1 - List Entry - Level 1 
+List Item 2; li2 - List Entry - Level 2 
+List Item 3; li3 - List Entry - Level 3 
+List Item 4; li4 - List Entry - Level 4 
+Name of God;nd...nd* - Special Text - Name of Deity
+Normal Text;no...no* - Character - Normal Text
+Normal; p - Paragraph - Normal - First Line Indent 
+Note Target Reference;fr - Footnote - Reference
+Note Xref;x...x* - Cross Reference
+Ordinal Number Ending; ord...ord* - Special Text - Ordinal number text portion 
+Paragraph Continuation; m - Paragraph - Margin - No First Line Indent 
+Parallel Passage Reference; r - Heading - Parallel References 
+Poetry line 1; q1 - Poetry - Indent Level 1 
+Poetry line 2; q2 - Poetry - Indent Level 2 
+Poetry line 3; q3 - Poetry - Indent Level 3 
+Poetry right;qr - Poetry - Right Aligned
+Preface;OBSOLETE pref Peripherals - Front Matter Preface
+Pronunciation; pro...pro* - Special Text - CJK Pronunciation 
+Proper name; pn...pn* - Special Text - Proper Name 
+Publication data;OBSOLETE pub Peripherals - Front Matter Publication Data
+Publication info;OBSOLETE pubinfo - Publication - Information
+Quoted Text; qt...qt* - Special Text - Quoted Text - OT in NT
+Quoted from text;fq - Footnote - Quotation or Alternate Rendering
+Referenced Text;fk - Footnote - Keyword
+Right Reference; rq...rq* - Cross Reference - Inline Quotation References 
+Secondary Language Source; sls...sls* - Special Text - Secondary Language or Text Source 
+Section Head Major 1; ms1 - Heading - Major Section Level 1 
+Section Head Major 2; ms2 - Heading - Major Section Level 2 
+Section Head Major 3; ms3 - Heading - Major Section Level 3 
+Section Range; mr - Heading - Major Section Range References 
+Section Reference; sr - Heading - Section Range References 
+Section title 1; s1 - Heading - Section Level 1 
+Section title 2; s2 - Heading - Section Level 2 
+Section title 3; s3 - Heading - Section Level 3 
+Speech Speaker; sp - Heading - Speaker 
+Spine;OBSOLETE spine Peripherals - Other - Spine
+Stanza Break; b - Poetry - Stanza Break (Blank Line) 
+Supplied; add...add* - Special Text - Translational Addition 
+Verse Number In Note;fv...fv* - Footnote - Embedded Verse Number
+Verse marker; v - Verse Number
+Word list Greek; wg...wg* - Peripheral Ref - Greek Wordlist Entry 
+Word list Hebrew; wh...wh* - Peripheral Ref - Hebrew Wordlist Entry 
+Word listed; w...w* - Peripheral Ref - Wordlist Entry 
+Words of Jesus; wj...wj* - Special Text - Words of Jesus 
+cvmarker can stay as it is, so SILAS can have a way of removing those numbers.

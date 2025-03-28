@@ -1,0 +1,29 @@
+Sub ClearDirectFormatting()
+'
+' ClearDirectFormatting Macro
+' Macro recorded 09-Oct-2018 by Jim
+'
+    Selection.Find.ClearFormatting
+    Selection.Find.Style = ActiveDocument.Styles( _
+        "em...em* - Character - Emphasized Text")
+    Selection.Find.Replacement.ClearFormatting
+    Selection.Find.Replacement.Style = ActiveDocument.Styles( _
+        "em...em* - Character - Emphasized Text")
+    With Selection.Find
+        .Text = ""
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+End Sub

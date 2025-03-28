@@ -1,0 +1,85 @@
+\F;<DELETE>
+\_sh;Shoebox Header
+\b;Blank Line;b - Poetry - Stanza Break (Blank Line)
+\bn;Book Number Psalms
+\br;Book Ref Psalms
+\btbn;BT Book Number Psalms
+\btbr;BT Book Ref Psalms
+\btc;BT Chapter Number
+\btf;BT Footnote Text
+\btm;BT Paragraph Cont
+\btmi;BT Indent Para Cont
+\btmt;BT Main Title
+\btp;BT Paragraph
+\btpi;BT Indent Para
+\btq;BT Quote / Poetry
+\btq2;BT Quote 2
+\btq3;BT Quote 3
+\btqc;BT Poetry Centered
+\btqh;BT Poetry List
+\btqm;BT Poetry Left
+\btqr;BT Poetry Right
+\btr;BT Reference
+\bts;BT Section Head
+\btsp;BT Speaker
+\btst;BT Secondary Title
+\btv;BT Verse Num
+\c;Chapter Number;c - Chapter Number
+\cap;Picture Caption
+\cat;Picture ID# Catalog
+\des;Picture Description
+\e;End of Book
+\f;Footnote Text;f...f* - Footnote 
+\gd;Glos Definition
+\gm;Glos Main Entry
+\gp;Glos Paragraph
+\gs;Glos Sub-entry
+\h;Bookname;h - File - Header
+\hr;Horizontal Rule
+\id;Identification;id - File - Identification
+\ie;Intro End;ie - Introduction - End Marker
+\im;Intro Paragraph Cont;im - Introduction - Paragraph - no first line indent
+\io1;Intro Outline 1;io1 - Introduction - Outline Level 1
+\io2;Intro Outline 2;io2 - Introduction - Outline Level 2
+\io3;Intro Outline 3;io3 - Introduction - Outline Level 3
+\ip;Intro Paragraph;ip - Introduction - Paragraph
+\iq;Intro Quote;iq - Introduction - Poetry Level 1
+\iq2;Intro Quote 2;iq2 - Introduction - Poetry Level 2
+\is;Intro Section Head
+\m;Paragraph Cont;m - Paragraph - Margin - No First Line Indent
+\mi;Indent Para Cont;mi - Paragraph - Indented - No First Line Indent
+\mt;Main Title;mt - Title - Major Title Level 1
+\nc;Notes Consultant
+\ne;Notes Exegetical
+\nq;Notes Questions
+\nt;Notes Translation
+\p;Paragraph;p - Paragraph - Normal - First Line Indent
+\pi;Indent Para;pi - Paragraph - Indented - Level 1 - First Line Indent
+\q;Quote / Poetry;q - Poetry - Indent Level 1 - Single Level Only
+\q2;Quote 2;q2 - Poetry - Indent Level 2
+\q3;Quote 3;q3 - Poetry - Indent Level 3
+\qc;Poetry Centered;qc - Poetry - Centered
+\qh;Poetry List
+\qm;Poetry Left;qm - Poetry - Embedded Text - Indent Level 1 - Single Level Only
+\qr;Poetry Right;qr - Poetry - Right Aligned
+\r;Reference;r - Heading - Parallel References
+\ref;Picture Ref Location
+\s;Section Head;s - Heading - Section Level 1
+\sp;Speaker;sp - Heading - Speaker
+\st;Secondary Title
+\v;Verse Num;v - Verse Number
+|book;Quoted Book Title
+|emph;Emphasized Word(s)
+|expl;Explanatory Material
+|ideo;Onomatopoetic Word
+|impl;Implied Info
+|insc;Inscription
+|key;Keyword
+|name;Proper Name
+|nd;Name of Deity
+|otref;OT Reference
+|quot;Quoted Text
+|tv;Textual Variant
+|tw;Transliterated Word(s)
+|vw;Vernacular Word(s)
+|yhwh;Name of YHWH

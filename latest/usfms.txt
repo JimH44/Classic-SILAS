@@ -1,0 +1,210 @@
+add:add...add* - Special Text - Translational Addition
+addpn:(addpn...addpn*) - Special Text for Chinese
+b:b - Poetry - Stanza Break (Blank Line)
+bd:bd...bd* - Character - Bold Text
+bdit:bdit...bdit* - Character - BoldItalic Text
+bk:bk...bk* - Special Text - Quoted book title
+c:c - Chapter Number
+ca:ca...ca* - Chapter Number - Alternate
+cd:cd - Chapter - Description
+cl:cl - Chapter - Publishing Label
+cls:cls - Paragraph - Closure of an Epistle
+conc:OBSOLETE conc Peripherals - Back Matter Concordance
+cov:OBSOLETE cov Peripherals - Other - Cover
+cp:cp - Chapter Number - Publishing Alternate
+d:d - Heading - Descriptive Title - Hebrew Subtitle
+dc:dc...dc* - Special Text - Deuterocanonical/LXX Additions
+efm:efm - Study Note - ID/Caller
+em:em...em* - Character - Emphasized Text
+f:f...f* - Footnote 
+fdc:fdc...fdc* - Footnote - DC text
+fe:fe...fe* - Endnote
+fig:fig...fig* - Auxiliary - Figure/Illustration/Map
+fk:fk - Footnote - Keyword
+fl:fl - Footnote - Label Text
+fm:fm - Footnote - Additional Caller to Previous Note
+fp:fp - Footnote Paragraph Mark
+fq:fq - Footnote - Quotation or Alternate Rendering
+fqa:fqa - Footnote - Alternate Translation Rendering
+fr:fr - Footnote - Reference
+ft:ft - Footnote - Text
+fv:fv...fv* - Footnote - Embedded Verse Number
+glo:OBSOLETE glo Peripherals - Back Matter Glossary
+h1:h1 - File - Header
+h2:h2 - File - Left Header
+h3:h3 - File - Right Header
+h:h - File - Header
+ib:ib - Introduction - Blank Line
+id:id - File - Identification
+ide:ide - File - Encoding
+idx:OBSOLETE idx Peripherals - Back Matter Index
+ie:ie - Introduction - End Marker
+iex:iex - Introduction - Explanatory or Bridge Text
+ili1:ili1 - Introduction - List Entry - Level 1
+ili2:ili2 - Introduction - List Entry - Level 2
+ili:ili - Introduction - List Entry - Level 1
+im:im - Introduction - Paragraph - no first line indent
+imi:imi - Introduction - Indented Para - no first line indent
+imq:imq - Introduction - Paragraph - quote from text - no first line indent
+imt1:imt1 - Introduction - Major Title Level 1
+imt2:imt2 - Introduction - Major Title Level 2
+imt3:imt3 - Introduction - Major Title Level 3
+imt4:imt4 - Introduction - Major Title Level 4
+imt:imt - Introduction - Major Title Level 1
+imte1:imte1 - Introduction - [Uncommon] Major Title at Introduction End Level 1
+imte2:imte2 - Introduction - [Uncommon] Major Title at Introduction End Level 2
+imte:imte - Introduction - [Uncommon] Major Title at Introduction End Level 1
+intro:OBSOLETE intro Peripherals - Front Matter Introduction
+io1:io1 - Introduction - Outline Level 1
+io2:io2 - Introduction - Outline Level 2
+io3:io3 - Introduction - Outline Level 3
+io4:io4 - Introduction - Outline Level 4
+io:io - Introduction - Outline Level 1
+ior:ior...ior* - Introduction - Outline References Range
+iot :iot - Introduction - Outline Title
+ip:ip - Introduction - Paragraph
+ipi:ipi - Introduction - Indented Para - first line indent
+ipq:ipq - Introduction - Paragraph - quote from text
+ipr:ipr - Introduction - Paragraph - right aligned
+iq1:iq1 - Introduction - Poetry Level 1
+iq2:iq2 - Introduction - Poetry Level 2
+iq3:iq3 - Introduction - Poetry Level 3
+iq:iq - Introduction - Poetry Level 1
+iqt:iqt...iqt* - Special Text - Quoted Scripture Text in Introduction
+is1 :is1 - Introduction - Section Heading Level 1
+is2:is2 - Introduction - Section Heading Level 2
+is:is - Introduction - Section Heading Level 1
+it:it...it* - Character - Italic Text
+k1:k1 - Periph - Concordance Keyword Level 1
+k2:k2 - Periph - Concordance Keyword Level 2
+k:k...k* - Special Text - Keyword
+li1:li1 - List Entry - Level 1
+li2:li2 - List Entry - Level 2
+li3:li3 - List Entry - Level 3
+li4:li4 - List Entry - Level 4
+li:li - List Entry - Level 1
+lit:lit - Special Text - Liturgical note
+m:m - Paragraph - Margin - No First Line Indent
+maps:OBSOLETE maps Peripherals - Back Matter Map Index
+mi:mi - Paragraph - Indented - No First Line Indent
+mr:mr - Heading - Major Section Range References
+ms1:ms1 - Heading - Major Section Level 1
+ms2:ms2 - Heading - Major Section Level 2
+ms3:ms3 - Heading - Major Section Level 3
+ms:ms - Heading - Major Section Level 1
+mt1:mt1 - Title - Major Title Level 1
+mt2:mt2 - Title - Major Title Level 2
+mt3:mt3 - Title - Major Title Level 3
+mt4:mt4 - Title - Major Title level 4
+mt:mt - Title - Major Title Level 1
+mte1:mte1 - Title - [Uncommon] Major Title Ending Level 1
+mte2:mte2 - Title - [Uncommon] Major Title Ending Level 2
+mte:mte - Title - [Uncommon] Major Title Ending Level 1
+nb:nb - Paragraph - No Break with Previous Paragraph
+nd:nd...nd* - Special Text - Name of Deity
+ndx:ndx...ndx* - Peripheral Ref - Subject Index Entry 
+no:no...no* - Character - Normal Text
+ord:ord...ord* - Special Text - Ordinal number text portion
+p1:p1 - Periph - Front/Back Matter Paragraph Level 1
+p2:p2 - Periph - Front/Back Matter Paragraph Level 2
+p:p - Paragraph - Normal - First Line Indent
+pb:pb - Break - Page Break
+pc:pc - Paragraph - Centered (for Inscription)
+periph:periph - Peripherals - Content Division Marker
+ph1:DEPRECATED ph1 - Paragraph - Hanging Indent - Level 1
+ph2:DEPRECATED ph2 - Paragraph - Hanging Indent - Level 2
+ph3:DEPRECATED ph3 - Paragraph - Hanging Indent - Level 3
+ph:DEPRECATED ph - Paragraph - Hanging Indent - Level 1
+phi:DEPRECATED phi - Paragraph - Indented - Hanging Indent
+pi1:pi1 - Paragraph - Indented - Level 1 - First Line Indent
+pi2:pi2 - Paragraph - Indented - Level 2 - First Line Indent
+pi3:pi3 - Paragraph - Indented - Level 3 - First Line Indent
+pi:pi - Paragraph - Indented - Level 1 - First Line Indent
+pm:pm - Paragraph - Embedded Text
+pmc:pmc - Paragraph - Embedded Text Closing
+pmo:pmo - Paragraph - Embedded Text Opening
+pmr:pmr - Paragraph - Embedded Text Refrain
+pn:pn...pn* - Special Text - Proper Name
+pr:DEPRECATED pr - Paragraph - Right Aligned
+pref:OBSOLETE pref Peripherals - Front Matter Preface
+pro:pro...pro* - Special Text - CJK Pronunciation
+ps:OBSOLETE ps - Paragraph - No Break with Next Paragraph
+psi:OBSOLETE psi - Paragraph - Indented - No Break with Next
+pub:OBSOLETE pub Peripherals - Front Matter Publication Data
+pubinfo:OBSOLETE pubinfo - Publication - Information
+q1:q1 - Poetry - Indent Level 1
+q2:q2 - Poetry - Indent Level 2
+q3:q3 - Poetry - Indent Level 3
+q4:q4 - Poetry - Indent Level 4
+q:q - Poetry - Indent Level 1 - Single Level Only
+qa:qa - Poetry - Acrostic Heading/Marker
+qac:qac...qac* - Poetry Text - Acrostic Letter
+qc:qc - Poetry - Centered
+qm1:qm1 - Poetry - Embedded Text - Indent Level 1
+qm2:qm2 - Poetry - Embedded Text - Indent Level 2
+qm3:qm3 - Poetry - Embedded Text - Indent Level 3
+qm:qm - Poetry - Embedded Text - Indent Level 1 - Single Level Only
+qr:qr - Poetry - Right Aligned
+qs:qs...qs* - Poetry Text - Selah
+qt:qt...qt* - Special Text - Quoted Text - OT in NT
+r:r - Heading - Parallel References
+rem:rem - File - Remark
+restore:restore - File - Restore Information
+rq:rq...rq* - Cross Reference - Inline Quotation References
+s1:s1 - Heading - Section Level 1
+s2:s2 - Heading - Section Level 2
+s3:s3 - Heading - Section Level 3
+s4:s4 - Heading - Section Level 4
+s:s - Heading - Section Level 1
+sc:sc...sc* - Character - Small Caps
+sig:sig...sig* - Special Text - Author's Signature (Epistles)
+sls:sls...sls* - Special Text - Secondary Language or Text Source
+sp:sp - Heading - Speaker
+spine:OBSOLETE spine Peripherals - Other - Spine
+sr:sr - Heading - Section Range References
+tc1:tc1 - Table - Column 1 Cell
+tc2:tc2 - Table - Column 2 Cell
+tc3:tc3 - Table - Column 3 Cell
+tc4:tc4 - Table - Column 4 Cell
+tcr1 :tcr1 - Table - Column 1 Cell - Right Aligned
+tcr2:tcr2 - Table - Column 2 Cell - Right Aligned
+tcr3:tcr3 - Table - Column 3 Cell - Right Aligned
+tcr4:tcr4 - Table - Column 4 Cell - Right Aligned
+th1 :th1 - Table - Column 1 Heading
+th2:th2 - Table - Column 2 Heading
+th3:th3 - Table - Column 3 Heading
+th4:th4 - Table - Column 4 Heading
+thr1 :thr1 - Table - Column 1 Heading - Right Aligned
+thr2:thr2 - Table - Column 2 Heading - Right Aligned
+thr3:thr3 - Table - Column 3 Heading - Right Aligned
+thr4:thr4 - Table - Column 4 Heading - Right Aligned
+tl:tl...tl* - Special Text - Transliterated Word
+toc1:toc1 - File - Long Table of Contents Text
+toc2:toc2 - File - Short Table of Contents Text
+toc3:toc3 - File - Book Abbreviation
+toc:OBSOLETE toc Peripherals - Front Matter Table of Contents
+tr1:OBSOLETE tr1 - Table - Row - Level 1
+tr2:OBSOLETE tr2 - Table - Row - Level 2
+tr:tr - Table - Row
+v:v - Verse Number
+va:va...va* - Verse Number - Alternate
+vp:vp...vp* - Verse Number - Publishing Alternate
+w:w...w* - Peripheral Ref - Wordlist Entry
+wg:wg...wg* - Peripheral Ref - Greek Wordlist Entry
+wh:wh...wh* - Peripheral Ref - Hebrew Wordlist Entry
+wj:wj...wj* - Special Text - Words of Jesus
+wr:OBSOLETE wr...wr* - Auxiliary - Wordlist/Glossary Reference 
+x:x...x* - Cross Reference
+xdc:xdc...xdc* - Cross Reference - DC Target Refs
+xk:xk - Cross Reference - Keyword
+xnt:xnt...xnt* - Cross Reference - NT Target Refs (optional)
+xo:xo - Cross Reference - Origin Reference
+xot:xot...xot* - Cross Reference - OT Target Refs (optional)
+xq:xq - Cross Reference - Quotation
+xt:xt - Cross Reference - Target References
+xtSee:xtSee - Concordance and Names Index - Alternate Entry Target Reference
+xtSeeAlso:xtSeeAlso - Concordance and Names Index - Additional Entry Target Reference
+zpa-d:zpa-d - Periph - Description
+zpa-xb:zpa-xb - Periph - Book
+zpa-xc:zpa-xc - Periph - Chapter
+zpa-xv:zpa-xv - Periph - Verse

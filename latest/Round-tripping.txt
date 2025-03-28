@@ -1,0 +1,45 @@
+The codes permitted within footnotes and cross references are standardized to \thing ...\thing* style.
+
+Here's the description from the USFM documentation:
+The individual elements which make up the footnote or cross reference content are defined as character level
+markers, which means that they each define a beginning and a corresponding end marker. The Paratext
+translation editor will interpret the presence of a new marker as an implicit closure of any preceding character
+level marker. For this reason a majority of translation projects have adopted the approach of authoring footnote
+or cross reference content without supplying the explicit end marker. Some examples of the two acceptable
+markup approaches for notes is provided below (A = implicit closure; B = explicit end marker):
+
+A. \f + \fk Issac:\ft In Hebrew means "laughter"\f*
+B. \f + \fk Issac:\fk* In Hebrew means "laughter"\f*
+A. \f + \fr 1.14 \fq religious festivals;\ft or \fq seasons.\f*
+B. \f + \fr 1.14\fr* \fq religious festivals;\fq* or \fq seasons.\fq*\f*
+A. \f + \fr 2.4 \fk The \nd Lord\nd*: \ft See \nd Lord\nd* in Word List.\f*
+B. \f + \fr 2.4\fr* \fk The \nd Lord\nd*:\fk* See \nd Lord\nd* in Word List.\f*
+
+SILAS standardizes the markers within footnotes to the "B" style.
+The character styles used in tables are standardized the same way, such as:
+\tr \th1 Day \th1*\th2 Tribe \th2*\th3 Leader\th3*
+\tr \tcr1 1st \tcr1*\tc2 Judah \tc2*\tc3 Nahshon son of Amminadab\tc3*
+
+The codes of DEPRECATED styles are updated to modern equivalents.
+For example, \ph, whose corresponding style is "DEPRECATED ph - Paragraph - Hanging Indent - Level 1" is changed to \li
+\li DEPRECATED ph - Paragraph - Hanging Indent - Level 1 
+
+Similarly, the codes of OBSOLETE styles are updated to modern equivalents.
+For example, \pi, whose corresponding style is "OBSOLETE psi - Paragraph - Indented - No Break with Next" is changed to \p.
+
+No-break space becomes "~", the character Paratext will convert to a no-break space.
+
+Currently when Paratext creates a book and includes the chapter and verse codes, it does not put any paragraph code between the chapter code (\c N) and the first verse code (\v 1). This causes the first paragraph to formatted in chapter style, so SILAS corrects that. So a round trip from Paratext to Word and back to USFM has this effect:
+\c N \v 1 changes to \c N \p \v 1
+
+For handling smart quotes,
+  if the version of Word is older than Word XP (2002)
+    then the smart quotes will be converted to angle brackets
+  otherwise the file will be saved in Unicode with the smart quotes preserved.
+
+
+If someone has used the SILAS macros to format the document for proof printouts or for booklet printing, any empty chapters exported from Paratext or Translation Editor will have been deleted.
+
+Similarly, SILAS converts strings like <<< to smart quotes with a no-break space between them. SaveAsUSFM preserves the no-break space.
+
+Some blank lines appear at the end of the file, because when Word saves as a text document, even though SILAS deletes the headers and footers, Word puts out a blank line for each.

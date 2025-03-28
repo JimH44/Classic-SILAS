@@ -1,0 +1,22 @@
+Logic of CheckUSFMVersion, as at 2011-06-24
+
+Assumes not from USFM_draft.
+
+Most recent selects 
+Custom_Styles.txt from ca...ca* - Chapter Number - Alternate
+2.1_Styles.txt from rq...rq* - Cross Reference - Inline Quotation References
+2.05_Styles.txt from rq - Cross Reference - Inline Quotation References
+TE_Styles.txt from Title Main
+WordSend_Styles.txt from Footnote Deuterocanon
+Original_Styles.txt from (p) Paragraph - Normal - First Line Indent
+Recent_Styles.txt from p - Paragraph - Normal - First Line Indent
+
+If no iot - Introduction - Outline Title
+	set USFM_Draft to "yes"
+
+PNG_Styles.txt from Bar-sc
+SCR_V2_Styles.txt from Implied Info
+SCR_V2_Styles.txt from BT Paragraph
+Out of Adapt It from Source Language
+	or from Target Language
+	or from Gloss Language

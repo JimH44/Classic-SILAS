@@ -1,0 +1,704 @@
+Revision History for Silas.DOT
+
+NEEDED
+
+-Provide drop-down list of 3-letter booknames in ID form?
+	The bookname is used for deciding where to put section breaks,
+	and it is visible in ID footers in Proofs. 
+	We could do it with a txt file similar to Recent_Styles.txt.
+-Add horizontal rule between intro and Scr text even if single-column?
+-check into more automated picture placement (see Toolbox macro by Steve White)
+-Make input boxes save as Unicode (if appropriate)
+-Research a way of having \s# and \ip# and \iex be in side boxes, 
+	(but not verse numbers in the margin -- that one's too hard).
+-Check Kim's loop in USFM2Styles with \b
+-Add ability to print first and last verse numbers in page headers,
+	as well as chapter numbers.
+-Work out why attaching Silas to RTF attached to an email
+	can't find Custom_Styles.txt nor show folder name.
+-Make installer use C:\My Paratext 9 Projects 
+	instead of C:\My Paratext Projects
+
+Silas 2.35-1.23 by Jim, 15 Mar 2025
+===================================
+"Read me" message in How ToInstall.rtf no longer too wide.
+Improved search for Paratext installation & Projects folder
+ExportAllModules macro now in each file.
+
+Silas 2.35-1.22 by Jim, 24 Oct 2018
+==================================
+Gets the complex font from the first line as before,
+	sets it into the base-style for vernacular text
+	and now deletes any initial blank line.
+Removes direct formatting if it hasn't been removed before.
+FixDirectFormattingComplex removed, as never called.
+
+Silas 2.35-1.20 by Jim, 13 Oct 2018
+==================================
+Now removes direct formatting by searching for each char style
+	and replacing the text with the same char style
+	using new Sub ClearDirectFormatting
+Added Sub ExportAllModules so version control can work.
+
+Silas 2.35-1.18 by Jim, 8 Oct 2018
+==================================
+Made font and size macros set these for complex scripts if Word is new enough.
+Removes direct formatting for Wd 2007 and later, but it doesn't work.
+ChangeFont sets complex font name also
+ChangeFontSize, some lines changed from WordBASIC to VBA
+ReplaceAlmostEverywhere can now reset fonts & direct formatting.
+MakeHeaders now callable from GUI
+ConvertFootnotesToInline added
+DirectFormattingCludge added
+ExportAllModules added for version control
+RemoveTocLines added
+
+Silas 2.35-1.17 by Jim, 25 Jun 2016
+==================================
+Made font and size macros set these for complex scripts if Word is new enough.
+Removes direct formatting for Wd 2007 and later.
+
+Silas 2.35-1.16 by Jim, 2 Aug 2013
+==================================
+Added to fixing special characters making Unicode THIN-SPACE be thin ordinary space
+	and Unicode NARROW NO-BREAK SPACE be thin no-break space
+
+Silas 2.35-1.14 by Jim, 15 Feb 2013
+===================================
+Wd 2010 workaround working properly now.
+
+Silas 2.35-1.10 by Jim, 14 Feb 2013
+===================================
+Added workaround for Wd 2010 crashing if changing angle brackets 
+	to sloping quotes in footnotes.
+
+Silas 2.35-1.08 by Jim, 18 Dec 2012
+===================================
+Changed section break before first book to not specify left or right
+	to avoid problems caused by Word.
+
+Silas 2.35-1.06 by Jim, 30 Nov 2012
+===================================
+Reduced the number of times OptionalLineBreaks is called
+Section break between copyright page and first book now starts on a right page.
+Fixed bug in no-break hyphens
+
+Silas 2.35-1.02 by Jim, 13 Jun 2012
+===================================
+Major number incremented to match 2.35 in USFM.sty from UBS.
+Added workaround for Wd 2010 crashing if changing hyphens to thin fixed spaces
+	in footnotes.
+Fixed Justified attribute in style "mi - Paragraph - Indented - No First Line Indent"
+Removed bold and italic from wg and ndx styles, to match USFM.sty vn 2.35
+Report a Problem now lists Build as well as version.
+
+Silas 2.301-1.06 by Jim, 13 Mar 2012
+====================================
+Improved detection of version of styles in document in AttachSILASTemplate
+Fixed bug with new language, "Unload Me" in the wrong place.
+Fixed bug with double column and is codes
+Added xnt, xot and iqt codes in USFM2Styles
+Added info about page size (ie. Letter or A4) to FAQ file.
+Reduced height of dialogs to fit inside small screens.
+Added option for bold verse numbers.
+Adjusted tab order & hotkeys in Language dialog.
+
+Silas 2.301-1.04 by Jim, 20 May 2011
+====================================
+Changed some accelerators in dbLanguageInfo.frm
+Bug in multi-digit dropcap chapter numbers fixed.
+\d style now based on vernacular text and left justified
+	so dropcap chapter numbers will work properly.
+Jmp styles out of Paratext now formatted better.
+SaveAsUSFM handles more Word document types.
+USFM2Styles now turns off revision tracking.
+Formatting verse numbers in SF data now handles codes like \tc2 better.
+USFM2Styles was not applying character style to last part of para -- fixed.
+Tables with missing columns now formatted correctly.
+Table cells formatted with \t[ch]rN now right justified.
+SaveAsUSFM no longer adds closing \...* code to t[ch]* fields,
+	and UnDropCap improved, fixed space after \va number removed
+	and handles \cl with non-dropcap chapter numbers properly.
+\sts status digit processing improved.
+End of formatting now reported in a message box.
+Dropcaps no longer have first line indent,
+	and \d paragraph no longer reverses italic attribute.
+SaveAsUSFM converts Normal to \p or \f as appropriate.
+
+Silas 2.301-1.02 by Jim, 23 Feb 2011
+====================================
+New version to match 2.301 prepared for Pt7.1
+Changed style "fp - Footnote Paragraph Mark" back to character style,
+	to match USFM.STY version 2.301.
+Added style for \fs
+Added a second test for files based on templates like SCR_V2.dot,
+	based on the existence of the style "BT Paragraph"
+In SaveAsUSFM, added format 12 to test for files in .docx format.
+Added \tr to styles that can be intro material when placing section breaks.
+SaveAsUSFM now converts style "Footnote Text" to \f,
+	handles sequence of \v N \f... correctly,
+	converts style "_BodyText_Base" to \f or \p as appropriate,
+	ignores illegal styles like " Char Char*" instead of crashing on them.
+SetDropcapSize now sets size of dropcap digits, to avoid irregular sizing
+	that Word does on its own.
+
+Silas 2.3-1.02 by Jim, 11 Aug 2010
+==================================
+Made style "fp - Footnote Paragraph Mark" be a paragraph style,
+	to match USFM.STY version 2.3.
+Updated refrences to Paratext 6 in "Install SILAS.doc".
+Added item in Scripture menu to format numbers as verse numbers.
+
+Silas 2.209-1.18 by Jim, 17 Jul 2010
+===================================
+fixed bug in verse number handling in USFM2Styles
+SaveAsUSFM now more robust with poorly-formed text.
+CheckForChapterNumberRunningTooFar can now display the first 10 problems
+	before turning off screen updating.
+\ca items now handled.
+In SaveAsUSFM, thin fixed spaces now converted to hyphens, 
+	and other fixes
+
+Silas 2.209-1.16 by Jim, 10 Jun 2010
+===================================
+Added ShowCodesInSelection to SILAS.
+Added SaveAsUSFM, adapted from PNG SCR template for RTH TrHelp template
+Fixed error distinguishing files made with PNG SCR template from those
+	made with the international template, SCR_V2.dot.
+Fixed stylename for \rem in SCR_V2_Styles.txt
+In AttachSILASTtemplate, styles now updated in footnotes and endnotes 
+	as well as main story.
+Handling of hyphens fixed, so you can take a proof printout file
+	and format it for booklet printing correctly
+Improved the FAQ file.
+Fixed bug where character style "_CurrentChapter" applied to
+	a paragraph mark can cause a loop.
+	All paragraph marks now have character styles reset.
+Made the fixed space between quote marks smaller.
+
+Silas 2.209-1.14 by Jim, 4 Mar 2010
+===================================
+If the last verse number of a chapter is on the previous page,
+	ending chapter number now appears in page header as well as 
+	beginning one.
+Current chapter numbers now before verse numbers instead of after.
+
+Silas 2.209-1.12 by Jim, 15 Dec 2009
+====================================
+Added a way for SILAS to put version numbers etc into an error report
+Added references to that in FAQ file, along with how to make suggestions.
+Footnotes formatted with tab after reference, so letters & stars match.
+
+Silas 2.209-1.10 by Jim, 13 Dec 2009
+====================================
+Resolved hang in Wd 2007 formatting Vwanji booklets :-)
+
+Silas 2.209-1.08 by Jim, 12 Dec 2009
+====================================
+Improved handling of new language.
+Added hanging indent on footnote paragraphs, adjusted to point size.
+Prevents Project Code and Ethnologue Code being applied incorrectly 
+	to a new language.
+
+Silas 2.209-1.06 by Jim, 4 Dec 2009
+====================================
+Added code to remove spaces from beginnings of footnotes
+	produced by Paratext 7's export to RTF,
+	and to apply style "_Footnote_Reference" to ref. letters in footnotes.
+Improved FAQ file somewhat.
+Added Unload Me to OK on language data form.
+
+Silas 2.209-1.04 by Jim, 18 Nov 2009
+====================================
+Improved Install Silas.doc instructions for Wd 2007, 
+	because Organizer doesn't have anything about toolbars.
+Added AddCaption macro
+Added # copies to copyright page.
+
+Silas 2.209-1.02 by Jim, 12 Oct 2009
+====================================
+Now removes space(s) at the beginning of paragraphs.
+Includes style for picture captions, "_Caption"
+Fixed problems closing window panes sometimes.
+Improved method of handling hyphens in verse number ranges.
+Converting to Wd2007 document didn't solve problem changing footnotes in Vwanji language,
+	so this is commented out.
+USFM2Styles ends section headings more safely.
+
+Silas 2.208-1.08 by Jim, 11 Aug 2009
+====================================
+improved way of putting fixed spaces after verse numbers 
+	and putting no-break hyphens between digits
+Added ChapterLabels subroutine, to handle \cl codes.
+Spaces between angle brackets now made no-break spaces, eg << <and> >>
+Bug in adding new language fixed.
+Fixed some bugs in USFM2Styles.
+Fixed error in PNG_Styles.txt
+
+Silas 2.208-1.06 by Jim, 18 Jul 2009
+====================================
+Template is now be installed in User Templates folder, 
+	to avoid having to tell Word 2007 to accept macros from elsewhere.
+Faster CopyStyles subroutine
+Now changing styles from two files each time, the normal update and Replaced_Styles.txt,
+	which changes DEPRECATED and OBSOLETE styles to appropriate USFM styles.
+	Custom_Styles.txt now empty, as it shouild be.
+Problems from no code between \c and \v now fixed, and empty chapters deleted.
+Better and simpler method of handling #-# and other special characters.
+Quicker display of first dialog for jobs 1 and 2, and fixed header-footer bug from that change.
+SetIniFile macro saves a lot of duplication.
+USFM2Styles more robust with poorly-formed footnotes.
+If this is Wd2007, converts document to Wd2007 instead of running in compatibility mode.
+Added some abbreviated stylenames to PNG_Styles.txt to help with use in Pt5.
+
+Silas 2.208-1.04 by Jim, 10 Jul 2009
+====================================
+Reduced scaling of tiny chapter numbers in style "_CurrentChapter" from 30% to 5%, 
+	because some people could see the space and removed the numbers.
+Added how to make send screenshots to problem report file.
+USFM2Styles now adds suggested ID line etc to input SFM file,
+	formats numbers as verse numbers where appropriate,
+		skipping any > 176 (PSA 119)
+	suggests filename based on actual BUK, Chapter and Language.
+Working around different behaviour in Word 2007 so space between bookname
+	and chapter number in page headers doesn't disappear.
+Now grouping special character changes such as !$ to ^~ in one macro
+	and making it also change #-# to #^~# early in the processing,
+	so that change in individual styles no longer necessary.
+
+Silas 2.208-1.02 by Jim, 30 Apr 2009
+====================================
+Updated to match USFM.sty version 2.208.
+Added section for further information to "Using SILAS.doc", to refer to
+	FAQ file and SILAS web page with its mailing lists and Issues tab.
+Fixed bug in CheckPath macro when Paratext not installed.
+Fixed bug in changing footnotes from renumbering each page to continuous (within sections) and back
+Fixed bug in ChangeFontSize if variable is empty.
+
+Silas 2.207-1.04 by Jim, 29 Apr 2009
+====================================
+Added control to say whether or not footnotes should restart at 'a' each page.
+Macro to convert // to ^l (manual line break) if the paragraph as formatted
+	occupies more than one line. (Actually, hides the "// " so the ^l 
+	can be removed and the job done again after anything that affects line length.)
+WordSend stylenemes now converted correctly.
+
+Silas 2.207-1.02 by Jim, 16 Apr 2009
+====================================
+This version of USFM added a style for the \sts code, "rem - File - Status", 
+	so the files for updating styles now change our previous style, 
+	"_sts - Status" to the new one,	and the new one appears in page footers.
+
+Documents produced by WordSend (ie. Onyx) now recognised, but styles not changed properly yet.
+
+Fixed problem installing if Pt folder name in the registry doesn't have "\" at the end.
+
+Fixed problem for some South American systems, where the national language settings 
+	have the same character for decimal point and list separator. 
+	With this setting, Word can't do math, so the separator between chapter numbers 
+	in page headers disappears. Now shows 4-5 and 5-7 in these countries.
+
+Added to the end of SetStandardFindOptions a setting of Browser.Target to wdBrowsePage, 
+	so the double-arrow browse keys default to browsing by page after macros run.
+
+Silas 2.204-1.02 by Jim, 12 Mar 2009
+====================================
+Makes ~ become fixed space as well as !$.
+A safer way of converting version strings to numbers for comparison:
+	change "." to separator character.
+Workaround for Wd 2003 (& others?) to allow wildcard searches for \ codes
+	to work properly in UTF-8 file (in sub FixCodes)
+A safer way of doing multi-character dropcap chapter numbers.
+	Select chapter numbers
+	put first one into a string and the rest into another
+	make the dropcap with the first one, then add the others to it.
+
+Silas 2.104-1.02 by Jim, 2 Jan 2009
+====================================
+The change in USFM.sty from 2.103 to 2.104 only affects the \OccursUnder field for \qt,
+	so no changes to the SILAS macros are needed.
+FAQ file updated to mention using SILAS with the original SCRxxx.dot templates,
+	and processing files without any formatting.
+Minor tweak to a message in Attach macro in Install Silas.doc
+No longer using wildcards to reduce duplicate fixed spaces.
+Made hyphen-to-fixed-spaces work in footnotes as well as main text.
+	Doing it for all "stories" that might have vernacular text in them, 
+	but not for page headers, so we don't mess up the field codes.
+
+Silas 2.103-1.08 by Jim, 7 Oct 2008
+====================================
+Reduced duplication of forms for 
+	adding a new language
+	modifying an existing language
+    Each job uses dbLanguageInfo, 
+    but sets the public variable NewLanguage appropriately first.
+Files made with USFM_draft.sty no longer produce warning messages,
+	but still load "Recent_Styles.txt" to update stylenames.
+This item removed from the ToDo list:
+-To solve the problem of lines not matching up, 
+	think about having a blank line with "keep with next" attribute
+	before each section heading, instead of setting Space before in the \s style.
+		(This proved hard to do in Word,
+		so let the typesetters use real typesetting software,
+		and translators use Word with SILAS for quick printouts.)
+Fixed a couple of loop errors in processing chapter codes 
+	that don't have appropriately-formatted text after them.
+Worked around problem with wildcard search not working to find multiple fixed spaces.
+
+Silas 2.103-1.06 by Jim, 22 Aug 2008
+====================================
+Colour used for hiding ID line etc changed from yellow to white,
+	because yellow shows up on some printers.
+	Uses a Public Const, HiddenColor, so you can change it back easily if you want to.
+In USFM2Styles, FixCodes always called to avoid problems where SFM file edited
+	after FixCodes has been run, and errors introduced. Also changed what happens
+	if a paragraph code found within a paragraph (word 2003 bug).
+Fixed problem with Change Paper Size dialog -- it now displays the current setting
+	when the dialog is initialized.
+Added tests and control files to update files made with SCR_V2.dot and SCRPNG98.dot.
+Minor improvement to instructions in Install Silas.doc when automatic procedure fails.
+Changed the check for chapter style running too far, to allow "Sapta 6" in files.
+Added macros to reduce multiple spaces and join lines into a paragraph,
+	with items on the USFM2Stles menu.
+
+Silas 2.103-1.04 by Jim, 20 Apr 2008
+====================================
+Added ReformatVerseNumbers to USFM to Styles menu as Format Verse Numbers.
+
+Silas 2.103-1.02 by Jim, 10 Apr 2008
+====================================
+Changes to match the new version of USFM.sty.
+\t* for tables have had their color information removed.
+Deleted some wrongly-named styles associated with these.
+Added a title to the text in the template.
+
+Silas 2.102-1.02 by Jim, 11 Apr 2008
+====================================
+This version was not released, because a new version of USFM.sty had come out already.
+
+Silas 2.101-1.16 by Jim, 10 Apr 2008
+====================================
+Fixed bug in ShowLangInfoInInifile and ShowCurrentSettings and ShowLanguageInfoForm.
+	(NoBreakHyphens used instead of NoBreakSpaces by mistake.)
+Added ability to change brackets ([ and ]) to half brackets (U02FB and U02FC).
+Fixed bug in scanning through paragraphs where a table with a column spanning several rows
+	could cause an endless loop.
+USFM2Styles now also saves document as .doc at the end, suggesting same filename as SFM version.
+Resolved problem in MakeCoverDocument in case where different sections have different margins --
+	getting the margin from the whole document produced the undefined value of "9999999".
+	Now gets the right margin from the first section in the document, the title page.
+	Fixed same problem in IncreaseRightMargin and DecreaseRightMargin,
+	and also prevented the user from increasing or decreasing too far.
+Removed line at top of footer in newly-made cover documents.
+Fixed problem with text in cover documnent being in the wrong font 
+	by basing the coverdocument on the booklet document, rather than the template.
+Fixed bug that double-sided layout for proof printouts would only be done 
+	if right margin set to "extrawide" (because End If in the wrong place).
+Moved macros that won't run in old verions of Word into separate modules, "VBA10plus" etc.
+Adjusted some macros to make them work in older versions of Word.
+Improved layout of dbPTFont.
+Fixed setting default value of ExportedFrom in AttachSILASFormattingTemplate.
+Tweaked some messages in AttachSILASTemplate in Install Silas.doc.
+Worked around erratic bug in Wd 2007 where Paste Special works in single step, but not running.
+Added a MsgBox in USFM2Styles if style can't be applied -- perhaps the stylename is wrong
+	in Silas.dot.
+USFM2Styles now updates \nc (ie. note, centred) to \iex.
+Fixed bug in USFM2Styles where two paragraph styles come in the same line.
+Fixed crash in Wd97 if picture put relative to column when in single column mode.
+Install Silas closing itself if toolbar not copied successfully -- fixed, 
+	and now brings itself to the top appropriately.
+Now distinguishing properly between a selected picture and a selected text box,
+	so Wd97 won't crash in not text box selected when formatting shape.
+Improved message if Paratext not installed.
+Separated usage instructions from template file full of macros,
+	to reduce the attach time a bit.
+Added more help for Word 2007 users to info file, "Using Silas.doc".
+
+Removed from todo list:
+-(eventually) add custom \z* style support, probably just copy the style 
+	into the template so it doesn't hang up. 
+	Perhaps note to user about adding to template & formatting it as desired 
+	so it'll update next time.
+   Removed because the template won't mess up, having extra styles -- it'll only mess up
+	if some style that it is expecting isn't there. And there's no need to
+	reload it from the template when the template is attached to set the formatting,
+	because the user can do that in USFM.sty, and Pt will export it properly.
+
+Silas 2.101-1.14 by Jim, 2 Mar 2008
+====================================
+Made style "_rq_para" have font of based-on style. Same for "c - Chapter...", 
+	"b - Poetry..." and "cl - Chapter..."
+Fixed bug with _Spread_items and _Paragraph_Centred not following font changes.
+Faster searching for verse numbers
+Modified Install Silas.doc to give instructions for Word 2007.
+Chapter style now stored in a variable StdChapterStyle, & similar for verse.
+Subroutine F_FileSaveAsText no longer does Encoding=1252.
+Improved handling of \c N followed by \v without \s or \p between them.
+Fixed some bugs in USFM2Styles.
+Fixed some wrong fonts in styles.
+
+Silas 2.101-1.12 by Jim, 12 Nov 2007
+====================================
+Build number jumped up to avoid looking like 2.05-1.04
+Removed confusing instruction to print instructions in "Install Silas.doc"
+Made a few minor changes to "FAQ Silas.doc"
+Fixed errors in *_Styles.txt files
+Added _sts stylename to list stepped over when adding section break
+	between 1-column intro material and 2-column text material.
+When verse codes found in chapter style, "Continue anyway" button now continues.
+Stylename updating tested OK for all versions of USFM:
+	1.5, 1.54, 2.0, 2.04, 2.041, 2.05, 2.1, 2.101
+
+Silas 2.101-1.04 by Jim, 24 Oct 2007
+==================================
+Fixed bugs associated with \sts.
+Checking of spelling and grammar turned off in NoAutoThings and NoAutoStyles.
+Based "cl - Chapter - Publishing Label" on section headings instead of c - Chapter Number 
+	so they don't disappear if someone does dropcaps as well.
+Changed the name of the shortcut in the START menu from "Silas Scripture Template Instructions"
+	to "How to use Silas Scripture Template"
+Added Kim's contribution: Triple spacing, with option to add extra space between words, 
+	for writing glosses by hand beneath the vernacular words.
+
+Silas 2.101-1.02 by Jim, 14 Oct 2007
+==================================
+Added USFM 2 styles, so people can type up on machines that can't run Paratext (eg. Alphasmart NEO)
+	and produce nicely formatted printouts.
+Deprecated and obsolete styles and \codes now changed to the currently approved equivalents.
+We now Catch \sts N out of Pt and apply "_sts - Status" character style (yellow, 1 pt)
+	& translate N into descriptions based on USFM description
+	& make ID footers show the latest one
+Added a way of hiding verse 1 if the chapter numbers are dropcaps.
+Added something to FAQ file on how to modify styles.
+
+Silas 2.1-1.04 by Jim, 7 Oct 2007
+==================================
+Formatting \li# in glossaries, not just \li
+Glossary formatting works with \id GLO as well as \glo
+ChangeFontSize now adjusts \rq style.
+OBSOLETE Peripheral styles now hidden and revealed along with \id etc.
+.ApplyStyleHeadingRows not used in word versions <= 10.
+Reduced number of message boxes from Install file
+After user-callable macros, find options are now reset to standard values.
+
+Silas 2.1-1.02 by Jim, 23 Aug 2007
+==================================
+Changed RemoveCommasFromStylenames in Install Silas.doc to match the new stylenames, 
+	in which the ", " of 2.05 has become " - " in 2.1.
+\b style pointsize up from 5 to 10, to match v2.1
+-updated styles to match USFM 2.1
+  \ipq style made italic to match USFM.sty and other Intro styles.
+  \k style bold italic to match v2.1
+  \ca style now a character style, to match v2.1
+  \ef style deleted to match v2.1
+Deprecated styles now being replaced by the modern equivalents.
+\pro style name changed to match v2.1
+.LineSpacing = 0.4 changed for Word 2007, where minimum is 0.7.
+	But I made this spacing 1 point to make easier maths for space before headings.
+Changed TE style equivalence for "Citation Paragraph" from "p - ..." to
+	"mi - Paragraph - Indented - No First Line Indent"
+	to match TE help file example better.
+-Pt 6.1 puts out verse numbers with no-break spaces after them, so check behaviour -- OK.
+-made "-" in verse numbers in \x fields be no-break
+Added \ili and \ili1 and \ili2 to match USFM.sty version 2.1
+-Attended to line spacing of _rq para style.
+Added USFM to Styles menu and macro, 
+
+Silas 2.05-1.040 by Jim, 9 Apr 2007
+====================================
+Changed size of verse number style back to same as text.
+Fixed bug in line spacing dialog if user cancels.
+Fixed bug in making filename for custom checking table.
+Even margins now one inch each side, now for Letter-sized paper as well as A4.
+Fixed font for _Heading_Base, now inherited properly. Also, Advanced button refers to Heading font, 
+	as does the message in changeFont routine.
+Moved module AttachUSFMTemplate from Silas.dot to Install Silas.doc in the hope of fixing
+	the problem with people being unable to copy it to Normal.dot sometimes.
+Equal signs (=) no longer changed to fixed spaces, at request of Nico Daams.
+Added \q4 style, and adjusted indentations for \q# styles to reduce ambiguity.
+Size of \r changed to 90% of normal, and \mr to 110% of normal.
+Fixed reference to menu item "Set language and paper size".
+Fixed bug, spacing before \rq style now set to zero.
+
+Silas 2.05-1.038 by Jim, 26 Mar 2007
+====================================
+Changed "Chapter Drop" style to "_Chapter_Drop", to avoid risk of matching Like "c*" tests.
+Now deleting replaced styles again in StyleNames_RenameText,
+	to avoid risk of their matching "Like" tests spuriously.
+Fixed missing error description messages by moving "On Error goto 0" below the Err.Description reference.
+Fixed problem with Japanese Word doing box for no-break space after verse numbers.
+Added options to make hyphens be non-breaking in Proof printouts and/or thin no-break spaces in Booklets,
+	so translators can have verb phrases group more closely together.
+Glossary entry numbered meanings can now have up to 2 digit numbers.
+Added table of contents and info about hyphens to FAQ file.
+Rearranged macros in Install Silas.doc to help people with Word 2000 installation failure recover better.
+
+Silas 2.05-1.036 by Jim, 23 Feb 2007
+====================================
+Fixed problem with checking to see if variables exist, now that all modules are Option Explicit,
+	using separate module which is not, called "Exists"
+FixQuotes no longer finishes with some text selected.
+MakeCoverPage no longer mangles Scripture->3 menu 
+	(by not deleting last paragraph mark from template when the file is created.)
+	Also, main text document is not left with title page selected.
+Booklet macros file updated to 2.56.
+Standard message string strGeneralReinstall used in some message boxes now.
+Quite a few places had an error trap turned on, but not turned off correctly -- fixed.
+Changed "Normal" stylename into defined constant wdStyleNormal for non-English versions of Word,
+	in all documents.
+Name of checking table for this language remembered better, in dbLanguageListFromIni.frm.
+When we are processing all the footnotes, sometimes Word can't find one of them.
+	This problem now ignored, and that footnote skipped.
+More explicit type checking by VBA threw up some errors that weren't a problem before. Code fixed.
+
+Silas 2.05-1.034 by Jim, 20 Feb 2007
+====================================
+Fixed bug in adding fixed spaces after verse numbers: infinite loop if there is no text following a verse number.
+Avoided random crashes by making all modules Option Explicit and putting a Dim statement for each variable.
+Fixed setting of .LineSpacingRule value, and some other wrong data references.
+Fixed problem with character styles from TE (such as Chapter Number becoming paragraph style "c - Chapter Number"),
+	where there isn't any paragraph mark at the beginning.
+Fixed bug in order of info in front pages if 2 columns alredy when job 2 run.
+Fixed bug in which Pictures sub-menu changed by making cover document.
+Reinstated hotkey in AskForHeaders form & abbreviated item for ID line.
+Variable for Checking table now set when there is no ID line in the file, if user does dialogue box OK.
+
+Silas 2.05-1.033 by Kim, 16 Feb 2007
+====================================
+Fixed bug in "Add new language" that prevented adding of a new language.
+
+Silas 2.05-1.032 by Jim, 12 Feb 2007
+====================================
+Calling SetPathVariables more often to make sure variables are set.
+Booklet Macros button renamed to Print booklet.
+FAQ file updated.
+Scripture menu now has item to display Print Booklet macro document, for its instructions.
+Fixed: HeaderOther doesn't update to Inifile
+
+Silas 2.05-1.030 by Jim, 9 Feb 2007
+====================================
+Added Install Booklet Macros button to Booklet style form,
+	and removed installing booklet macros from Install Silas.doc.
+	Modified FAQ document to match.
+Removes explicit font formatting from verse numbers and footnote markers,
+	because Pt adds it for RTL text.
+If you edit the checking table for a language/project,
+	you edit a specific file for that project, and Languages.ini remembers its name for that project.
+
+Silas 2.05-1.028 by Jim, 5 Feb 2007
+====================================
+Updated screenshot of Scripture menu in template text, and the description of menus, booklet macros etc.
+In Install.doc, moved check for custom file to the right place, about destination, not source.
+	Also using a boolean argument to put ref to filename in a safer place.
+In FAQ file, comments on the two custom files now match the program logic.
+
+Silas 2.05-1.027 by Kim, 3 Feb 2007
+====================================
+Button in Proofs dialog to bring up checking table for editing.
+Inserted checking table is resized to fit margins, like old v was.
+Install modif. so if Custom_styles.txt and Checking Table.doc are already in template folder, they're not 
+	overridden. Then they won't have to retrieve their old versions every time they install a new Silas v.
+	If we add s.t. or make a major change to one of these files we can have that Install v copy the files.
+
+Silas 2.05-1.026 by Jim, 3 Feb 2007
+====================================
+Checking table in ID footers now comes from an included file in template folder that people can edit.
+	Install protects their version in "old versions" folder.
+Custom_styles.txt now copied to Pt settings folder, and preserved in "old versions" during updates.
+
+Silas 2.05-1.025 by Kim, 1 Feb 2007
+====================================
+Fixed bug in FormatForProofPrintout when canceling this macro from the dialog, 
+     redid Cancel variable for both Format macros
+Reordered FormatForHalfPage to make the dialog show faster
+Changed LineSpacing menu item from toggle to submenu, changed LineSpacing button to dialog
+More tweaks to Scripture menu items
+
+Silas 2.05-1.024 by Jim, 29 Jan 2007
+====================================
+Fixed bug in InstallScrTemplate module that prevented self-updating.
+Added question to FAQ file about printing in different scripts.
+
+Silas 2.05-1.023 by Kim, 21 Jan 2007
+====================================
+Fixed bug introduced into .021 in Attach...
+Refined menus; fixed Single and Double spacing calls in Scripture menu.
+minor fix to dbProofPrintouts
+
+Silas 2.05-1.021 by Kim, 20 Jan 2007
+====================================
+Added ControlTip to dbAskForHeaderAndTitle.txtOther-- experiment
+Added db for ProofPrintouts for options (this db has wide textboxes to see if it works for Peter Kirk)
+Increased size of dbWhatYouCanDo as above
+Fixed bug if you run Attach... twice in a row
+Fixed error in dbAddNewLanguage code
+
+Silas 2.05-1.020 by Jim, 14 Jan 2007
+====================================
+Changed Install Silas to check global variable before offering to install booklet macros.
+Now uses version number, so booklet macros can be updated.
+
+Silas 2.05-1.018 by Jim, 11 Jan 2007
+===================================
+-Perhaps add key(s) to Inifile to note out-of-date stylenames -- done.
+-Fixed addition of ID line and bookname that could end up in Verse Number style.
+
+Silas 2.05-1.016 by Jim, 9 Jan 2007
+===================================
+Cropped picture of final message in "Install Silas.doc" so it wouldn't look like a button people could click.
+-CreateIniFile in LangData needs to be updated so it won't make [SilasVersion] any more. -- fixed.
+-add messages if Recent_Styles.txt or Original_Styles.txt are called. -- done.
+-TE_Styles.txt now looks as if it should handle all the styles that come out of TE in an RTF.
+
+Silas 2.05-1.015 by Kim, 31 Dec 2006
+====================================
+Fixed problem with footnote spacing. Also made Footer and checking table styles stay single-spaced.
+
+Fixed problem with Booklet Macro installation.
+
+Changed Latest_Styles.txt to Custom_Styles.txt. This control file is used for customizing USFM standard, so 
+it's labeled accordingly. The other control files are used for updating to the latest "Standard" stylenames
+in USFM.STY as distributed by the PT team.
+
+Added subs ZoomSet and ZoomRecall to return to previous view.zoom after running jobs. Cleaned up subs to use
+ZoomSet at start, and SetDefaultView (which calls ZoomRecall among other things) rather than 
+ActiveDocument...View=PageOrPrintView at end of subs. Then if user sets a different zoom it won't change 
+after every job. Also cleaned up a few places where screen updating caused a flashing image 
+(switched order of calls at end of some subs).
+
+Silas 2.05-1.014 by Jim, 31 Dec 2006
+====================================
+Fixed problem with comma-separated sections of style names being made unique.
+
+-Add progress stage to ID line -- Actually only Village Tested broken -- fixed.
+
+Removed some unnecessary references to Paratext. Macros now refer to Adapt It
+or Translation Editor if appropriate instead.
+
+Added 2 questions to FAQ file.
+Added Latest_Styles.txt and comments in *_Styles.txt.
+
+_Notes_Base now changes points of leading with other base styles, so footnotes follow along.
+-dialog to get ID line has &C for Code and for Cancel. Let's have &3 for 3-letter book code. -- done
+Adding page header line would sometimes catch part of Main Title line -- fixed.
+
+Silas 2.05-1.012 by Jim, 26 Dec 2006
+====================================
+Updated template text to match new name & menus.
+Improved Install Silas here and there.
+Updating styles seems to work properly now.
+-Modify chapter numbers to have - when range > 1. -- done
+
+Silas 2.05-1.01 by Jim, 25 Dec 2006
+===================================
+Changed the name to Silas -- Smart Interactive Layout Assistant for Scripture
+This is the first attempt at a Silas distribution -- watch things break!
+
+-add msg to DoubleColumns if no ID line is found so people know why it didn't work. Or add an ID --done.
+	but... EVEN THO THE COLUMNS AREN'T CHANGED, NrColumns=2 is set if no ID line. 
+	I guess this case won't occur again since a fake ID line is added by LoadLangData. Right?
+-add Jim's stylename changes for TE output to Attach (need to get a version posted and this may not be finalized yet)
+-add stylename changes for minor USFM.STY 2.4x versions (into CheckUSFMVersion) for AI users. This could be done in 
+	CheckUsfmVersion.
+-add Booklet Macros installation to Install Scripture Template (rough v done, see .123)
+-add pointer to Add Pictures...doc to Scr-Pictures menu -- done before by Kim
