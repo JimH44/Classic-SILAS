@@ -1,0 +1,49 @@
+Problem report with Silas,
+  Smart Interactive Layout Assistant for Scripture
+==================================================
+From:			
+  Name: 		Debbie Conwell 
+  Email address: 	debbie_conwell@sil.org
+
+Please answer the following questions:
+What did you do and what happened?
+
+I installed Silas, but I had to do the attaching manually. The Silas icon appeared in the toolbar, then I exited Word and created a document from Paratext and the icon wasn’t visible. The option is in Tools … just no icon. The small toolbar with the formatting options does appear.
+
+What did you expect to happen?
+
+To get an icon I can use … I use it quite a lot.
+
+Please be very specific about error messages -- 
+the exact wording or a screen shot help a lot.
+To send a screenshot, operate the Print Screen key
+(which sometimes requires that you hold down a key called 'Fn' at the seme time.)
+This will put a screenshot in the clipboard.
+Do START->Run->mspaint, then in that program, do Ctrl-V to paste in the screenshot.
+Do File->Save As and choose the type PNG (Portable Network Graphics)
+and attach that file to your email message along with this document.
+
+No error message.
+
+Word reports the computer operating system as Windows NT  6.1
+Version of MS Word reported as 
+    Microsoft Word 11.0 {90110409-6000-11D3-8CFE-0150048383C9}
+Version of Silas reported as 2.209-1.12
+
+Okay, Word lied. My operating system is Windows 7 
+and this is Word 2003  11.8313.8221  SP3
+Professional Edn
+
+(We saved this form with the filename
+    [SILAS] issue 22 problem 2010-Mar-25 at 1736.txt
+in the folder
+    C:\Users\Debbie\Documents)
+
+When you have filled in this form, hold down the Ctrl key and hit S to save it,
+then please send it to BOTH of:
+kblewett@Gmail.com; Jim.Henderson44@Gmail.com
+
+If this computer has access to email, you can do 
+File->Send to->Mail recipient (as attachment),
+otherwise find this file at the location above and send it from another computer.
+

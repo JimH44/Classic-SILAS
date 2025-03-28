@@ -1,0 +1,28 @@
+\Marker sts
+\Name rem - File - Status
+\Marker addpn
+\Name (addpn...addpn*) - Special Text for Chinese
+\Marker wr
+\Name OBSOLETE wr...wr* - Auxiliary - Wordlist/Glossary Reference 
+\Marker pub
+\Name OBSOLETE pub Peripherals - Front Matter Publication Data
+\Marker toc
+\Name OBSOLETE toc Peripherals - Front Matter Table of Contents
+\Marker pref
+\Name OBSOLETE pref Peripherals - Front Matter Preface
+\Marker intro
+\Name OBSOLETE intro Peripherals - Front Matter Introduction
+\Marker conc
+\Name OBSOLETE conc Peripherals - Back Matter Concordance
+\Marker glo
+\Name OBSOLETE glo Peripherals - Back Matter Glossary
+\Marker idx
+\Name OBSOLETE idx Peripherals - Back Matter Index
+\Marker maps
+\Name OBSOLETE maps Peripherals - Back Matter Map Index
+\Marker cov
+\Name OBSOLETE cov Peripherals - Other - Cover
+\Marker spine
+\Name OBSOLETE spine Peripherals - Other - Spine
+\Marker pubinfo
+\Name OBSOLETE pubinfo - Publication - Information

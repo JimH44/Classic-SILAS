@@ -1,0 +1,639 @@
+1c1
+< # Version=2.35
+---
+> # Version=3.0.0
+3c3
+< # * usfm.sty is the default stylesheet for Paratext 6 or 7 projects  *
+---
+> # * usfm.sty is the default stylesheet for Paratext projects         *
+6c6
+< # *   http://ubs-icap.org/usfm                                       *
+---
+> # *   http://markups.paratext.org/usfm                               *
+8d7
+< # Last Updated: Feb 2, 2012 Jeff Klassen (jklassen@ubs-icap.org)
+565c564
+< \OccursUnder id c
+---
+> \OccursUnder id
+578c577
+< \OccursUnder id NEST
+---
+> \OccursUnder imt, imt1, imt2, imt3, imt4, ib, ie, ili, ili1, ili2, im, imi, imq, io, io1, io2, io3, io4, iot, ip, ipi, ipq, ipr, iq, iq1, iq2, iq3, is, is1, is2, imte, imte1, imte2, iex
+662c661
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 qm4 tr tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s3 d sp
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s3 d sp
+673c672
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 qm4 tc1 tc2 tc3 tc4 s3 d
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tc1 tc2 tc3 tc4 s3 d
+684c683
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tc1 tc2 tc3 tc4 s3
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tc1 tc2 tc3 tc4 s3
+713a713,736
+> \Marker po
+> \Name po - Paragraph - Letter Opening
+> \Description Letter opening
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular
+> \StyleType Paragraph
+> \FontSize 12
+> \FirstLineIndent .125   # 1/8 inch first line indent
+> \SpaceBefore 4
+> \SpaceAfter 4
+> 
+> \Marker cls
+> \Name cls - Paragraph - Letter Closing
+> \Description Letter Closing
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular
+> \StyleType Paragraph
+> \FontSize 12
+> \Justification Right
+> 
+717c740
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr po q q1 q2 q3 q4 qc qr s1 s2 s3 s4
+728c751
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr  psi q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr po psi q q1 q2 q3 q4 qc qr b s1 s2 s3 s4
+740c763
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr po q q1 q2 q3 q4 qc qr b s1 s2 s3 s4
+751c774
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr po q q1 q2 q3 q4 qc qr b s1 s2 s3 s4
+845,855d867
+< \Marker cls
+< \Name cls - Paragraph - Closure of an Epistle
+< \Description Closure of an Epistle
+< \OccursUnder c
+< \Rank 4
+< \TextType VerseText
+< \TextProperties paragraph publishable vernacular
+< \StyleType Paragraph
+< \FontSize 12
+< \Justification Right
+< 
+944c956
+< \OccursUnder q q1 q2 q3 q4 qc qr NEST
+---
+> \OccursUnder q q1 q2 q3 q4 qc qr qd NEST
+978c990
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr b
+989c1001
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr b
+1000c1012
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr b
+1011c1023
+< \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr
+---
+> \OccursUnder m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr b
+1018a1031,1042
+> \Marker qd
+> \Name qd - Poetry - Hebrew Note
+> \Description A Hebrew musical performance annotation, similar in content to Hebrew descriptive title.
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular poetic
+> \StyleType Paragraph
+> \FontSize 12
+> \Italic
+> \LeftMargin .25
+> 
+1118c1142
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tc1 tc2 tc3 tc4 s3 d
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tc1 tc2 tc3 tc4 s3 d
+1383a1408,1417
+> \Marker th5
+> \Name th5 - Table - Column 5 Heading
+> \Description A table heading, column 5
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> 
+1419a1454,1569
+> \Marker tc5
+> \Name tc5 - Table - Column 5 Cell
+> \Description A table cell item, column 5
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> 
+> # Center Aligned Table Heads and Columns
+> 
+> \Marker thc1 
+> \Name thc1 - Table - Column 1 Heading - Center Aligned
+> \Description A table heading, column 1, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Center
+> 
+> \Marker thc2
+> \Name thc2 - Table - Column 2 Heading - Center Aligned
+> \Description A table heading, column 2, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Center
+> 
+> \Marker thc3
+> \Name thc3 - Table - Column 3 Heading - Center Aligned
+> \Description A table heading, column 3, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Center
+> 
+> \Marker thc4
+> \Name thc4 - Table - Column 4 Heading - Center Aligned
+> \Description A table heading, column 4, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Center
+> 
+> \Marker thc5
+> \Name thc5 - Table - Column 5 Heading - Center Aligned
+> \Description A table heading, column 5, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Center
+> 
+> \Marker tcc1
+> \Name tcc1 - Table - Column 1 Cell - Center Aligned
+> \Description A table cell item, column 1, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Center
+> 
+> \Marker tcc2
+> \Name tcc2 - Table - Column 2 Cell - Center Aligned
+> \Description A table cell item, column 2, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Center
+> 
+> \Marker tcc3
+> \Name tcc3 - Table - Column 3 Cell - Center Aligned
+> \Description A table cell item, column 3, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Center
+> 
+> \Marker tcc4
+> \Name tcc4 - Table - Column 4 Cell - Center Aligned
+> \Description A table cell item, column 4, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Center
+> 
+> \Marker tcc5
+> \Name tcc5 - Table - Column 5 Cell - Center Aligned
+> \Description A table cell item, column 5, center aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Center
+> 
+1431,1432c1581
+< \Justification right
+< 
+---
+> \Justification Right
+1443c1592
+< \Justification right
+---
+> \Justification Right
+1454c1603
+< \Justification right
+---
+> \Justification Right
+1465c1614,1625
+< \Justification right
+---
+> \Justification Right
+> 
+> \Marker thr5
+> \Name thr5 - Table - Column 5 Heading - Right Aligned
+> \Description A table heading, column 5, right aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> \Justification Right
+1475c1635
+< \Justification right
+---
+> \Justification Right
+1485c1645
+< \Justification right
+---
+> \Justification Right
+1495c1655
+< \Justification right
+---
+> \Justification Right
+1505c1665,1675
+< \Justification right
+---
+> \Justification Right
+> 
+> \Marker tcr5
+> \Name tcr5 - Table - Column 5 Cell - Right Aligned
+> \Description A table cell item, column 5, right aligned
+> \OccursUnder tr
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Justification Right
+1508a1679,1689
+> \Marker lh
+> \Name lh - List Header
+> \Description List header (introductory remark)
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular
+> \StyleType Paragraph
+> \FontSize 12
+> \FirstLineIndent .125   # 1/8 inch first line indent
+> 
+1510,1511c1691,1692
+< \Name li - List Entry - Level 1
+< \Description A list entry, level 1 (if single level)
+---
+> \Name li - List Item - Level 1
+> \Description A list item, level 1 (if single level)
+1522,1523c1703,1704
+< \Name li1 - List Entry - Level 1
+< \Description A list entry, level 1 (if multiple levels)
+---
+> \Name li1 - List Item - Level 1
+> \Description A list item, level 1 (if multiple levels)
+1534,1535c1715,1716
+< \Name li2 - List Entry - Level 2
+< \Description A list entry, level 2
+---
+> \Name li2 - List Item - Level 2
+> \Description A list item, level 2
+1546,1547c1727,1728
+< \Name li3 - List Entry - Level 3
+< \Description A list entry, level 3
+---
+> \Name li3 - List Item - Level 3
+> \Description A list item, level 3
+1558,1559c1739,1740
+< \Name li4 - List Entry - Level 4
+< \Description A list entry, level 4
+---
+> \Name li4 - List Item - Level 4
+> \Description A list item, level 4
+1568a1750,1821
+> \Marker lf
+> \Name lf - List Footer
+> \Description List footer (concluding remark)
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular
+> \StyleType Paragraph
+> \FontSize 12
+> 
+> \Marker lim
+> \Name lim - Embedded List Item - Level 1
+> \Description An embedded list item, level 1 (if single level)
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular level_1
+> \StyleType paragraph
+> \FontSize 12
+> \LeftMargin .75
+> \FirstLineIndent -.375
+> \RightMargin .25
+> 
+> \Marker lim1
+> \Name lim1 - Embedded List Item - Level 1
+> \Description An embedded list item, level 1 (if multiple levels)
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular level_1
+> \StyleType paragraph
+> \FontSize 12
+> \LeftMargin .75
+> \FirstLineIndent -.375
+> \RightMargin .25
+> 
+> \Marker lim2
+> \Name lim2 - Embedded List Item - Level 2
+> \Description An embedded list item, level 2
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular level_2
+> \StyleType paragraph
+> \FontSize 12
+> \LeftMargin 1
+> \FirstLineIndent -.375
+> 
+> \Marker lim3
+> \Name lim3 - Embedded List Item - Level 3
+> \Description An embedded list item, level 3
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular level_3
+> \StyleType paragraph
+> \FontSize 12
+> \LeftMargin 1.25
+> \FirstLineIndent -.375
+> 
+> \Marker lim4
+> \Name lim4 - Embedded List Item - Level 4
+> \Description An embedded list item, level 4
+> \OccursUnder c
+> \Rank 4
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular level_4
+> \StyleType paragraph
+> \FontSize 12
+> \LeftMargin 1.5
+> \FirstLineIndent -.375
+> 
+1575c1828
+< \OccursUnder c li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 ms3 s s1 s2 s3 spd d ip cp
+---
+> \OccursUnder c cp lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 ms3 s s1 s2 s3 d ip
+1585c1838
+< \OccursUnder c li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tc1 tc2 tc3 tc4 ms ms1 ms2 ms3 s s1 s2 s3 spd d ip
+---
+> \OccursUnder c lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 sp tc1 tc2 tc3 tc4 ms ms1 ms2 ms3 s s1 s2 s3 d ip
+1668,1678d1920
+< \Marker fs
+< \Endmarker fs*
+< \Name DEPRECATED fs - Footnote - Footnote Summary
+< \Description A summary text for the concept/idea/quotation from the scripture translation for which the note is being provided.
+< \OccursUnder f fe
+< \TextProperties publishable vernacular note
+< \TextType NoteText
+< \StyleType Character
+< \FontSize 12
+< \Italic
+< 
+1704c1946
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tc1 tc2 tc3 tc4 ms ms1 ms2 s s1 s2 s3 spd d ip
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 sp tc1 tc2 tc3 tc4 ms ms1 ms2 s s1 s2 s3 d ip
+1717c1959
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 s s1 s2 s3 spd d
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 s s1 s2 s3 d
+1733a1976,1985
+> \Marker xop
+> \Endmarker xop*
+> \Name xop - Cross Reference - Origin Reference Publishing Alternate
+> \Description Published cross reference origin reference (origin reference that should appear in the published text)
+> \OccursUnder x
+> \TextProperties publishable vernacular note
+> \TextType NoteText
+> \StyleType Character
+> \FontSize 12
+> 
+1738c1990,2000
+< \OccursUnder x f ef ip ipi im imi ili ili1 ili2
+---
+> \OccursUnder x f ip ipi im imi ili ili1 ili2 p pi pi1 pi2
+> \TextProperties publishable vernacular note
+> \TextType NoteText
+> \StyleType Character
+> \FontSize 12
+> 
+> \Marker xta
+> \Endmarker xta*
+> \Name xta - Cross Reference - Target References Added Text
+> \Description Cross reference target references added text
+> \OccursUnder x
+1800c2062
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 NEST
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 NEST
+1813c2075
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1824c2086
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1835c2097
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1846c2108
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1855c2117
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1866c2128
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1877c2139
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1884a2147,2157
+> \Marker png
+> \Endmarker png*
+> \Name png...png* - Special Text - Geographic Proper Name
+> \Description For a geographic proper name
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+> \TextType VerseText
+> \TextProperties publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> \Underline
+> 
+1889c2162
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1903c2176
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1914c2187
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1926c2199
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1937c2210
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1948c2221
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 cls tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe NEST
+1982c2255
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe x NEST
+1992c2265
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe x NEST
+2002c2275
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe x NEST
+2013c2286
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe x NEST
+2023c2296
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe ef NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 io io1 io2 io3 io4 ms ms1 ms2 s s1 s2 s3 s4 cd sp d lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 f fe x NEST
+2026a2300
+> \Smallcaps
+2046c2320
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 ms ms1 ms2 s s1 s2 s3 spd d ip
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 ms ms1 ms2 s s1 s2 s3 d ip
+2056c2330
+< \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 ms ms1 ms2 s s1 s2 s3 spd d ip f fe NEST
+---
+> \OccursUnder ip im ipi imi ipq imq ipr iq iq1 iq2 iq3 lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 sp tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 ms ms1 ms2 s s1 s2 s3 d ip f fe NEST
+2069c2343
+< \OccursUnder ip im li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr d q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+---
+> \OccursUnder f ip im lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po d q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+2079c2353
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr d q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po d q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+2089c2363,2373
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr d q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po d q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+> \TextType VerseText
+> \TextProperties paragraph publishable vernacular
+> \StyleType Character
+> \FontSize 12
+> 
+> \Marker wa
+> \Endmarker wa*
+> \Name wa...wa* - Peripheral Ref - Aramaic Wordlist Entry
+> \Description An Aramaic Wordlist text item
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po d q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+2099c2383
+< \OccursUnder li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr q q1 q2 q3 q4 qc qr qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+---
+> \OccursUnder lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr th1 th2 th3 th4 thr1 thr2 thr3 thr4 tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s s1 s2 s3 s4 NEST
+2312a2597,2607
+> \Marker fs
+> \Endmarker fs*
+> \Name DEPRECATED fs - Footnote - Footnote Summary
+> \Description A summary text for the concept/idea/quotation from the scripture translation for which the note is being provided.
+> \OccursUnder f fe
+> \TextProperties publishable vernacular note
+> \TextType NoteText
+> \StyleType Character
+> \FontSize 12
+> \Italic
+> 
+2317,2318c2612,2613
+< \OccursUnder ms s li li1 li2 li3 li4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr q q1 q2 q3 q4 qc qr tc1 tc2 tc3 tc4 f fe NEST
+< \TextProperties publishable vernacular note
+---
+> \OccursUnder ms s lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr po q q1 q2 q3 q4 qc qr qd tc1 tc2 tc3 tc4 f fe NEST
+> \TextProperties publishable vernacular
+2320d2614
+< \TextProperties paragraph publishable vernacular
+2445c2739
+< \TextType VerseText
+---
+> \TextType Other
+2456c2750
+< \TextType VerseText
+---
+> \TextType Other
+2468c2762
+< \TextType VerseText
+---
+> \TextType Other
+2479c2773
+< \TextType VerseText
+---
+> \TextType Other
+2482c2776
+< \FontSize 12
+---
+> \FontSize 12
+\ No newline at end of file

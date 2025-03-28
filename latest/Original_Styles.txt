@@ -1,0 +1,171 @@
+Original_Styles.txt -- control file for updating style names that begin with parentheses.
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+(add...add*) Special - Translational Addition; add...add* - Special Text - Translational Addition
+(b) Poetry - Stanza Break (Blank Line); b - Poetry - Stanza Break (Blank Line)
+(bd...bd*) Character - Bold Text; bd...bd* - Character - Bold Text
+(bdit...bdit*) Character - BoldItalic Text; bdit...bdit* - Character - BoldItalic Text
+(bk...bk*) Character - Quoted book title; bk...bk* - Special Text - Quoted book title
+(c) Chapter Number; c - Chapter Number
+(ca) Chapter Number - Alternate; ca...ca* - Chapter Number - Alternate
+(cd) Chapter - Description; cd - Chapter - Description
+(cl) Chapter - Publishing Label; cl - Chapter - Publishing Label
+(cls) Paragraph - Closure of an Epistle; cls - Paragraph - Closure of an Epistle
+(cp) Chapter Number - Publishing Alternate; cp - Chapter Number - Publishing Alternate
+(d) Heading - Descriptive Title - Hebrew Subtitle; d - Heading - Descriptive Title - Hebrew Subtitle
+(dc) Special - Deuterocanonical/LXX Additions; dc...dc* - Special Text - Deuterocanonical/LXX Additions
+(f...f*) Footnote ;f...f* - Footnote 
+(fdc...fdc*) Footnote - DC text; fdc...fdc* - Footnote - DC text
+(fe...fe*) Endnote; fe...fe* - Endnote
+(fig...fig*) Auxiliary - Figure/Illustration/Map; fig...fig* - Auxiliary - Figure/Illustration/Map
+(fk) Footnote - Keyword; fk - Footnote - Keyword
+(fm) Footnote - Additional Caller to Previous Note; fm - Footnote - Additional Caller to Previous Note
+(fq) Footnote - Quotation or Alternate Rendering; fq - Footnote - Quotation or Alternate Rendering
+(fr) Footnote - Reference; fr - Footnote - Reference
+(ft) Footnote - Text; ft - Footnote - Text
+(fv...fv*) Footnote [Verse Number]; fv...fv* - Footnote - Embedded Verse Number
+(fv...fv*) Footnote - Embedded Verse Number; fv...fv* - Footnote - Embedded Verse Number
+(h) File - Header; h - File - Header
+(h) FILE - [Header]; h - File - Header
+(h1) File - Header; h1 - File - Header
+(h2) File - Left Header; h2 - File - Left Header
+(h3) File - Right Header; h3 - File - Right Header
+(ib) Introduction - Blank Line; ib - Introduction - Blank Line
+(id) File - Identification; id - File - Identification
+(ide) File - Encoding; ide - File - Encoding
+(iex) Introduction - Explanatory or Bridge Text; iex - Introduction - Explanatory or Bridge Text
+(im) Introduction - Paragraph - no first line indent; im - Introduction - Paragraph - no first line indent
+(imi) Introduction - Indented Para - no first line indent; imi - Introduction - Indented Para - no first line indent
+(imq) Introduction - Paragraph - quote from text - no first line indent; imq - Introduction - Paragraph - quote from text - no first line indent
+(imt) Introduction - Major Title Level 1; imt - Introduction - Major Title Level 1
+(imt1) Introduction - Major Title Level 1; imt1 - Introduction - Major Title Level 1
+(imt2) Introduction - Major Title Level 2; imt2 - Introduction - Major Title Level 2
+(imt3) Introduction - Major Title Level 3; imt3 - Introduction - Major Title Level 3
+(imt4) Introduction - Major Title Level 4; imt4 - Introduction - Major Title Level 4
+(imte) Introduction - Major Title at Introduction End; imte - Introduction - [Uncommon] Major Title at Introduction End Level 1
+(io1) Introduction - Outline Level 1; io1 - Introduction - Outline Level 1
+(io2) Introduction - Outline Level 2; io2 - Introduction - Outline Level 2
+(io3) Introduction - Outline Level 3; io3 - Introduction - Outline Level 3
+(io4) Introduction - Outline Level 4; io4 - Introduction - Outline Level 4
+(ior...ior*) Introduction - Outline References Range; ior...ior* - Introduction - Outline References Range
+(iot) Introduction - Outline Title; iot - Introduction - Outline Title
+(ip) Introduction - Paragraph; ip - Introduction - Paragraph
+(ipi) Introduction - Indented Para - first line indent; ipi - Introduction - Indented Para - first line indent
+(ipq) Introduction - Paragraph - quote from text; ipq - Introduction - Paragraph - quote from text
+(ipr) Introduction - Paragraph - right aligned; ipr - Introduction - Paragraph - right aligned
+(iq) Introduction - Poetry Level 1; iq - Introduction - Poetry Level 1
+(iq1) Introduction - Poetry Level 1; iq1 - Introduction - Poetry Level 1
+(iq2) Introduction - Poetry Level 2; iq2 - Introduction - Poetry Level 2
+(iq3) Introduction - Poetry Level 3; iq3 - Introduction - Poetry Level 3
+(is) Introduction - Section Heading Level 1; is - Introduction - Section Heading Level 1
+(is1) Introduction - Section Heading Level 1; is1 - Introduction - Section Heading Level 1
+(is2) Introduction - Section Heading Level 2; is2 - Introduction - Section Heading Level 2
+(it...it*) Character - Italic Text; it...it* - Character - Italic Text
+(k...k*) Character - Keyword; k...k* - Special Text - Keyword
+(li) List Entry - Level 1; li - List Entry - Level 1
+(li1) List Entry - Level 1; li1 - List Entry - Level 1
+(li2) List Entry - Level 2; li2 - List Entry - Level 2
+(li3) List Entry - Level 3; li3 - List Entry - Level 3
+(li4) List Entry - Level 4; li4 - List Entry - Level 4
+(lit) Special - Liturgical note; lit - Special Text - Liturgical note
+(m) Paragraph - Margin - No First Line Indent; m - Paragraph - Margin - No First Line Indent
+(mi) Paragraph - Indented - No First Line Indent; mi - Paragraph - Indented - No First Line Indent
+(mr) HEADING [Main Section Reference]; mr - Heading - Major Section Range References
+(mr) Heading - Major Section References; mr - Heading - Major Section Range References
+(ms) Heading - Major Section Level 1; ms - Heading - Major Section Level 1
+(ms1) Heading - Major Section Level 1; ms1 - Heading - Major Section Level 1
+(ms2) Heading - Major Section Level 2; ms2 - Heading - Major Section Level 2
+(mt) Title - Major Title Level 1; mt - Title - Major Title Level 1
+(mt1) Title - Major Title Level 1; mt1 - Title - Major Title Level 1
+(mt2) Title - Major Title Level 2; mt2 - Title - Major Title Level 2
+(mt3) Title - Major Title Level 3; mt3 - Title - Major Title Level 3
+(mt4) Title - Major Title level 4; mt4 - Title - Major Title level 4
+(mte) Title - Major Title Ending Level 1; mte - Title - [Uncommon] Major Title Ending Level 1
+(mte1) Title - Major Title Ending Level 1; mte1 - Title - [Uncommon] Major Title Ending Level 1
+(mte2) Title - Major Title Ending Level 2; mte2 - Title - [Uncommon] Major Title Ending Level 2
+(nb) Paragraph - No Break with Previous Paragraph; nb - Paragraph - No Break with Previous Paragraph
+(nd...nd*) Character - Name of Deity; nd...nd* - Special Text - Name of Deity
+(ndx...ndx*) Auxiliary - Subject Index Entry ;ndx...ndx* - Peripheral Ref - Subject Index Entry 
+(no...no*) Character - Normal Text; no...no* - Character - Normal Text
+(ord...ord*) Character - Ordinal number text portion; ord...ord* - Special Text - Ordinal number text portion
+(p) PARAGRAPH [First Line Indent]; p - Paragraph - Normal - First Line Indent
+(p) Paragraph - Normal - First Line Indent; p - Paragraph - Normal - First Line Indent
+(pb) Break - Page Break; pb - Break - Page Break
+(pc) Paragraph - Centered; pc - Paragraph - Centered (for Inscription)
+(pc) PARAGRAPH [Centered]; pc - Paragraph - Centered (for Inscription)
+(ph) Paragraph - Hanging Indent - Level 1; li - List Entry - Level 1
+(ph) PARAGRAPH [Hanging Indent]; li - List Entry - Level 1
+(ph1) Paragraph - Hanging Indent - Level 1; li1 - List Entry - Level 1
+(ph2) Paragraph - Hanging Indent - Level 2; li2 - List Entry - Level 2
+(ph3) Paragraph - Hanging Indent - Level 3; li3 - List Entry - Level 3
+OBSOLETE (phi) Paragraph - Indented - Hanging Indent; li - List Entry - Level 1
+(pi) Paragraph - Indented - Level 1 - First Line Indent; pi - Paragraph - Indented - Level 1 - First Line Indent
+(pi1) Paragraph - Indented - Level 1 - First Line Indent; pi1 - Paragraph - Indented - Level 1 - First Line Indent
+(pi2) Paragraph - Indented - Level 2 - First Line Indent; pi2 - Paragraph - Indented - Level 2 - First Line Indent
+(pi3) Paragraph - Indented - Level 3 - First Line Indent; pi3 - Paragraph - Indented - Level 3 - First Line Indent
+(pn...pn*) Character - Proper Name; pn...pn* - Special Text - Proper Name
+(pr) Paragraph - Right Aligned; pmr - Paragraph - Embedded Text Refrain
+(ps) Paragraph - No Break with Next Paragraph; p - Paragraph - Normal - First Line Indent
+(ps) PARAGRAPH [No Break with Next Paragraph]; p - Paragraph - Normal - First Line Indent
+(psi) Paragraph - Indented - No Break with Next; pi - Paragraph - Indented - Level 1 - First Line Indent
+(q) Poetry - Indent Level 1 - Single Level Only; q - Poetry - Indent Level 1 - Single Level Only
+(q1) Poetry - Indent Level 1; q1 - Poetry - Indent Level 1
+(q2) Poetry - Indent Level 2; q2 - Poetry - Indent Level 2
+(q3) Poetry - Indent Level 3; q3 - Poetry - Indent Level 3
+(qa) Poetry - Acrostic Heading/Marker; qa - Poetry - Acrostic Heading/Marker
+(qac...qac*) Poetry Text - Acrostic Letter; qac...qac* - Poetry Text - Acrostic Letter
+(qc) Poetry - Centered; qc - Poetry - Centered
+(qr) Poetry - Right Aligned; qr - Poetry - Right Aligned
+(qs...qs*) Poetry Text - Selah; qs...qs* - Poetry Text - Selah
+(qt...qt*) Special - Quoted Text - OT in NT; qt...qt* - Special Text - Quoted Text - OT in NT
+(r) Heading - Parallel References; r - Heading - Parallel References
+(rem) File - Remark; rem - File - Remark
+(restore) File - Restore Information; restore - File - Restore Information
+(s) Heading - Section Level 1; s - Heading - Section Level 1
+(s1) Heading - Section Level 1; s1 - Heading - Section Level 1
+(s2) Heading - Section Level 2; s2 - Heading - Section Level 2
+(s3) Heading - Section Level 3; s3 - Heading - Section Level 3
+(s4) Heading - Section Level 4; s4 - Heading - Section Level 4
+(sc...sc*) Character - Small Caps; sc...sc* - Character - Small Caps
+(sig...sig*) Character - Author's Signature (Epistles); sig...sig* - Special Text - Author's Signature (Epistles)
+(sp) Heading - Speaker; sp - Heading - Speaker
+(tc1) Table - Column 1 Cell; tc1 - Table - Column 1 Cell
+(tc2) Table - Column 2 Cell; tc2 - Table - Column 2 Cell
+(tc3) Table - Column 3 Cell; tc3 - Table - Column 3 Cell
+(tc4) Table - Column 4 Cell; tc4 - Table - Column 4 Cell
+(tcr1) Table - Column 1 Cell - Right Aligned; tcr1 - Table - Column 1 Cell - Right Aligned
+(tcr2) Table - Column 2 Cell - Right Aligned; tcr2 - Table - Column 2 Cell - Right Aligned
+(tcr3) Table - Column 3 Cell - Right Aligned; tcr3 - Table - Column 3 Cell - Right Aligned
+(tcr4) Table - Column 4 Cell - Right Aligned; tcr4 - Table - Column 4 Cell - Right Aligned
+(th1) Table - Column 1 Heading; th1 - Table - Column 1 Heading
+(th2) Table - Column 2 Heading; th2 - Table - Column 2 Heading
+(th3) Table - Column 3 Heading; th3 - Table - Column 3 Heading
+(th4) Table - Column 4 Heading; th4 - Table - Column 4 Heading
+(thr1) Table - Column 1 Heading - Right Aligned; thr1 - Table - Column 1 Heading - Right Aligned
+(thr2) Table - Column 2 Heading - Right Aligned; thr2 - Table - Column 2 Heading - Right Aligned
+(thr3) Table - Column 3 Heading - Right Aligned; thr3 - Table - Column 3 Heading - Right Aligned
+(thr4) Table - Column 4 Heading - Right Aligned; thr4 - Table - Column 4 Heading - Right Aligned
+(tl...tl*) Character - Transliterated Word; tl...tl* - Special Text - Transliterated Word
+(tr) Table - Row; tr - Table - Row
+(tr1) TABLE [Row]; tr - Table - Row
+(tr2) TABLE [Row]; tr - Table - Row
+OBSOLETE (tr1) Table - Row - Level 1; tr - Table - Row
+OBSOLETE (tr2) Table - Row - Level 2; tr - Table - Row
+(v) Verse Number; v - Verse Number
+(va) Verse Number - Alternate; va...va* - Verse Number - Alternate
+(vp) Verse Number - Publishing Alternate; vp...vp* - Verse Number - Publishing Alternate
+(w...w*) Auxiliary - Wordlist Entry; w...w* - Peripheral Ref - Wordlist Entry
+(wg...wg*) Auxiliary - Greek Wordlist Entry; wg...wg* - Peripheral Ref - Greek Wordlist Entry
+(wg) CHARACTER [Greek Wordlist Entry]; wg...wg* - Peripheral Ref - Greek Wordlist Entry
+(wh...wh*) Auxiliary - Hebrew Wordlist Entry; wh...wh* - Peripheral Ref - Hebrew Wordlist Entry
+(wr...wr*) Auxiliary - Wordlist/Glossary Reference; w...w* - Peripheral Ref - Wordlist Entry
+(x...x*) Cross Reference; x...x* - Cross Reference
+(xdc...xdc*) Cross Reference - DC Target Refs; xdc...xdc* - Cross Reference - DC Target Refs
+(xk) Cross Reference - Keyword; xk - Cross Reference - Keyword
+(xo) Cross Reference - Origin Reference; xo - Cross Reference - Origin Reference
+(xq) Cross Reference - Quotation; xq - Cross Reference - Quotation
+(xt) Cross Reference - Target References; xt - Cross Reference - Target References

@@ -1,0 +1,7 @@
+It seems you have not removed 2.301-1.02, so let's work on that. I looked up on the internet how to do that in Windows 7, and found these steps:
+1. Close all Word windows.
+2. Tap the Windows key or click the windows symbol at the bottom left of the screen, where the word START used to be. This should open the start menu.
+3. In the right-hand column, just below Computer, you should see Control Panel. Click it.
+4. In Control Panel, click Programs, then Uninstall a program.
+5. Find SILAS and click it, then click Uninstall/Change and remove it.
+6. Look for any other versions of SILAS and remove them as well.

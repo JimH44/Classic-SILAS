@@ -1,0 +1,55 @@
+Problem report with Silas, 
+  Smart Interactive Layout Assistant for Scripture
+==================================================
+
+If you have a problem with Silas, please fill in the details in this form
+and send it to BOTH of:
+  kblewett@Gmail.com
+  Jim.Henderson44@Gmail.com
+
+From:
+  Name:
+  Email address:
+
+Computer operating system:
+
+  (eg. Windows XP Pro SP2, Windows Vista)
+    (To find this information, 
+       right-click "My Computer" and select Properties.
+       For example, mine is Windows XP, Professional, Version 2002, SP3.)
+
+Version of MS Word:
+
+  (eg. Word 2003 (11.8125.8122) SP2)
+    (To find this information, 
+       when Word is open, 
+         open the Help menu and 
+         send the details in the item called "About".)
+
+Version of Silas:
+
+  (eg. version 2.205, build 1.02)
+    (To find this information, 
+      when Silas is attached to a file, 
+        open the menu called ScrLanguages and 
+        select the item "Show Template version".)
+
+Please be very specific about error messages -- the exact wording or a screen shot help a lot.
+To send a screenshot, operate the Print Screen key (which sometimes requires that you hold down a key called "Fn" at the seme time.) This will put a screenshot in the clipboard.
+Do START->Run->mspaint, then in that program, do Ctrl-V to paste in the screenshot.
+Do File->Save As and choose the type PNG (Portable Network Graphics) and attach that file to your email message.
+
+Please answer the following questions:
+
+What did you do and what happened?
+
+  (eg. Exported text from Paratext and used the Tools menu item to attach Silas.)
+
+
+  (eg. Silas asked me to "Set language and paper size" but nothing happened.)
+
+
+What did you expect to happen?
+
+  (eg. Silas should have recognised the language name from the ID line.)
+

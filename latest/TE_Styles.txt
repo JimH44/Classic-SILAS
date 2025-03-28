@@ -1,0 +1,116 @@
+TE_Styles.txt -- control file for converting Translation Editor style names 
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+Abbreviation
+Alluded Text
+Alternate Reading; fq - Footnote - Quotation or Alternate Rendering
+Attribution
+Book ID; id - File - Identification
+Book Title In Text; bk...bk* - Special Text - Quoted book title
+Canonical Reference
+Caption; fig...fig* - Auxiliary - Figure/Illustration/Map
+Chapter Head; cl - Chapter - Publishing Label
+Chapter Number; c - Chapter Number
+Chapter Number Alternate; ca...ca* - Chapter Number - Alternate
+Citation Line1; q1 - Poetry - Indent Level 1
+Citation Line2; q2 - Poetry - Indent Level 2
+Citation Paragraph; mi - Paragraph - Indented - No First Line Indent
+Closing; cls - Paragraph - Closure of an Epistle
+Congregational Response; lit - Special Text - Liturgical note
+Cross-Reference; rq...rq* - Cross Reference - Inline Quotation References
+Doxology; qc - Poetry - Centered
+Embedded Text Closing; pmc - Paragraph - Embedded Text Closing
+Embedded Text Line1; qm1 - Poetry - Embedded Text - Indent Level 1
+Embedded Text Line2; qm2 - Poetry - Embedded Text - Indent Level 2
+Embedded Text Line3; qm3 - Poetry - Embedded Text - Indent Level 3
+Embedded Text Opening; pmo - Paragraph - Embedded Text Opening
+Embedded Text Paragraph; pm - Paragraph - Embedded Text
+Embedded Text Paragraph Continuation; mi - Paragraph - Indented - No First Line Indent
+Embedded Text Refrain; pmr - Paragraph - Embedded Text Refrain
+Emphasis; em...em* - Character - Emphasized Text
+Foreign; tl...tl* - Special Text - Transliterated Word
+Gloss
+Hand; sig...sig* - Special Text - Author's Signature (Epistles)
+Header; h - File - Header
+Hebrew Title; d - Heading - Descriptive Title - Hebrew Subtitle
+Inscription; sc...sc* - Character - Small Caps
+Inscription Paragraph; pc - Paragraph - Centered (for Inscription)
+Interlude; qs...qs* - Poetry Text - Selah
+Intro Citation Line1; iq1 - Introduction - Poetry Level 1
+Intro Citation Line2; iq2 - Introduction - Poetry Level 2
+Intro Citation Paragraph; imq - Introduction - Paragraph - quote from text - no first line indent
+Intro Cross-Reference; ipr - Introduction - Paragraph - right aligned
+Intro List Item1; io1 - Introduction - Outline Level 1
+Intro List Item2; io2 - Introduction - Outline Level 2
+Intro List Item3; io3 - Introduction - Outline Level 3
+Intro Paragraph; ip - Introduction - Paragraph
+Intro Section Head; is - Introduction - Section Heading Level 1
+Key Word; k...k* - Special Text - Keyword
+Label
+Line1; q1 - Poetry - Indent Level 1
+Line2; q2 - Poetry - Indent Level 2
+Line3; q3 - Poetry - Indent Level 3
+List Item1; li1 - List Entry - Level 1
+List Item1 Additional; pi1 - Paragraph - Indented - Level 1 - First Line Indent
+List Item2; li2 - List Entry - Level 2
+List Item2 Additional; pi2 - Paragraph - Indented - Level 2 - First Line Indent
+List Item3; li3 - List Entry - Level 3
+Mentioned
+Name Of God; nd...nd* - Special Text - Name of Deity
+Normal
+Notation Author; rem - File - Remark
+Notation Date; rem - File - Remark
+Notation Date Created; rem - File - Remark
+Notation Date Modified; rem - File - Remark
+Notation Date Resolved; rem - File - Remark
+Notation Discussion; rem - File - Remark
+Notation Quote; rem - File - Remark
+Notation Resolution; rem - File - Remark
+Notation Suggestion; rem - File - Remark
+Notation Tag
+Note Cross-Reference Paragraph; x...x* - Cross Reference
+Note General Paragraph; f...f* - Footnote 
+Note Marker; _Footnote_Reference
+Note Target Reference; fr - Footnote - Reference
+The TE style above should be xo in cross references, but it's good enough for now.
+Ordinal Number Ending; ord...ord* - Special Text - Ordinal number text portion
+Paragraph; p - Paragraph - Normal - First Line Indent
+Paragraph Continuation; m - Paragraph - Margin - No First Line Indent
+Parallel Passage Reference; r - Heading - Parallel References
+Quoted Text; qt...qt* - Special Text - Quoted Text - OT in NT
+Referenced Text; fk - Footnote - Keyword
+Refrain; qr - Poetry - Right Aligned
+Remark; rem - File - Remark
+Section Head; s - Heading - Section Level 1
+Section Head Major; ms - Heading - Major Section Level 1
+Section Head Minor; s2 - Heading - Section Level 2
+Section Head Series; qa - Poetry - Acrostic Heading/Marker
+Section Range Paragraph; mr - Heading - Major Section Range References
+See In Glossary; w...w* - Peripheral Ref - Wordlist Entry
+So Called
+Speech Line1; q1 - Poetry - Indent Level 1
+Speech Line2; q2 - Poetry - Indent Level 2
+Speech Speaker; sp - Heading - Speaker
+Stanza Break; b - Poetry - Stanza Break (Blank Line)
+Supplied; add...add* - Special Text - Translational Addition
+Table Cell; tc1 - Table - Column 1 Cell
+Table Cell Head; th1 - Table - Column 1 Heading
+Table Cell Head Last; th4 - Table - Column 4 Heading
+Table Cell Last; tc4 - Table - Column 4 Cell
+Table Row; tr - Table - Row
+Title Main; mt - Title - Major Title Level 1
+Title Secondary; mt2 - Title - Major Title Level 2
+Title Tertiary; mt3 - Title - Major Title Level 3
+Untranslated Word; tl...tl* - Special Text - Transliterated Word
+Variant; fqa - Footnote - Alternate Translation Rendering
+Variant Paragraph; p - Paragraph - Normal - First Line Indent
+Variant Section Head; s - Heading - Section Level 1
+Variant Section Tail
+Verse Number; v - Verse Number
+Verse Number Alternate; va...va* - Verse Number - Alternate
+Verse Number In Note; fv...fv* - Footnote - Embedded Verse Number
+Words Of Christ; wj...wj* - Special Text - Words of Jesus

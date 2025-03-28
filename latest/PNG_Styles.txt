@@ -1,0 +1,80 @@
+PNG_Styles.txt -- control file for updating style names
+in files based on the PNG template, so SILAS can format them.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+Stylenames without a semicolon won't be updated.
+
+Bar-b;bd...bd* - Character - Bold Text
+Bar-i;it...it* - Character - Italic Text
+Bar-sc;sc...sc* - Character - Small Caps
+Book Number Psalms;ms1 - Heading - Major Section Level 1
+Book Ref Psalms; mr - Heading - Major Section Range References
+Bookname;h - File - Header
+Chapter Number;c - Chapter Number
+Choir Direction;d - Heading - Descriptive Title - Hebrew Subtitle
+Division;ms - Heading - Major Section Level 1
+Division Reference;mr - Heading - Major Section Range References
+Footnote Text;f...f* - Footnote 
+fr - Reference;fr - Footnote - Reference
+ft - Text;ft - Footnote - Text
+fk - Keyword;fk - Footnote - Keyword
+fq - Quotation or Alternate;fq - Footnote - Quotation or Alternate Rendering
+fqa - Alternate Rendering;fqa - Footnote - Alternate Translation Rendering
+fl - Label Text;fl - Footnote - Label Text
+fp - Paragraph Mark;fp - Footnote Paragraph Mark
+fv...fv* - Verse Number;fv...fv* - Footnote - Embedded Verse Number
+Glos Definition;mi - Paragraph - Indented - No First Line Indent
+Glos Main Entry;li1 - List Entry - Level 1
+Glos Paragraph;mi - Paragraph - Indented - No First Line Indent
+Glos Sub-entry;li2 - List Entry - Level 2
+Hebrew Letter;d - Heading - Descriptive Title - Hebrew Subtitle
+Horizontal Rule;_ibr - Introduction - Blank Line - Rule
+Identification;id - File - Identification
+Indent Para;pi - Paragraph - Indented - Level 1 - First Line Indent
+Indent Para Cont;mi - Paragraph - Indented - No First Line Indent
+Intro Outline 1;io1 - Introduction - Outline Level 1
+Intro Outline 2;io2 - Introduction - Outline Level 2
+Intro Outline 3;io3 - Introduction - Outline Level 3
+Intro Paragraph;ip - Introduction - Paragraph
+Intro Paragraph Cont;im - Introduction - Paragraph - no first line indent
+Intro Quote;iq1 - Introduction - Poetry Level 1
+Intro Quote 2;iq2 - Introduction - Poetry Level 2
+Intro Section Head;is1 - Introduction - Section Heading Level 1
+Preface Section Head;is1 - Introduction - Section Heading Level 1
+Main Title;mt - Title - Major Title Level 1
+Note Centered;pc - Paragraph - Centered (for Inscription)
+Para Spanning Chap;nb - Paragraph - No Break with Previous Paragraph
+Paragraph;p - Paragraph - Normal - First Line Indent
+Paragraph Cont;m - Paragraph - Margin - No First Line Indent
+Poetry Centered;qc - Poetry - Centered
+Poetry Extra 1
+Poetry Extra 2
+Poetry Left;li1 - List Entry - Level 1
+Poetry List;q - Poetry - Indent Level 1 - Single Level Only
+Poetry Right;qr - Poetry - Right Aligned
+Preface - Title;imt - Introduction - Major Title Level 1
+Preface Cont;im - Introduction - Paragraph - no first line indent
+Preface Paragraph;ip - Introduction - Paragraph
+Preface Poetry;iq1 - Introduction - Poetry Level 1
+Quote/Poetry;q1 - Poetry - Indent Level 1
+Quote 2;q2 - Poetry - Indent Level 2
+Quote 3;q3 - Poetry - Indent Level 3
+Reference;r - Heading - Parallel References
+Reference Right;rq...rq* - Cross Reference - Inline Quotation References
+Secondary Title;mt2 - Title - Major Title Level 2
+Section Extra 1;s3 - Heading - Section Level 3
+Section Extra 2;s4 - Heading - Section Level 4
+Section Head;s - Heading - Section Level 1
+Speaker;sp - Heading - Speaker
+T-I Head1 vernacular;m - Paragraph - Margin - No First Line Indent
+T-I Head2 vernacular;li1 - List Entry - Level 1
+T-I Head3 vernacular;li2 - List Entry - Level 2
+T-I reference;xt - Cross Reference - Target References
+Verse Num;v - Verse Number
+xo - Origin Reference;xo - Cross Reference - Origin Reference
+xt - Target References;xt - Cross Reference - Target References
+xk - Keyword;xk - Cross Reference - Keyword
+xq - Quotation;xq - Cross Reference - Quotation

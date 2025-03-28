@@ -1,0 +1,40 @@
+Custom_Styles.txt -- control file for standardizing non-standard style names.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+Use this control file if you have some non-standard stylenames,
+using Recent_Styles.txt as a model.
+
+Book; h3 - File - Right Header
+BookGroup; h2 - File - Left Header
+Book:Para; mt2 - Title - Major Title Level 2
+
+parallelPassage; r - Heading - Parallel References
+
+Paragraph; p - Paragraph - Normal - First Line Indent
+p; p - Paragraph - Normal - First Line Indent
+pv; p - Paragraph - Normal - First Line Indent
+pv1; p - Paragraph - Normal - First Line Indent
+pc; m - Paragraph - Margin - No First Line Indent
+pcv; m - Paragraph - Margin - No First Line Indent
+
+q; q - Poetry - Indent Level 1 - Single Level Only
+q2; q2 - Poetry - Indent Level 2
+qe_p; m - Paragraph - Margin - No First Line Indent
+qe_pc; m - Paragraph - Margin - No First Line Indent
+qe_pcv; m - Paragraph - Margin - No First Line Indent
+qe_pv; p - Paragraph - Normal - First Line Indent
+qq2; q2 - Poetry - Indent Level 2
+qs_q; q - Poetry - Indent Level 1 - Single Level Only
+qs_qv; q - Poetry - Indent Level 1 - Single Level Only
+Qv; q - Poetry - Indent Level 1 - Single Level Only
+qv; q - Poetry - Indent Level 1 - Single Level Only
+
+Section; toc1 - File - Long Table of Contents Text
+Section:Para; s - Heading - Section Level 1
+Sections; ms - Heading - Major Section Level 1
+
+Version; h2 - File - Left Header
+Version:Para; mt1 - Title - Major Title Level 1

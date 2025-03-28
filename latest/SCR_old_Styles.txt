@@ -1,0 +1,100 @@
+﻿SCR_old_Styles.txt -- control file for updating style names
+in files based on old versions of SCR_Vn.dot or SCR_PN95, so SILAS can format them.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+Stylenames without a semicolon won't be updated.
+
+Bar-b;bd...bd* - Character - Bold Text
+Bar-i;it...it* - Character - Italic Text
+Bar-sc;sc...sc* - Character - Small Caps
+Blank Line; b - Poetry - Stanza Break (Blank Line)
+Book Number Psalms; ms - Heading - Major Section Level 1
+Book Ref Psalms; mr - Heading - Major Section Range References
+Bookname; h - File - Header
+Chapter Number; c - Chapter Number
+Choir Direction;d - Heading - Descriptive Title - Hebrew Subtitle
+Division Reference;mr - Heading - Major Section Range References
+Division;ms - Heading - Major Section Level 1
+Emphasized Word(s); em...em* - Character - Emphasized Text
+Explanatory Material; iex - Introduction - Explanatory or Bridge Text
+fk - Keyword;fk - Footnote - Keyword
+fl - Label Text;fl - Footnote - Label Text
+Footnote Text; f...f* - Footnote
+fp - Paragraph Mark;fp - Footnote Paragraph Mark
+fq - Quotation or Alternate;fq - Footnote - Quotation or Alternate Rendering
+fqa - Alternate Rendering;fqa - Footnote - Alternate Translation Rendering
+fr - Reference;fr - Footnote - Reference
+ft - Text;ft - Footnote - Text
+fv...fv* - Verse Number;fv...fv* - Footnote - Embedded Verse Number
+Glos Definition;mi - Paragraph - Indented - No First Line Indent
+Glos Main Entry;li1 - List Entry - Level 1
+Glos Paragraph;mi - Paragraph - Indented - No First Line Indent
+Glos Sub-entry;li2 - List Entry - Level 2
+Hebrew Letter;d - Heading - Descriptive Title - Hebrew Subtitle
+Horizontal Rule;_ibr - Introduction - Blank Line - Rule
+Identification; id - File - Identification
+Implied Info; add...add* - Special Text - Translational Addition
+Indent Para Cont; mi - Paragraph - Indented - No First Line Indent
+Indent Para; pi - Paragraph - Indented - Level 1 - First Line Indent
+Inscription; pc - Paragraph - Centered (for Inscription)
+Intro End; ie - Introduction - End Marker
+Intro Outline 1; io1 - Introduction - Outline Level 1
+Intro Outline 2; io2 - Introduction - Outline Level 2
+Intro Outline 3; io3 - Introduction - Outline Level 3
+Intro Paragraph Cont; im - Introduction - Paragraph - no first line indent
+Intro Paragraph; ip - Introduction - Paragraph
+Intro Quote 2; iq2 - Introduction - Poetry Level 2
+Intro Quote; iq - Introduction - Poetry Level 1
+Intro Section Head; is - Introduction - Section Heading Level 1
+Keyword; k...k* - Special Text - Keyword
+Main Title; mt - Title - Major Title Level 1
+Name of Deity; nd...nd* - Special Text - Name of Deity
+Name of YHWH; nd...nd* - Special Text - Name of Deity
+Note Centered;pc - Paragraph - Centered (for Inscription)
+Notes Consultant; rem - File - Remark
+Onomatopoetic Word; tl...tl* - Special Text - Transliterated Word
+OT Reference; rq...rq* - Cross Reference - Inline Quotation References
+Para Spanning Chap;nb - Paragraph - No Break with Previous Paragraph
+Paragraph Cont; m - Paragraph - Margin - No First Line Indent
+Paragraph; p - Paragraph - Normal - First Line Indent
+Picture Caption; fig...fig* - Auxiliary - Figure/Illustration/Map
+Picture Description; fig...fig* - Auxiliary - Figure/Illustration/Map
+Picture ID# Catalog; fig...fig* - Auxiliary - Figure/Illustration/Map
+Poetry Centered; qc - Poetry - Centered
+Poetry Extra 1
+Poetry Extra 2
+Poetry Left; qm1 - Poetry - Embedded Text - Indent Level 1
+Poetry List; li - List Entry - Level 1
+Poetry Right; qr - Poetry - Right Aligned
+Preface - Title;imt - Introduction - Major Title Level 1
+Preface Cont;im - Introduction - Paragraph - no first line indent
+Preface Paragraph;ip - Introduction - Paragraph
+Preface Poetry;iq1 - Introduction - Poetry Level 1
+Preface Section Head;is1 - Introduction - Section Heading Level 1
+Proper Name; pn...pn* - Special Text - Proper Name
+Quote / Poetry; q1 - Poetry - Indent Level 1
+Quote 2; q2 - Poetry - Indent Level 2
+Quote 3; q3 - Poetry - Indent Level 3
+Quote/Poetry; q1 - Poetry - Indent Level 1
+Quoted Book Title; bk...bk* - Special Text - Quoted book title
+Quoted Text; qt...qt* - Special Text - Quoted Text - OT in NT
+Reference Right;rq...rq* - Cross Reference - Inline Quotation References
+Reference; r - Heading - Parallel References
+Secondary Title; mt2 - Title - Major Title Level 2
+Section Extra 1;s3 - Heading - Section Level 3
+Section Extra 2;s4 - Heading - Section Level 4
+Section Head; s - Heading - Section Level 1
+Speaker; sp - Heading - Speaker
+T-I Head1 vernacular;m - Paragraph - Margin - No First Line Indent
+T-I Head2 vernacular;li1 - List Entry - Level 1
+T-I Head3 vernacular;li2 - List Entry - Level 2
+T-I reference;xt - Cross Reference - Target References
+Transliterated Word(s); tl...tl* - Special Text - Transliterated Word
+Verse Num; v - Verse Number
+xk - Keyword;xk - Cross Reference - Keyword
+xo - Origin Reference;xo - Cross Reference - Origin Reference
+xq - Quotation;xq - Cross Reference - Quotation
+xt - Target References;xt - Cross Reference - Target References

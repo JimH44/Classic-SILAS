@@ -1,0 +1,16 @@
+2.1_Styles.txt -- control file for standardizing non-standard style names.
+from version 2.1 (released on Pt6.1 CD) 
+to those in USFM.sty, version 2.208 of Apr 29, 2009.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+ca - Chapter Number - Alternate; ca...ca* - Chapter Number - Alternate
+va - Verse Number - Alternate; va...va* - Verse Number - Alternate
+vp - Verse Number - Publishing Alternate; vp...vp* - Verse Number - Publishing Alternate
+dc - Special Text - Deuterocanonical/LXX Additions; dc...dc* - Special Text - Deuterocanonical/LXX Additions
+
+imte - Introduction - [Uncommon] Major Title at Introduction End; imte - Introduction - [Uncommon] Major Title at Introduction End Level 1
+
+_sts - Status; rem - File - Status

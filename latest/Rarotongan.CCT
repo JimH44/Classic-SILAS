@@ -1,0 +1,14 @@
+﻿c Rarotongan.CCT - Cook Islands - July 2013
+
+begin   > store(sp) ' ' nl
+          store(longV)  "ĀāĒēĪīŌōŪū"
+          endstore
+
+any(longV) '-'  > dup 
+'-'		> 0U2009	c narrow space, THIN-SPACE
+
+c '~' comes through as no-break space automatically.
+
+'+'		> 0U202F	c NARROW NO-BREAK SPACE
+
+' ' nl          > nl

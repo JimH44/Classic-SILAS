@@ -1,0 +1,32 @@
+# SILAS gitignore begun 2025-03-25
+
+# Previous builds
+v*.*
+NTM
+.hg/
+latest/.hgignore
+latest/.hgignore.bak
+latest/.hgtags
+.hgignore
+
+# History not needed for these
+#
+latest/~$Silas.dot
+latest/~$stall silas.doc
+latest/ca-bit.txt
+latest/backups/
+latest/from John's Wd2007/
+latest/Notsi problem/
+latest/Bit from renumbering footnotes.txt
+
+latest/.~lock.Word2USFM.doc#
+
+latest/diffs 2.103 - 2.204.txt
+
+*.bak
+
+*.zip
+
+*.grip
+
+*.pdf

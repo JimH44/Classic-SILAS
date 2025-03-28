@@ -1,0 +1,48 @@
+\Marker sts
+\Name rem - File - Status
+\Marker addpn
+\Name (addpn...addpn*) - Special Text for Chinese
+\Marker pr
+\Name DEPRECATED pr - Paragraph - Right Aligned
+\Marker ph
+\Name DEPRECATED ph - Paragraph - Hanging Indent - Level 1
+\Marker ph1
+\Name DEPRECATED ph1 - Paragraph - Hanging Indent - Level 1
+\Marker ph2
+\Name DEPRECATED ph2 - Paragraph - Hanging Indent - Level 2
+\Marker ph3
+\Name DEPRECATED ph3 - Paragraph - Hanging Indent - Level 3
+\Marker phi
+\Name DEPRECATED phi - Paragraph - Indented - Hanging Indent
+\Marker tr1
+\Name OBSOLETE tr1 - Table - Row - Level 1
+\Marker tr2
+\Name OBSOLETE tr2 - Table - Row - Level 2
+\Marker ps
+\Name OBSOLETE ps - Paragraph - No Break with Next Paragraph
+\Marker psi
+\Name OBSOLETE psi - Paragraph - Indented - No Break with Next
+\Marker wr
+\Name OBSOLETE wr...wr* - Auxiliary - Wordlist/Glossary Reference 
+\Marker pub
+\Name OBSOLETE pub Peripherals - Front Matter Publication Data
+\Marker toc
+\Name OBSOLETE toc Peripherals - Front Matter Table of Contents
+\Marker pref
+\Name OBSOLETE pref Peripherals - Front Matter Preface
+\Marker intro
+\Name OBSOLETE intro Peripherals - Front Matter Introduction
+\Marker conc
+\Name OBSOLETE conc Peripherals - Back Matter Concordance
+\Marker glo
+\Name OBSOLETE glo Peripherals - Back Matter Glossary
+\Marker idx
+\Name OBSOLETE idx Peripherals - Back Matter Index
+\Marker maps
+\Name OBSOLETE maps Peripherals - Back Matter Map Index
+\Marker cov
+\Name OBSOLETE cov Peripherals - Other - Cover
+\Marker spine
+\Name OBSOLETE spine Peripherals - Other - Spine
+\Marker pubinfo
+\Name OBSOLETE pubinfo - Publication - Information

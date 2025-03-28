@@ -1,0 +1,19 @@
+Replaced_Styles.txt -- control file for replacing deprecated and obsolete style names.
+
+Comment lines have no semi-colons in them.
+Change lines have the old stylename that should be replaced first,
+then after the semicolon the new replacement name.
+
+DEPRECATED ph - Paragraph - Hanging Indent - Level 1; li - List Entry - Level 1
+DEPRECATED ph1 - Paragraph - Hanging Indent - Level 1; li1 - List Entry - Level 1
+DEPRECATED ph2 - Paragraph - Hanging Indent - Level 2; li2 - List Entry - Level 2
+DEPRECATED ph3 - Paragraph - Hanging Indent - Level 3; li3 - List Entry - Level 3
+DEPRECATED phi - Paragraph - Indented - Hanging Indent; li4 - List Entry - Level 4
+DEPRECATED pr - Paragraph - Right Aligned; pmr - Paragraph - Embedded Text Refrain
+
+OBSOLETE tr1 - Table - Row - Level 1; tr - Table - Row
+OBSOLETE tr2 - Table - Row - Level 2; tr - Table - Row
+OBSOLETE ps - Paragraph - No Break with Next Paragraph; p - Paragraph - Normal - First Line Indent
+OBSOLETE psi - Paragraph - Indented - No Break with Next; pi - Paragraph - Indented - Level 1 - First Line Indent
+
+_sts - Status; rem - File - Status

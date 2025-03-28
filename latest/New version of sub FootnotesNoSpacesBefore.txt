@@ -1,0 +1,67 @@
+Sub FootnotesNoSpacesBefore()
+    Dim NrFootnotes As Long
+    Dim i As Long
+    Dim iRefCode As Integer
+    Dim Fnote As Footnote
+    
+    Selection.HomeKey Unit:=wdStory
+    
+    ' For each footnote marker,
+    '   change the explicit number that came from Paratext to an automatic number
+    '   (unless the user put a marker outside the range [a-z])
+    '   apply the style "_Footnote_Reference" to the reference letter
+    '   remove any spaces before it.
+    '
+    NrFootnotes = ActiveDocument.Footnotes.Count
+    
+    If NrFootnotes > 0 Then
+        ActiveDocument.ActiveWindow.View.Type = wdNormalView
+        Application.StatusBar = "    Removing spaces before footnote references -- please wait."
+        Application.ScreenUpdating = False
+        
+        For i = 1 To NrFootnotes
+            Set Fnote = ActiveDocument.Footnotes(i)
+            On Error GoTo -1: On Error GoTo InvalidFootnote
+            Fnote.Reference.Select
+            iRefCode = Asc(Selection.Text)
+            
+            ' If reference character is in the range a-z,
+            '   replace Paratext's explicit number with auto.
+            '
+            If iRefCode >= 97 And iRefCode <= 122 Then
+                
+                With Selection
+                    With .FootnoteOptions
+                        .Location = wdBottomOfPage
+                        .NumberingRule = wdRestartContinuous
+                        .StartingNumber = 1
+                        .NumberStyle = wdNoteNumberStyleLowercaseLetter
+                        .NumberingRule = wdRestartPage
+                    End With
+                    .Footnotes.Add Range:=Selection.Range, Reference:=""
+                End With
+                
+                ActiveDocument.Footnotes(i).Reference.Select
+            End If
+            
+            ' Apply style to each footnote marker
+            '
+            Selection.Font.Reset
+            Selection.Style = "_Footnote_Reference"
+            Selection.Collapse
+            
+            ' Now remove any preceding spaces
+            '
+            Do While Selection.Start > 0
+                Selection.Start = Selection.Start - 1
+                If Selection.Text = " " Then
+                    Selection.Delete
+                Else
+                    Exit Do
+                End If
+            Loop
+InvalidFootnote:
+        On Error GoTo 0
+        Next i
+    End If
+End Sub

@@ -1,0 +1,14 @@
+
+To get the latest version of PNG's Scripture Template for
+MS Word and Paratext 6.0 users (by Kim Blewett and Jim Henderson)
+download it from
+/Departments/LCORE/Software/Scripture Editing/ParaText6
+
+The file to get is:
+Silas-v2.205-1.02-Setup.exe
+(or a later version)
+
+
+To read all about it....
+
+See:  http://mango.sil.org.pg/lss/Paratext

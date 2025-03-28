@@ -1,0 +1,121 @@
+add;Supplied
+b;Stanza Break
+bd;Bold
+bdit;Bold italic
+bk;Book Title In Text
+cd;Chapter description
+cls;Greeting
+conc;Concordance
+cov;Cover
+d;Hebrew Title
+dc;Deuterocanon
+e;Invisible Paragraph
+ebm;Bridge left
+ebp;Bridge paragraph
+ebq;Bridge poetry
+ebs;Bridge title
+em;Emphasized
+f;Footnote
+fdc;Footnote Deuterocanon
+fe;Endnote
+fig;Figure
+fk;Referenced Text
+fl;Footnote Label
+fm;Footnote marker
+fp;Footnote normal
+fq;Quoted from text
+fqa;Alternate Reading
+fr;Note Target Reference
+ft;Footnote
+fv;Verse Number In Note
+glo;Glossary
+h;Invisible Paragraph
+hr;Horizontal Rule
+ib;Intro Stanza Break
+id;Invisible Paragraph
+ide;Invisible Paragraph
+idx;Index
+ie;Introduction end
+iex;Introduction explanatory text
+im;Intro Paragraph Continuation
+imi;Intro Citation Paragraph
+imq;Introduction block quote
+imt;Intro Title Main
+imte;Intro Title End
+intro;Intro
+io;Intro List Item
+ior;Canonical Reference
+iot;Intro Outline Title
+ip;Intro Paragraph
+ipi;Intro Paragraph Indented
+ipq;Intro Paragraph Quote
+ipr;Intro Citation Reference
+iq;Intro Citation Line
+is;Intro Section Head
+it;Italics
+k;Key Word
+keyword;Keyword
+li;List Item
+lit;Congregational Response
+m;Paragraph Continuation
+mi;Letter Greeting
+mr;Section Range
+ms;Section Head Major
+mt;Book Title
+mte;Book Title at Ending
+nd;Name of God
+no;Normal Text
+ord;Ordinal Number Ending
+p;Normal
+pc;Inscription Paragraph
+pde;Discourse End
+pdi;Discourse Intro
+ph;Hanging Indent
+phi;Indented hanging indent
+pi;Letter Paragraph
+pm;Embedded Paragraph
+pmc;Embedded Closing
+pmo;Embedded Opening
+pmr;Embedded Refrain
+pn;Proper name
+pref;Preface
+pro;Pronunciation
+ps;Normal
+psi;Letter Paragraph
+pub;Publication data
+pubinfo;Publication info
+q;Poetry line
+qa;Acrostic heading
+qac;Acrostic letter
+qc;Doxology
+qm;Embedded Poetry
+qr;Poetry right
+qs;Interlude
+qt;Quoted Text
+r;Parallel Passage Reference
+rem;Invisible Paragraph
+rr;Right Reference
+rq;Right Reference
+s;Section title
+sc;Inscription
+sig;Hand
+sls;Secondary Language Source
+sp;Speech Speaker
+spine;Spine
+sr;Section Reference
+th;Table Cell Head
+tl;Foreign
+toc;TOC
+w;Word listed
+wg;Word list Greek
+wh;Word list Hebrew
+wj;Words of Jesus
+wr;Word listed
+x;Note Xref
+xdc;Crossreference Deuterocanon
+xk;Crossreference keywords
+xo;Crossreference origin
+xq;Crossreference Scripture quote
+xt;Crossreference target references
+zc;zc
+zp;zp

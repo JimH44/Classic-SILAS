@@ -1,0 +1,9 @@
+How to handle non-ASCII digits, when adding \v before verse numbers
+
+Problem:
+Arabic or other digits are not recognised, so don't get \v before them.
+
+How to fix it:
+1. Modify FixCodes so it recognises all digit ranges
+   No, because Paratext needs ASCI digits for \c and presumably \v codes.
+2. Convert all non-ASCII digits to ASCII in FixCodes
