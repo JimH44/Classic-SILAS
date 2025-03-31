@@ -6263,11 +6263,11 @@ Public Sub SetIniFile()
             Lib1.EndMacro
         End If
     End If
-    MsgBox "About to set IniFile from " + PtSettingsDir + " and " + LangIniFile, vbOKOnly
+    ' MsgBox "XXX: About to set IniFile from " + PtSettingsDir + " and " + LangIniFile, vbOKOnly
     
     CheckPath PtSettingsDir
     IniFile = PtSettingsDir & LangIniFile
-    MsgBox "IniFile is " + IniFile, vbOKOnly
+    ' MsgBox "XXX: IniFile is " + IniFile, vbOKOnly
 End Sub
 Public Function SetPathVariables() As Boolean
     Dim fs As Object

@@ -279,21 +279,21 @@ Dim NewBuild As Double, OldBuild As Double
 'Dim fs As Object 'in globals
 Dim ScrTemplatePath As String
 
-    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
-        "PtPathFromReg is " & PtPathFromReg & " and adding Languages.ini.", vbOKOnly)
+    ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+    '     "PtPathFromReg is " & PtPathFromReg & " and adding Languages.ini.", vbOKOnly)
         
     CheckPath PtPathFromReg
     
-    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
-        "PtPathFromReg is " & PtPathFromRe, vbOKCancel)
+    ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+    '     "PtPathFromReg is " & PtPathFromRe, vbOKCancel)
             
     IniFile = PtPathFromReg & "Languages.ini"
     NewVersion = InternationalCDbl(SilasInstallVersion)
     Set fs = CreateObject("Scripting.FileSystemObject")
     
-    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
-        "IniFile is " & IniFile & ", and" & vbCrLf & _
-        "ScrTemplateFileName is " & ScrTemplateFileName & ".", vbOKOnly)
+    ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+    '     "IniFile is " & IniFile & ", and" & vbCrLf & _
+    '     "ScrTemplateFileName is " & ScrTemplateFileName & ".", vbOKOnly)
         
     If UseUserTemplates Then
         ScrTemplatePath = NormalTemplate.Path & Application.PathSeparator & ScrTemplateFileName
@@ -301,8 +301,8 @@ Dim ScrTemplatePath As String
         ScrTemplatePath = PtSettingsDir & ScrTemplateFileName
     End If
     
-    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
-        "ScrTemplatePath is " & ScrTemplatePath & ".", vbOKCancel)
+    ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+    '     "ScrTemplatePath is " & ScrTemplatePath & ".", vbOKCancel)
         
     If fs.FileExists(ScrTemplatePath) = True Then
         'Check previous template version from Inifile setting
@@ -575,6 +575,37 @@ End_All:
     ActiveWindow.ActivePane.View.Type = PageOrPrintView
     ActiveWindow.ActivePane.View.Zoom.PageFit = wdPageFitTextFit
 End Sub
+Sub ExportAllModules()
+    Dim strPath As String
+    Dim vbc As Object
+    With Application.FileDialog(msoFileDialogFolderPicker)
+        .Title = "Please select the folder within Modules for this export."
+        
+        If .Show Then
+            strPath = .SelectedItems(1)
+            If Right(strPath, 1) <> "\" Then
+                strPath = strPath & "\"
+            End If
+            For Each vbc In ActiveDocument.VBProject.VBComponents
+                Select Case vbc.Type
+                    Case 1  'vbext_ct_StdModule
+                      vbc.Export strPath & vbc.Name & ".txt"
+                    Case 100    ' vbext_ct_Document, vbext_ct_ClassModule
+                      ' ThisDocument and class modules
+                      vbc.Export strPath & vbc.Name & ".cls"
+                    Case 3  ' vbext_ct_MSForm
+                      vbc.Export strPath & vbc.Name & ".frm"
+                    Case Else
+                      vbc.Export strPath & vbc.Name
+                    End Select
+                ' vbc.Export strPath & vbc.Name & ".txt"
+            Next vbc
+        Else
+            MsgBox "No folder specified...", vbExclamation
+        End If
+    End With
+    MsgBox "Exporting finished.", vbInformation
+End Sub
 Function InstallFile(ByVal DstPath As String, _
                     FileName As String, _
                     CustomFile As Boolean, _
@@ -743,35 +774,4 @@ End If
 InternationalCDbl = CDbl(Adjusted)
 
 End Function
-Sub ExportAllModules()
-    Dim strPath As String
-    Dim vbc As Object
-    With Application.FileDialog(msoFileDialogFolderPicker)
-        .Title = "Please select the folder within Modules for this export."
-        
-        If .Show Then
-            strPath = .SelectedItems(1)
-            If Right(strPath, 1) <> "\" Then
-                strPath = strPath & "\"
-            End If
-            For Each vbc In ActiveDocument.VBProject.VBComponents
-                Select Case vbc.Type
-                    Case 1  'vbext_ct_StdModule
-                      vbc.Export strPath & vbc.Name & ".txt"
-                    Case 100    ' vbext_ct_Document, vbext_ct_ClassModule
-                      ' ThisDocument and class modules
-                      vbc.Export strPath & vbc.Name & ".cls"
-                    Case 3  ' vbext_ct_MSForm
-                      vbc.Export strPath & vbc.Name & ".frm"
-                    Case Else
-                      vbc.Export strPath & vbc.Name
-                    End Select
-                ' vbc.Export strPath & vbc.Name & ".txt"
-            Next vbc
-        Else
-            MsgBox "No folder specified...", vbExclamation
-        End If
-    End With
-    MsgBox "Exporting finished.", vbInformation
-End Sub
 
