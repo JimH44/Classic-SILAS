@@ -31,7 +31,7 @@ Dim LanguageProvince As String  ' for front matter
 Public IniFile As String        ' settings filename + path
 
 ' These are set by LoadLanguageData from the ID line
-' and "C:\My Paratext Projects\Languages.ini"
+' and "C:\My Paratext 9 Projects\Languages.ini"
 
 Public PtSettingsPathFromReg As String  ' Path to Pt settings folder in Registry
                                         ' (actually put there when Tr Notes Editor installed.)
@@ -6263,7 +6263,11 @@ Public Sub SetIniFile()
             Lib1.EndMacro
         End If
     End If
+    MsgBox "About to set IniFile from " + PtSettingsDir + " and " + LangIniFile, vbOKOnly
+    
+    CheckPath PtSettingsDir
     IniFile = PtSettingsDir & LangIniFile
+    MsgBox "IniFile is " + IniFile, vbOKOnly
 End Sub
 Public Function SetPathVariables() As Boolean
     Dim fs As Object

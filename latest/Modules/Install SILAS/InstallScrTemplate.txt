@@ -212,7 +212,7 @@ CloseInstallDoc:
 End Sub
 Sub CreateIniFile()
 ' use writestream to create "Languages.ini" in the Paratext settings folder if it's missing,
-' in "c:\my paratext projects\" or wherever the Paratext settings folder is on this computer.
+' in "c:\my paratext 9 projects\" or wherever the Paratext settings folder is on this computer.
 ' No languages entered yet
 ' First check to see if Languages.ini exists in the folder
 ' where the attached template is
@@ -279,16 +279,31 @@ Dim NewBuild As Double, OldBuild As Double
 'Dim fs As Object 'in globals
 Dim ScrTemplatePath As String
 
+    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+        "PtPathFromReg is " & PtPathFromReg & " and adding Languages.ini.", vbOKOnly)
+        
+    CheckPath PtPathFromReg
+    
+    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+        "PtPathFromReg is " & PtPathFromRe, vbOKCancel)
+            
     IniFile = PtPathFromReg & "Languages.ini"
     NewVersion = InternationalCDbl(SilasInstallVersion)
     Set fs = CreateObject("Scripting.FileSystemObject")
     
+    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+        "IniFile is " & IniFile & ", and" & vbCrLf & _
+        "ScrTemplateFileName is " & ScrTemplateFileName & ".", vbOKOnly)
+        
     If UseUserTemplates Then
         ScrTemplatePath = NormalTemplate.Path & Application.PathSeparator & ScrTemplateFileName
     Else
         ScrTemplatePath = PtSettingsDir & ScrTemplateFileName
     End If
     
+    response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
+        "ScrTemplatePath is " & ScrTemplatePath & ".", vbOKCancel)
+        
     If fs.FileExists(ScrTemplatePath) = True Then
         'Check previous template version from Inifile setting
         If fs.FileExists(IniFile) = True Then
