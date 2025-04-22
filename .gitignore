@@ -20,6 +20,7 @@ latest/Notsi problem/
 latest/Bit from renumbering footnotes.txt
 
 latest/.~lock.Word2USFM.doc#
+~*.doc
 
 latest/diffs 2.103 - 2.204.txt
 
@@ -32,3 +33,5 @@ latest/diffs 2.103 - 2.204.txt
 *.pdf
 
 *.frx
+
+*.swp
