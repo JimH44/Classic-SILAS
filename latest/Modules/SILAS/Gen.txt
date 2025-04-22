@@ -6,8 +6,8 @@ Attribute VB_Name = "Gen"
 ' Global variables
 '
 Public Const UseUserTemplates As Boolean = True
-Public Const GenSilasVersion As String = "2.35"
-Public Const GenSilasBuild As String = "1.23"
+Public Const GenSilasVersion As String = "3.0.10"
+Public Const GenSilasBuild As String = "1.02"
 Public Const PageOrPrintView As Integer = 3 ' because different versions of Word use different names.
 Public Const HiddenColor = wdWhite
 ' Public Const HiddenColor = wdYellow
