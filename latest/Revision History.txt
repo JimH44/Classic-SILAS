@@ -16,14 +16,16 @@ NEEDED
 	as well as chapter numbers.
 -Work out why attaching Silas to RTF attached to an email
 	can't find Custom_Styles.txt nor show folder name.
--Make installer use C:\My Paratext 9 Projects 
-	instead of C:\My Paratext Projects
+
+Silas 3.0.10-1.02 by Jim, 22 Mar 2025
+=====================================
 
 Silas 2.35-1.23 by Jim, 15 Mar 2025
 ===================================
 "Read me" message in How ToInstall.rtf no longer too wide.
 Improved search for Paratext installation & Projects folder
 ExportAllModules macro now in each file.
+Installer defaults to C:\My Paratext 9 Projects
 
 Silas 2.35-1.22 by Jim, 24 Oct 2018
 ==================================

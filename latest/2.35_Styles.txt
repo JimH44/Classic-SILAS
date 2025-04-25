@@ -5,3 +5,15 @@ Change lines have the old stylename that should be replaced first,
 then after the semicolon the new replacement name.
 
 Use this control file if you have some non-standard stylenames.
+
+h1 - File - Header; DEPRECATED h1 - File - Header
+h2 - File - Left Header; DEPRECATED h2 - File - Left Header
+h3 - File - Right Header; DEPRECATED h3 - File - Right Header
+cls - Paragraph - Closure of an Epistle; cls - Paragraph - Letter Closing
+sp - Heading - Speaker; sp - Label - Speaker
+(addpn...addpn*) - Special Text for Chinese; DEPRECATED addpn...addpn* - Special Text for Chinese
+DEPRECATED pr - Paragraph - Right Aligned; pr - Paragraph - Text Refrain (right aligned)
+OBSOLETE tr1 - Table - Row - Level 1; DEPRECATED tr1 - Table - Row - Level 1
+OBSOLETE tr2 - Table - Row - Level 2; DEPRECATED tr2 - Table - Row - Level 2
+OBSOLETE ps - Paragraph - No Break with Next Paragraph; DEPRECATED ps - Paragraph - No Break with Next Paragraph
+OBSOLETE psi - Paragraph - Indented - No Break with Next; DEPRECATED psi - Paragraph - Indented - No Break with Next
