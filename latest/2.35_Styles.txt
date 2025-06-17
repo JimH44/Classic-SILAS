@@ -1,4 +1,6 @@
-Latest_Styles.txt -- control file for standardizing non-standard style names.
+2.35_Styles.txt -- control file for standardizing non-standard style names
+and for updating text formatted with USFM version 2.35
+to match the latest stylesheet released with Paratext, 3.0.10
 
 Comment lines have no semi-colons in them.
 Change lines have the old stylename that should be replaced first,
@@ -12,7 +14,9 @@ h3 - File - Right Header; DEPRECATED h3 - File - Right Header
 cls - Paragraph - Closure of an Epistle; cls - Paragraph - Letter Closing
 sp - Heading - Speaker; sp - Label - Speaker
 (addpn...addpn*) - Special Text for Chinese; DEPRECATED addpn...addpn* - Special Text for Chinese
+addpn...addpn* - Special Text for Chinese; DEPRECATED addpn...addpn* - Special Text for Chinese
 DEPRECATED pr - Paragraph - Right Aligned; pr - Paragraph - Text Refrain (right aligned)
+OBSOLETE idx Peripherals - Back Matter Index; DEPRECATED idx Peripherals - Back Matter Index
 OBSOLETE tr1 - Table - Row - Level 1; DEPRECATED tr1 - Table - Row - Level 1
 OBSOLETE tr2 - Table - Row - Level 2; DEPRECATED tr2 - Table - Row - Level 2
 OBSOLETE ps - Paragraph - No Break with Next Paragraph; DEPRECATED ps - Paragraph - No Break with Next Paragraph
@@ -28,3 +32,10 @@ OBSOLETE maps Peripherals - Back Matter Map Index; DEPRECATED maps Peripherals -
 OBSOLETE cov Peripherals - Other - Cover; DEPRECATED cov Peripherals - Other - Cover
 OBSOLETE spine Peripherals - Other - Spine; DEPRECATED spine Peripherals - Other - Spine
 OBSOLETE pubinfo - Publication - Information; DEPRECATED pubinfo - Publication - Information
+pro...pro* - Special Text - CJK Pronunciation; DEPRECATED pro...pro* - Special Text - CJK Pronunciationpr 
+rem - File - Status; sts - File - Status
+toc Peripherals - Front Matter Table of Contents; DEPRECATED toc Peripherals - Front Matter Table of Contents
+d - Heading - Descriptive Title - Hebrew Subtitle; d - Label - Descriptive Title - Hebrew Subtitle
+erq - Study - Reflective Questions Ending; erqe - Study - Reflective Questions Ending
+fdc...fdc* - Footnote - DC text; DEPRECATED fdc...fdc* - Footnote - DC text
+xdc...xdc* - Cross Reference - DC Target Refs; DEPRECATED xdc...xdc* - Cross Reference - DC Target Refs

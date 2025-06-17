@@ -16,6 +16,7 @@ NEEDED
 	as well as chapter numbers.
 -Work out why attaching Silas to RTF attached to an email
 	can't find Custom_Styles.txt nor show folder name.
+-For each centred table style, make its paragraph centred.
 
 Silas 3.0.10-1.02 by Jim, 22 Mar 2025
 =====================================
