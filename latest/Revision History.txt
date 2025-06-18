@@ -17,9 +17,11 @@ NEEDED
 -Work out why attaching Silas to RTF attached to an email
 	can't find Custom_Styles.txt nor show folder name.
 -For each centred table style, make its paragraph centred.
+-Fix bug dealing with Vn nr with two dots in it
 
 Silas 3.0.10-1.02 by Jim, 22 Mar 2025
 =====================================
+Set up to update styles to 3.0.10
 
 Silas 2.35-1.23 by Jim, 15 Mar 2025
 ===================================

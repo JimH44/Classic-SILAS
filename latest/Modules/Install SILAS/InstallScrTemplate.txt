@@ -278,6 +278,7 @@ Dim NewVersion As Double, OldVersion As Double
 Dim NewBuild As Double, OldBuild As Double
 'Dim fs As Object 'in globals
 Dim ScrTemplatePath As String
+Dim Comparison As Integer   ' result of StrComp of vn or build numbers
 
     ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
     '     "PtPathFromReg is " & PtPathFromReg & " and adding Languages.ini.", vbOKOnly)
@@ -288,7 +289,7 @@ Dim ScrTemplatePath As String
     '     "PtPathFromReg is " & PtPathFromRe, vbOKCancel)
             
     IniFile = PtPathFromReg & "Languages.ini"
-    NewVersion = InternationalCDbl(SilasInstallVersion)
+    ' NewVersion = InternationalCDbl(SilasInstallVersion)   ' Dbl conv breaks on 3.0.10
     Set fs = CreateObject("Scripting.FileSystemObject")
     
     ' response = MsgBox("XXX: InstallScrTemplate:CheckForNewVersion here." & vbCrLf & _
@@ -310,25 +311,31 @@ Dim ScrTemplatePath As String
             SilasVersionStr = System.PrivateProfileString(FileName:=IniFile, _
                 Section:="TemplateVersionNumber", Key:="SVersion")
             If SilasVersionStr = "" Or SilasVersionStr = " " Then SilasVersionStr = "0"
-            OldVersion = InternationalCDbl(SilasVersionStr)
+            ' OldVersion = InternationalCDbl(SilasVersionStr)   ' Dbl breaks with 3.0.10
             
-            If NewVersion < OldVersion Then
+            Comparison = StrComp(SilasInstallVersion, SilasVersionStr, vbTextCompare)
+            ' Comparison will be positive if new > old.
+            
+            If Comparison < 0 Then
                 CheckForNewVersion = False
-            ElseIf NewVersion > OldVersion Then
+            ElseIf Comparison > 0 Then
                 CheckForNewVersion = True
-            ElseIf NewVersion = OldVersion Then
+            ElseIf Comparison = 0 Then
                 ' Check the build number
                 '
                 SilasBuildStr = System.PrivateProfileString(FileName:=IniFile, _
                     Section:="TemplateVersionNumber", Key:="Build")
                 If SilasBuildStr = "" Or SilasBuildStr = " " Then SilasBuildStr = "0"
                 
-                NewBuild = InternationalCDbl(SilasInstallBuild)
-                OldBuild = InternationalCDbl(SilasBuildStr)
+                ' NewBuild = InternationalCDbl(SilasInstallBuild) ' Dbl breaks on 3.0.10
                 
-                If NewBuild < OldBuild Then
+                ' OldBuild = InternationalCDbl(SilasBuildStr)
+                
+                Comparison = StrComp(SilasInstallBuild, SilasBuildStr, vbTextCompare)
+                
+                If Comparison < 0 Then
                     CheckForNewVersion = False
-                ElseIf NewBuild >= OldBuild Then
+                Else
                     CheckForNewVersion = True
                 End If
             End If
