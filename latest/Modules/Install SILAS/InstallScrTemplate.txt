@@ -123,7 +123,7 @@ Sub Main()
     
     If UpdatingTemplate Then
         If InstallFile(PtPathFromReg, _
-            "usfm.sty", NotCustomFile, Report, MoveAside:=False) = True Then
+            "usfm_sb.sty", NotCustomFile, Report, MoveAside:=False) = True Then
         End If
         
         If InstallFile(PtPathFromReg, _
@@ -315,7 +315,6 @@ Dim Comparison As Integer   ' result of StrComp of vn or build numbers
             
             Comparison = StrComp(SilasInstallVersion, SilasVersionStr, vbTextCompare)
             ' Comparison will be positive if new > old.
-            
             If Comparison < 0 Then
                 CheckForNewVersion = False
             ElseIf Comparison > 0 Then
@@ -327,10 +326,8 @@ Dim Comparison As Integer   ' result of StrComp of vn or build numbers
                     Section:="TemplateVersionNumber", Key:="Build")
                 If SilasBuildStr = "" Or SilasBuildStr = " " Then SilasBuildStr = "0"
                 
-                ' NewBuild = InternationalCDbl(SilasInstallBuild) ' Dbl breaks on 3.0.10
-                
+                ' NewBuild = InternationalCDbl(SilasInstallBuild)   ' Dbl breaks on 3.0.10
                 ' OldBuild = InternationalCDbl(SilasBuildStr)
-                
                 Comparison = StrComp(SilasInstallBuild, SilasBuildStr, vbTextCompare)
                 
                 If Comparison < 0 Then
