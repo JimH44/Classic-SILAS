@@ -1,6 +1,6 @@
 [Setup]
-#define AppVersion "2.35"
-#define AppBuild "1.23"
+#define AppVersion "3.0.10"
+#define AppBuild "1.02"
 #define BookletVersion "2.56"
 AppName=Silas
 AppVerName=Silas Version {#AppVersion} build {#AppBuild}
@@ -50,10 +50,11 @@ Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:Ad
 [Files]
 Source: .\Install Silas.doc; DestDir: {app}; Flags: ignoreversion
 Source: .\Silas.dot; DestDir: {app}; Flags: ignoreversion
-Source: .\USFM.STY; DestDir: {app}; Flags: ignoreversion
+Source: .\usfm_sb.sty; DestDir: {app}; Flags: ignoreversion
 Source: .\USFM_draft.STY; DestDir: {app}; Flags: ignoreversion
 Source: .\2.1_Styles.txt; DestDir: {app}; Flags: ignoreversion
 Source: .\2.05_Styles.txt; DestDir: {app}; Flags: ignoreversion
+Source: .\2.35-to-3.0.10_Styles.txt; DestDir: {app}; Flags: ignoreversion
 Source: .\Original_Styles.txt; DestDir: {app}; Flags: ignoreversion
 Source: .\Recent_Styles.txt; DestDir: {app}; Flags: ignoreversion
 Source: .\SCR_V2_Styles.txt; DestDir: {app}; Flags: ignoreversion
