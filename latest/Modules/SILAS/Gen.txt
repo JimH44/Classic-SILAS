@@ -1306,9 +1306,10 @@ Public Function CheckForNewVersionB() As Boolean
 '
     Dim SilasBuildStr As String
     Dim OldVersionStr As String
-    Dim NewVersion As Double, OldVersion As Double
+    ' Dim NewVersion As Double, OldVersion As Double
     Dim NewBuild As Double, OldBuild As Double
     Dim fs As Object
+    Dim Comparison As Integer   ' result of StrComp of vn or build numbers
     
     If IniFile = "" Then SetIniFile
     Set fs = CreateObject("Scripting.FileSystemObject")
@@ -1316,31 +1317,36 @@ Public Function CheckForNewVersionB() As Boolean
     'Check previous template version from Inifile setting
     '
     If fs.FileExists(IniFile) Then
-        NewVersion = InternationalCDbl(GenSilasVersion) ' the version number from the attached template
+        ' Version numbers with 2 dots (like 3.0.10) break conversion to double,
+        ' so now we'll do string comparisons instead.
+        '
+        ' NewVersion = InternationalCDbl(GenSilasVersion) ' the version number from the attached template
         OldVersionStr = System.PrivateProfileString(FileName:=IniFile, _
             Section:="TemplateVersionNumber", Key:="SVersion")
         If OldVersionStr = "" Or OldVersionStr = " " Then OldVersionStr = "0"
-        OldVersion = InternationalCDbl(OldVersionStr)
+        ' OldVersion = InternationalCDbl(OldVersionStr)
         
-        ' If the version number in the template is older than the ini file,
+        Comparison = StrComp(GenSilasVersion, OldVersionStr, vbTextCompare)
+        ' Comparison will be positive if new > old.
         '
-        If NewVersion < OldVersion Then
+        If Comparison < 0 Then
             CheckForNewVersionB = False
-        ElseIf NewVersion > OldVersion Then
+        ElseIf Comparison > 0 Then
             CheckForNewVersionB = True
-        ElseIf NewVersion = OldVersion Then
+        ElseIf Comparison = 0 Then
             ' Check the build number
             '
             SilasBuildStr = System.PrivateProfileString(FileName:=IniFile, _
                 Section:="TemplateVersionNumber", Key:="Build")
             If SilasBuildStr = "" Or SilasBuildStr = " " Then SilasBuildStr = "0"
             
-            NewBuild = InternationalCDbl(GenSilasBuild)
-            OldBuild = InternationalCDbl(SilasBuildStr)
+            ' NewBuild = InternationalCDbl(GenSilasBuild)
+            ' OldBuild = InternationalCDbl(SilasBuildStr)
+            Comparison = StrComp(GenSilasBuild, SilasBuildStr, vbTextCompare)
 
-            If NewBuild <= OldBuild Then
+            If Comparison <= 0 Then
                 CheckForNewVersionB = False
-            ElseIf NewBuild > OldBuild Then
+            ElseIf Comparison > 0 Then
                 CheckForNewVersionB = True
             End If
         End If
