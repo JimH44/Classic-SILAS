@@ -355,15 +355,15 @@ Function CheckForPTInstall()
     Else
         ' Paratext might set this Registry Key in future
         '
-        PdPathFromReg = System.PrivateProfileString("", _
-            "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paratext\9\Settings_Directory", "")
+        PtPathFromReg = System.PrivateProfileString("", _
+            "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paratext\9", "Settings_Directory")
         If PtPathFromReg <> "" Then
             CheckForPTInstall = True
         Else
             ' Paratext currently sets this Registry Key
             '
-            PdPathFromReg = System.PrivateProfileString("", _
-                "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paratext\8\Settings_Directory", "")
+            PtPathFromReg = System.PrivateProfileString("", _
+                "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paratext\8", "Settings_Directory")
             If PtPathFromReg <> "" Then
                 CheckForPTInstall = True
             End If
