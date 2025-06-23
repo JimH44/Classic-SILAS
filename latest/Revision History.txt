@@ -17,14 +17,15 @@ NEEDED
 -Work out why attaching Silas to RTF attached to an email
 	can't find Custom_Styles.txt nor show folder name.
 -For each centred table style, make its paragraph centred.
--Fix bug dealing with Vn nr with two dots in it
--Fix bug installer looking for _Styles.txt file in Pt Projects folder,
-	instead of in Application folder
 -Make Attach macro process Custom_Styles.txt also.
+-fix broken table formatting
 
-Silas 3.0.10-1.02 by Jim, 22 Mar 2025
+Silas 3.0.10-1.02 by Jim, 23 Jun 2025
 =====================================
 Set up to update styles to 3.0.10
+Fixed bug dealing with Vn nr with two dots in it, such as 3.0.10
+Fixed bug installer looking for *_Styles.txt file in Pt Projects folder,
+	instead of in Application folder
 
 Silas 2.35-1.23 by Jim, 15 Mar 2025
 ===================================
