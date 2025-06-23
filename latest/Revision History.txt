@@ -20,6 +20,7 @@ NEEDED
 -Fix bug dealing with Vn nr with two dots in it
 -Fix bug installer looking for _Styles.txt file in Pt Projects folder,
 	instead of in Application folder
+-Make Attach macro process Custom_Styles.txt also.
 
 Silas 3.0.10-1.02 by Jim, 22 Mar 2025
 =====================================

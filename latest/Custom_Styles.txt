@@ -2,7 +2,8 @@ Custom_Styles.txt -- control file for standardizing non-standard style names.
 
 Comment lines have no semi-colons in them.
 Change lines have the old stylename that should be replaced first,
-then after the semicolon the new replacement name.
+then after the semicolon the new replacement name, like this:
+abcxyx - This is a nonexistent USFM code; abcxyz - Sample nonexistent USFM code
 
 Use this control file if you have some non-standard stylenames,
 using Recent_Styles.txt as a model.

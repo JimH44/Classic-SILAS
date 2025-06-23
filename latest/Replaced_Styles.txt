@@ -1,19 +1,57 @@
 Replaced_Styles.txt -- control file for replacing deprecated and obsolete style names.
+For processing in Word with SILAS, we don't want styles to begin with DEPRECATED.
 
 Comment lines have no semi-colons in them.
 Change lines have the old stylename that should be replaced first,
 then after the semicolon the new replacement name.
+
+DEPRECATED addpn...addpn* - Special Text for Chinese; addpn...addpn* - Special Text for Chinese
+DEPRECATED h1 - File - Header; h1 - File - Header
+DEPRECATED h2 - File - Left Header; h2 - File - Left Header
+DEPRECATED h3 - File - Right Header; h3 - File - Right Header
+
+Peripherals -- These should now be in separate books,
+but we'll still support them for files exported from Paratext long ago
+
+OBSOLETE idx Peripherals - Back Matter Index; idx Peripherals - Back Matter Index
+DEPRECATED idx Peripherals - Back Matter Index; idx Peripherals - Back Matter Index
+OBSOLETE pub Peripherals - Front Matter Publication Data; pub Peripherals - Front Matter Publication Data
+DEPRECATED pub Peripherals - Front Matter Publication Data; pub Peripherals - Front Matter Publication Data
+OBSOLETE toc Peripherals - Front Matter Table of Contents; toc Peripherals - Front Matter Table of Contents
+DEPRECATED toc Peripherals - Front Matter Table of Contents; toc Peripherals - Front Matter Table of Contents
+OBSOLETE pref Peripherals - Front Matter Preface; pref Peripherals - Front Matter Preface
+DEPRECATED pref Peripherals - Front Matter Preface; pref Peripherals - Front Matter Preface
+OBSOLETE intro Peripherals - Front Matter Introduction; intro Peripherals - Front Matter Introduction
+DEPRECATED intro Peripherals - Front Matter Introduction; intro Peripherals - Front Matter Introduction
+OBSOLETE conc Peripherals - Back Matter Concordance; conc Peripherals - Back Matter Concordance
+DEPRECATED conc Peripherals - Back Matter Concordance; conc Peripherals - Back Matter Concordance
+OBSOLETE glo Peripherals - Back Matter Glossary; glo Peripherals - Back Matter Glossary
+DEPRECATED glo Peripherals - Back Matter Glossary; glo Peripherals - Back Matter Glossary
+OBSOLETE maps Peripherals - Back Matter Map Index; maps Peripherals - Back Matter Map Index
+DEPRECATED maps Peripherals - Back Matter Map Index; maps Peripherals - Back Matter Map Index
+OBSOLETE cov Peripherals - Other - Cover; cov Peripherals - Other - Cover
+DEPRECATED cov Peripherals - Other - Cover; cov Peripherals - Other - Cover
+OBSOLETE pubinfo - Publication - Information; pubinfo - Publication - Information
+DEPRECATED pubinfo - Publication - Information; pubinfo - Publication - Information
+OBSOLETE spine Peripherals - Other - Spine; spine Peripherals - Other - Spine
+DEPRECATED spine Peripherals - Other - Spine; spine Peripherals - Other - Spine
 
 DEPRECATED ph - Paragraph - Hanging Indent - Level 1; li - List Entry - Level 1
 DEPRECATED ph1 - Paragraph - Hanging Indent - Level 1; li1 - List Entry - Level 1
 DEPRECATED ph2 - Paragraph - Hanging Indent - Level 2; li2 - List Entry - Level 2
 DEPRECATED ph3 - Paragraph - Hanging Indent - Level 3; li3 - List Entry - Level 3
 DEPRECATED phi - Paragraph - Indented - Hanging Indent; li4 - List Entry - Level 4
-DEPRECATED pr - Paragraph - Right Aligned; pmr - Paragraph - Embedded Text Refrain
+DEPRECATED pr - Paragraph - Right Aligned; pr - Paragraph - Text Refrain (right aligned)
 
 OBSOLETE tr1 - Table - Row - Level 1; tr - Table - Row
+DEPRECATED tr1 - Table - Row - Level 1; tr - Table - Row
 OBSOLETE tr2 - Table - Row - Level 2; tr - Table - Row
-OBSOLETE ps - Paragraph - No Break with Next Paragraph; p - Paragraph - Normal - First Line Indent
-OBSOLETE psi - Paragraph - Indented - No Break with Next; pi - Paragraph - Indented - Level 1 - First Line Indent
+DEPRECATED tr2 - Table - Row - Level 2; tr - Table - Row
+OBSOLETE ps - Paragraph - No Break with Next Paragraph; ps - Paragraph - No Break with Next Paragraph
+DEPRECATED ps - Paragraph - No Break with Next Paragraph; ps - Paragraph - No Break with Next Paragraph
+OBSOLETE psi - Paragraph - Indented - No Break with Next; psi - Paragraph - Indented - No Break with Next
+DEPRECATED psi - Paragraph - Indented - No Break with Next; psi - Paragraph - Indented - No Break with Next
 
-_sts - Status; rem - File - Status
+OBSOLETE wr...wr* - Auxiliary - Wordlist/Glossary Reference; w...w* - Peripheral Ref - Wordlist Entry
+DEPRECATED wr...wr* - Auxiliary - Wordlist/Glossary Reference; w...w* - Peripheral Ref - Wordlist Entry
+
