@@ -51,11 +51,11 @@ asStyle__$(nTags) = "(addpn...addpn*) - Special Text for Chinese"
 
 nTags = nTags + 1
 asMarker__$(nTags) = "li"
-asStyle__$(nTags) = "DEPRECATED phi - Paragraph - Indented - Hanging Indent"
+asStyle__$(nTags) = "phi - Paragraph - Indented - Hanging Indent"
 
 nTags = nTags + 1
 asMarker__$(nTags) = "sts"
-asStyle__$(nTags) = "rem - File - Status"
+asStyle__$(nTags) = "sts - File - Status"
 
 nTags = nTags + 1
 asMarker__$(nTags) = "f"

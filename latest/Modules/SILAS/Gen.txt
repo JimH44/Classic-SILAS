@@ -718,7 +718,7 @@ Sub AddSectionBreaks(Optional SeparateIntro As Boolean)
                         StyleName = Selection.Paragraphs(1).Style
                         If StyleName Like "[hi]*" _
                         Or StyleName Like "toc*" _
-                        Or StyleName Like "OBSOLETE toc *" _
+                        Or StyleName Like "toc *" _
                         Or StyleName Like "periph *" _
                         Or StyleName Like "*pref *" _
                         Or StyleName Like "*intro *" _
@@ -732,7 +732,7 @@ Sub AddSectionBreaks(Optional SeparateIntro As Boolean)
                         Or StyleName Like "*spine *" _
                         Or StyleName Like "re*" _
                         Or StyleName Like "_sts - Status" _
-                        Or StyleName Like "rem - File - Status" _
+                        Or StyleName Like "sts - File - Status" _
                         Or StyleName Like "tr *" _
                         Or StyleName = "_SpaceAbove" _
                         Or StyleName Like "mt*" Then
@@ -1753,7 +1753,7 @@ Sub CreateIDFooterText( _
     
     If VariableGet("StatusCode") = "done" Then
         rFooter.Text = rFooter.Text & _
-            " { STYLEREF " & Chr(34) & "rem - File - Status" & Chr(34) & " \* MERGEFORMAT }"
+            " { STYLEREF " & Chr(34) & "sts - File - Status" & Chr(34) & " \* MERGEFORMAT }"
     End If
     
     rFooter.Text = rFooter.Text & ", exported: "
@@ -1818,7 +1818,7 @@ Function DefaultSettings()
     CopyStyle "_SpaceAbove"
     CopyStyle "_Spread_items"
     CopyStyle "_sts - Status"
-    CopyStyle "rem - File - Status"
+    CopyStyle "sts - File - Status"
     CopyStyle "_OptionalLineBreak"
     
     If SetPathVariables <> True Then
@@ -3206,7 +3206,7 @@ Sub FormatGlossaryEntries()
 '
 ' Quit if this job has been done already.
 '
-' If there is any text in the  style "OBSOLETE glo Peripherals - Back Matter Glossary",
+' If there is any text in the  style "glo Peripherals - Back Matter Glossary",
 '   change that style to small and yellow
 '   step down through paragraphs until non-glossary code found then goto NoMoreParagraphs
 '
@@ -3255,7 +3255,7 @@ Dim ThisStyle As String
     Selection.HomeKey Unit:=wdStory
     Selection.Find.ClearFormatting
     Selection.Find.Style = ActiveDocument.Styles( _
-        "OBSOLETE glo Peripherals - Back Matter Glossary")
+        "glo Peripherals - Back Matter Glossary")
     With Selection.Find
         .Text = ""
         .Replacement.Text = ""
@@ -3269,7 +3269,7 @@ Dim ThisStyle As String
     If FoundGloStyle Or FoundIDGlossary Then FoundGlossary = True
     
     If FoundGlossary Then
-        With ActiveDocument.Styles("OBSOLETE glo Peripherals - Back Matter Glossary").Font
+        With ActiveDocument.Styles("glo Peripherals - Back Matter Glossary").Font
             .ColorIndex = HiddenColor
             .Size = 1
         End With
@@ -3480,7 +3480,7 @@ Sub Format_rq_items()
     Loop While Found
 End Sub
 Sub FormatStatusItems()
-    ' To catch \sts N fields or text in style "rem - File - Status"
+    ' To catch \sts N fields or text in style "sts - File - Status"
     ' and apply a small white paragraph style to them.
     '
     Dim FoundSTS As Boolean
@@ -3574,7 +3574,7 @@ Sub FormatStatusItems()
             rStatusCode.Text = Trim(rStatusCode.Text)
             rStatusCode.InsertBefore "("
             rStatusCode.InsertAfter ")"
-            rStatusCode.Style = ActiveDocument.Styles("rem - File - Status")
+            rStatusCode.Style = ActiveDocument.Styles("sts - File - Status")
                     
             Selection.Start = Selection.End
         End If
@@ -3582,7 +3582,7 @@ Sub FormatStatusItems()
     
     If SomeSTSCodeFound = True Then GoTo FinishSub
     
-    ' Now search for text in style "rem - File - Status".
+    ' Now search for text in style "sts - File - Status".
     '
     SetStandardFindOptions
     Selection.HomeKey Unit:=wdStory
@@ -3590,7 +3590,7 @@ Sub FormatStatusItems()
     Selection.Find.Replacement.ClearFormatting
 
     With Selection.Find
-        .Style = ActiveDocument.Styles("rem - File - Status")
+        .Style = ActiveDocument.Styles("sts - File - Status")
         .Text = ""
         .Replacement.Text = ""
         .Forward = True
