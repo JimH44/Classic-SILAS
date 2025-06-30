@@ -217,7 +217,15 @@ Dim BoldVerseNumbers As String
 Dim FileSystem As Object
 
     ZoomSet
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
     
     If IniFile = "" Then SetIniFile
     Set FileSystem = CreateObject("Scripting.FileSystemObject")
@@ -321,7 +329,16 @@ Dim FileSystem As Object
 Dim a As Object
 
     If IniFile = "" Then SetIniFile
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
    
     Set FileSystem = CreateObject("Scripting.FileSystemObject")
     If Not FileSystem.FileExists(IniFile) Then
@@ -377,7 +394,16 @@ Sub ShowLanguageInfoForm(Optional PTFont As String)
 ' Dim FileSystem As Object
 
 ZoomSet
-ActiveWindow.ActivePane.View.Type = wdNormalView
+
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
 
 NewLanguage = False
 
@@ -479,7 +505,16 @@ Dim LanguageNumber As String
 Dim Number As Integer
 Dim FileSystem As Object
     
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     If IniFile = "" Then SetIniFile
     Set FileSystem = CreateObject("Scripting.FileSystemObject")
 
@@ -906,7 +941,16 @@ Dim FileSystem As Object
     If IniFile = "" Then SetIniFile
     Set FileSystem = CreateObject("Scripting.FileSystemObject")
 
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     VariableSet "NoLanguageSet", ""
     VariableSet "InstallWarning", ""
     

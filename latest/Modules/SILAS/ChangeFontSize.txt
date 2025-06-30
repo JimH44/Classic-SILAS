@@ -8,7 +8,16 @@ Public Sub MAIN()
 Attribute MAIN.VB_Description = "Allows you to change the font size (point size) for the styles that display vernacular text."
 Attribute MAIN.VB_ProcData.VB_Invoke_Func = "TemplateProject.ChangeFontSize.MAIN"
 ZoomSet
-ActiveWindow.ActivePane.View.Type = wdNormalView
+If Val(Application.Version) >= Wd2010 Then
+    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+Else
+    ActiveWindow.ActivePane.View.Type = wdNormalView
+End If
+
 DoChangeSize (0)
 'ZoomRecall done in DoChangeSize
 End Sub

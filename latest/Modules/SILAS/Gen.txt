@@ -645,7 +645,17 @@ Sub AddSectionBreaks(Optional SeparateIntro As Boolean)
     Dim rIDField As Range
     
     PreviousStyleName = ""
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     Selection.HomeKey Unit:=wdStory
 
     Application.StatusBar = "               Adding section breaks -- please wait."
@@ -1851,7 +1861,15 @@ Function DefaultSettings()
         If VariableGet("NoLanguageSet") = "True" Then GoTo EndSub
     End If
     
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
     
     ' Change " -- " to emdash, "!$" or "~" to no-break space
     ' and hyphens between numbers, as in John 1:1B-4 or \v 7-9
@@ -2439,6 +2457,8 @@ e7:
         Else
             ActiveWindow.View.Type = wdNormalView
         End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
     End If
    
    EnableSmartQuotes           ' Restore user's preference.
@@ -2575,12 +2595,16 @@ Sub FootnoteParaHangSet(ByVal ForceStyleSetting As Boolean)
     
     Selection.HomeKey Unit:=wdStory
     
-    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
     Else
-        ActiveWindow.View.Type = wdNormalView
+        ActiveWindow.ActivePane.View.Type = wdNormalView
     End If
-    
+
     ActiveWindow.View.SplitSpecial = wdPaneFootnotes
     Application.StatusBar = "       Adjusting hanging indent on footnotes --  please wait."
     
@@ -2786,11 +2810,16 @@ Sub FootnotesRestartingEachPage()
     ' so first we'll remove any of those that exist.
     '
     
-    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
     Else
-        ActiveWindow.View.Type = wdNormalView
+        ActiveWindow.ActivePane.View.Type = wdNormalView
     End If
+
 '
 '    ActiveWindow.View.SplitSpecial = wdPaneFootnotes
     
@@ -2999,7 +3028,16 @@ Sub FormatForHalfPageBooklets()
     MakeHeaders MakeSectionBreaks:=True
     NrSections = ActiveDocument.Sections.Count
     
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     HideIDetc
     ReplaceAlmostEverywhere iFixQuotes
     
@@ -3111,7 +3149,15 @@ Sub FormatForProofPrintouts()
        .ParagraphFormat.Alignment = wdAlignParagraphLeft
    End With
 
-   ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
 
    If VariableGet("FrontMatter") = "done" Then
        RemakeFrontMatter = True
@@ -3126,7 +3172,15 @@ Sub FormatForProofPrintouts()
        .MirrorMargins = False
    End With
 
-   ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
 
    If VariableGet("NoBreakHyphens") = "yes" Then
        ReplaceAlmostEverywhere iNoBreakHyphens
@@ -4206,7 +4260,16 @@ Sub MakeFrontPages()
     
     ' Set up for booklets, clear footers and put centred page number on first page footer.
     ZoomSet
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
     
     PassageRef = VariableGet("ScripturePassage")   'from dbBookletStyle
     Village = VariableGet("VillageName")
@@ -4892,9 +4955,17 @@ Sub MoveChapterAfterIDLines()
         Exit Sub
     End If
     
-    ActiveWindow.ActivePane.View.Type = wdNormalView
-    Selection.HomeKey Unit:=wdStory
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
 
+    Selection.HomeKey Unit:=wdStory
     Application.StatusBar = "               Moving some chapter codes -- please wait."
     Application.ScreenUpdating = False
     
@@ -5182,7 +5253,16 @@ Dim rng As Range
     End If
     'fallthrough to SetSize
 SetSize:
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
 '    NoAutoUpdate
     SingleSpacingNew
     SetDefaultPaperSize
@@ -5567,10 +5647,14 @@ Sub RemoveSectionBreaks()
     ActiveDocument.StoryRanges(wdMainTextStory).Select
     Selection.HomeKey Unit:=wdStory
     
-    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
     Else
-        ActiveWindow.View.Type = wdNormalView
+        ActiveWindow.ActivePane.View.Type = wdNormalView
     End If
     
     SetStandardFindOptions
@@ -6028,7 +6112,16 @@ If VariableGet("NoLanguageSet") = "True" Then GoTo FindSize
 Dim tmpPaperSize As String
     
     SetIniFile  ' also sets PtSettingsDir
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
     
 'Check Inifile for paper size setting
     Set fs = CreateObject("Scripting.FileSystemObject")

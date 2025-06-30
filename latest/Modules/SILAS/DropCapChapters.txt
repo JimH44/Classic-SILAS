@@ -28,7 +28,16 @@ Dim rCl As Range              ' chapter name from \cl code, such as Psalm
 Dim rChapterRest As Range       ' Remaining digits
 
 Selection.HomeKey Unit:=wdStory
-ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+If Val(Application.Version) >= Wd2010 Then
+    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+Else
+    ActiveWindow.ActivePane.View.Type = wdNormalView
+End If
 
 If VariableGet("ChapterStyle") = "drop" Then
     MsgBox "The chapter numbers have been made into DropCaps already."

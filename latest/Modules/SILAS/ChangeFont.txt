@@ -39,7 +39,16 @@ sVersion$ = "ver 2.01"  'Nov96
 sTitle$ = "Change Font  " + sVersion$   'Title for Dialog boxes
 
 ZoomSet
-ActiveWindow.ActivePane.View.Type = wdNormalView
+
+If Val(Application.Version) >= Wd2010 Then
+    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+Else
+    ActiveWindow.ActivePane.View.Type = wdNormalView
+End If
 
 'Note about temporary vs. permanent font change
 If MsgBox("Warning: This job will change the font in this current " & _

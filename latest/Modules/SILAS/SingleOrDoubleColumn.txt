@@ -36,7 +36,16 @@ Dim ParaNotIntro As Boolean
    End If
    
     ZoomSet
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
 
     If VariableGet("NrColumns") = "2" Then
         MakingNrColumns = "1"

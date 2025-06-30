@@ -19,7 +19,16 @@ Dim button
 
 CR$ = Chr(13)
 ZoomSet
-ActiveWindow.ActivePane.View.Type = wdNormalView
+
+If Val(Application.Version) >= Wd2010 Then
+    If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+Else
+    ActiveWindow.ActivePane.View.Type = wdNormalView
+End If
 
 ' Is there a selection?  Set operating mode.
 If WordBasic.SelType() = 2 Then

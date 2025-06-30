@@ -953,7 +953,16 @@ Sub FixCodes()
         .Execute Replace:=wdReplaceAll
     End With
     
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     FixParagraphMarks
     SetStandardFindOptions
     ActiveDocument.ActiveWindow.View.ShowHiddenText = True
@@ -1889,7 +1898,16 @@ Sub FormatVerseNumbersSFM()
     Gen.DisableSmartCutAndPaste "disable"   ' and remember user's preference
     SetStandardFindOptions
     Selection.HomeKey Unit:=wdStory
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
     
     ' set VerseNum = VerseEnd = 0
     ' set VerseNext = 1
@@ -2325,7 +2343,17 @@ Sub USFM2Styles()
     FixParagraphMarks
     SetStandardFindOptions
     ActiveDocument.ActiveWindow.View.ShowHiddenText = True
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.ActivePane.View.Type = wdNormalView
+    End If
+
     Selection.HomeKey Unit:=wdStory
     Application.ScreenUpdating = True
     
