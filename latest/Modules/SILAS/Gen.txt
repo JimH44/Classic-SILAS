@@ -4299,7 +4299,7 @@ End Sub
 Sub MakeFrontPages()
     Dim Months(12) As String
     Dim StyleName As String
-    Dim TitleCopied As Boolean
+    Dim TitleCopied As Boolean  ' Pastes the real Main Title or a dummy.
     Dim PassageRef As String
     Dim Village As String
     Dim rStartOfText As Range
@@ -4387,7 +4387,8 @@ Sub MakeFrontPages()
             '
             rStartOfText.End = Selection.Start
             rStartOfText.Select
-            Selection.Copy
+            rStartOfText.Copy
+'            Selection.Copy
             TitleCopied = True
             Exit Do
         End If
@@ -4408,6 +4409,9 @@ Sub MakeFrontPages()
     ' Copy Main Title lines to start of file.
     '
     If TitleCopied Then
+        ' Word 2021 can't do Selection.Paste
+        ' unless there is a delay first, so do ScreenRefresh first.
+        Application.ScreenRefresh
         Selection.Paste
     Else
         Selection.Style = ActiveDocument.Styles("mt - Title - Major Title Level 1")
@@ -4551,7 +4555,7 @@ Sub MakeFrontPages()
     
     SetStandardFindOptions
     SetDefaultView
-    End Sub
+End Sub
 Sub MakeHeaders(Optional MakeSectionBreaks As Boolean)
 '
 ' MakeHeaders Macro
