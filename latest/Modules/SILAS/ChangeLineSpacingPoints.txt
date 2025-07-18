@@ -95,7 +95,17 @@ SetSpacing
 End Sub
 Function SetSpacing()
 ZoomSet
-ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
 FontSizePts = ActiveDocument.Styles("_BodyText_Base").Font.Size
 LeadingHeight = VariableGet("Leading")
    ' Comes from Variable in AdvancedFontOptions: normal, tall, extratall

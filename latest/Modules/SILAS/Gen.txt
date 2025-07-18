@@ -130,7 +130,17 @@ Sub AddChapterCodesToVerseNumbers()
     Selection.HomeKey Unit:=wdStory
     
     Set rThisChapter = Selection.Range.Duplicate
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     Application.StatusBar = "               Adding chapter codes to verse numbers -- please wait."
     Application.ScreenUpdating = False
     
@@ -526,9 +536,17 @@ Sub AddFixedSpaces2VerseNumbersInternal(ByVal StyleName As String)
 '
     Dim FoundVerseNumber As Boolean
     Dim StyleManifested As Boolean
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
 
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
-        
     StyleManifested = False
     
     ' Wildcard searching is broken in Word 2003, and perhaps in other versions,
@@ -653,7 +671,7 @@ Sub AddSectionBreaks(Optional SeparateIntro As Boolean)
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     Selection.HomeKey Unit:=wdStory
@@ -910,7 +928,17 @@ Sub ChapterLabels()
     
     iPreviousChapterNumber = 0
     iThisChapterNumber = 0
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     Application.StatusBar = "               Handling Chapter Label (\cl) codes -- please wait."
     Application.ScreenUpdating = False
     SetStandardFindOptions
@@ -1041,7 +1069,17 @@ Sub CheckForChapterNumberRunningTooFar()
     Selection.HomeKey Unit:=wdStory
     SetStandardFindOptions
     Application.ScreenUpdating = True
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     
     Do While ActiveDocument.ActiveWindow.Panes.Count > 1
         On Error Resume Next
@@ -1868,7 +1906,7 @@ Function DefaultSettings()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
     ' Change " -- " to emdash, "!$" or "~" to no-break space
@@ -2458,7 +2496,7 @@ e7:
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
    
    EnableSmartQuotes           ' Restore user's preference.
@@ -2602,7 +2640,7 @@ Sub FootnoteParaHangSet(ByVal ForceStyleSetting As Boolean)
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     ActiveWindow.View.SplitSpecial = wdPaneFootnotes
@@ -2755,7 +2793,17 @@ Sub FootnotesNoSpacesBefore()
     NrFootnotes = ActiveDocument.Footnotes.Count
     
     If NrFootnotes > 0 Then
-        ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
         Application.StatusBar = "    Removing spaces before footnote references -- please wait."
         Application.ScreenUpdating = False
         
@@ -2817,7 +2865,7 @@ Sub FootnotesRestartingEachPage()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
 '
@@ -2857,7 +2905,16 @@ Sub FootnotesRestartingEachPage()
     '   (unless the user put a marker outside the range [a-z])
     '   apply the style "_Footnote_Reference" to the reference letter
     '
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     Application.StatusBar = "    Making footnote references restart at 'a' each page -- please wait."
     Application.ScreenUpdating = False
     
@@ -3035,7 +3092,7 @@ Sub FormatForHalfPageBooklets()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     HideIDetc
@@ -3156,7 +3213,7 @@ Sub FormatForProofPrintouts()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
    If VariableGet("FrontMatter") = "done" Then
@@ -3179,7 +3236,7 @@ Sub FormatForProofPrintouts()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
    If VariableGet("NoBreakHyphens") = "yes" Then
@@ -3800,7 +3857,17 @@ Sub HideIDetc()
     SetStandardFindOptions
     WordBasic.ShowAll 1
     ZoomSet
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
         
     Application.StatusBar = "               Hiding ID lines etc -- please wait."
     Application.ScreenUpdating = False
@@ -4268,7 +4335,7 @@ Sub MakeFrontPages()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
     PassageRef = VariableGet("ScripturePassage")   'from dbBookletStyle
@@ -4523,7 +4590,16 @@ Sub MakeHeaders(Optional MakeSectionBreaks As Boolean)
     
     RemoveFrontMatter           ' unless done already
     RemoveSectionBreaks
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
     
     ActiveDocument.Styles("_Header").Font.Italic = True
         
@@ -4962,7 +5038,7 @@ Sub MoveChapterAfterIDLines()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     Selection.HomeKey Unit:=wdStory
@@ -5103,7 +5179,17 @@ Sub OptionalLineBreaks()
     SetStandardFindOptions
     Selection.HomeKey Unit:=wdStory
     iView = ActiveDocument.ActiveWindow.View.Type
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     Application.ScreenUpdating = True
     Application.StatusBar = "    Processing // codes for optional line breaks -- please wait."
     Application.ScreenUpdating = False
@@ -5260,7 +5346,7 @@ SetSize:
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
 '    NoAutoUpdate
@@ -5654,7 +5740,7 @@ Sub RemoveSectionBreaks()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
     SetStandardFindOptions
@@ -5708,8 +5794,17 @@ Sub RemoveTocLines()
     Dim rPara As Range
 
     Application.StatusBar = "Removing paragraphs in toc styles -- please wait."
-    
-    ActiveWindow.View.Type = wdNormalView
+        
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     Application.ScreenUpdating = False
     
     For Each para In ActiveDocument.Paragraphs
@@ -5784,8 +5879,17 @@ Sub ReplaceAlmostEverywhere(Job As Integer)
 '
   Dim rngStory As Word.Range
   Dim lngJunk As Long
-  
-  ActiveWindow.View.Type = wdNormalView
+      
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
   Application.ScreenUpdating = True
   'Fix the skipped blank Header/Footer problem as provided by Peter Hewett
   lngJunk = ActiveDocument.Sections(1).Headers(1).Range.StoryType
@@ -5978,7 +6082,17 @@ Sub RevealIDetc()
     
     SetStandardFindOptions
     ZoomSet
-    ActiveDocument.ActiveWindow.View.Type = wdNormalView
+    
+    If Val(Application.Version) >= Wd2010 Then
+        If ActiveWindow.View.SplitSpecial = wdPaneNone Then
+            ActiveWindow.ActivePane.View.Type = wdNormalView
+        Else
+            ActiveWindow.View.Type = wdNormalView
+        End If
+    Else
+        ActiveWindow.View.Type = wdNormalView
+    End If
+
     WordBasic.ShowAll 1
         
     Application.StatusBar = "               Revealing ID lines etc -- please wait."
@@ -6120,7 +6234,7 @@ Dim tmpPaperSize As String
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
 'Check Inifile for paper size setting

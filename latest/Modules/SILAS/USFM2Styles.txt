@@ -960,7 +960,7 @@ Sub FixCodes()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     FixParagraphMarks
@@ -1906,7 +1906,7 @@ Sub FormatVerseNumbersSFM()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
     ' set VerseNum = VerseEnd = 0
@@ -2351,7 +2351,7 @@ Sub USFM2Styles()
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     Selection.HomeKey Unit:=wdStory

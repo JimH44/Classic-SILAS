@@ -47,7 +47,7 @@ If Val(Application.Version) >= Wd2010 Then
         ActiveWindow.View.Type = wdNormalView
     End If
 Else
-    ActiveWindow.ActivePane.View.Type = wdNormalView
+    ActiveWindow.View.Type = wdNormalView
 End If
 
 'Note about temporary vs. permanent font change

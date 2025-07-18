@@ -224,7 +224,7 @@ Dim FileSystem As Object
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
     
     If IniFile = "" Then SetIniFile
@@ -337,7 +337,7 @@ Dim a As Object
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
    
     Set FileSystem = CreateObject("Scripting.FileSystemObject")
@@ -402,7 +402,7 @@ ZoomSet
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
 NewLanguage = False
@@ -512,7 +512,7 @@ Dim FileSystem As Object
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     If IniFile = "" Then SetIniFile
@@ -948,7 +948,7 @@ Dim FileSystem As Object
             ActiveWindow.View.Type = wdNormalView
         End If
     Else
-        ActiveWindow.ActivePane.View.Type = wdNormalView
+        ActiveWindow.View.Type = wdNormalView
     End If
 
     VariableSet "NoLanguageSet", ""
