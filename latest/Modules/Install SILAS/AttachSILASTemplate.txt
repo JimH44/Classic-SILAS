@@ -6,7 +6,7 @@ Attribute VB_Name = "AttachSILASTemplate"
 
 Public Const UseUserTemplates As Boolean = True
 Public Const SilasVersion As String = "3.0.10"
-Public Const SilasBuild As String = "1.02"
+Public Const SilasBuild As String = "1.04"
 Public Const LatestUSFMVersion As String = "3.0.10"
 Public Const InstallingBookletVersion As String = "2.56"
 Public Const ScrTemplateFileName = "Silas.dot"

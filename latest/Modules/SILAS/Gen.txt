@@ -7,7 +7,7 @@ Attribute VB_Name = "Gen"
 '
 Public Const UseUserTemplates As Boolean = True
 Public Const GenSilasVersion As String = "3.0.10"
-Public Const GenSilasBuild As String = "1.02"
+Public Const GenSilasBuild As String = "1.04"
 Public Const PageOrPrintView As Integer = 3 ' because different versions of Word use different names.
 Public Const HiddenColor = wdWhite
 ' Public Const HiddenColor = wdYellow
@@ -1613,7 +1613,11 @@ Sub ConvertTextIntoFields(NrFields As Integer)
             
             WordBasic.WW6_EditClear
             WordBasic.InsertFieldChars
-            WordBasic.EditPaste
+            ' Word 2021 can't do Selection.Paste
+            ' unless there is a ScreenRefresh first, so do ScreenRefresh first.
+            Application.ScreenRefresh
+            DoEvents    ' so newer versions of Word can catch up
+            Selection.Paste
         Else
             ' Disable selection
             WordBasic.Cancel
@@ -1686,7 +1690,8 @@ Sub CreateIDFootersInternal(IncludeTable As Boolean, MakeSectionBreaks As Boolea
     Selection.TypeParagraph
     FooterStart = Selection.Start
     
-    On Error GoTo -1:  On Error GoTo error1
+    On Error GoTo -1
+    ' On Error GoTo error1
     
     ' Make sure there are enough pages in this section
     ' so we can make the Footers
@@ -1707,28 +1712,10 @@ Sub CreateIDFootersInternal(IncludeTable As Boolean, MakeSectionBreaks As Boolea
         .DifferentFirstPageHeaderFooter = True
     End With
     
-    CreateIDFooterText wdSeekFirstPageFooter, wdSeekPrimaryFooter, IncludeTable
-    ' CreateIDFooterText wdSeekPrimaryFooter, wdSeekFirstPageFooter, IncludeTable
-    ' CreateIDFooterText wdSeekEvenPagesFooter, wdSeekPrimaryFooter, IncludeTable
-    Selection.Sections(1).Footers(wdHeaderFooterFirstPage).Range.Select
-    Selection.Sections(1).Footers(wdHeaderFooterFirstPage).Range.Copy
-    Selection.Sections(1).Footers(wdHeaderFooterEvenPages).Range.Select
-    Selection.Style = ActiveDocument.Styles("_Footer")
-    Selection.Paste
-    Selection.Sections(1).Footers(wdHeaderFooterEvenPages).Range.Select
-    
-    ' Remove unwanted paragraph mark
-    '
-    Selection.MoveRight Unit:=wdCharacter, Count:=1
-    Selection.Delete Unit:=wdCharacter, Count:=1
-    
-    Selection.Sections(1).Footers(wdHeaderFooterPrimary).Range.Select
-    Selection.Style = ActiveDocument.Styles("_Footer")
-    Selection.Paste
-    Selection.Sections(1).Footers(wdHeaderFooterPrimary).Range.Select
-    Selection.MoveRight Unit:=wdCharacter, Count:=1
-    Selection.Delete Unit:=wdCharacter, Count:=1
-    
+    CreateIDFooterText wdHeaderFooterFirstPage, IncludeTable
+    CreateIDFooterText wdHeaderFooterPrimary, IncludeTable
+    CreateIDFooterText wdHeaderFooterEvenPages, IncludeTable
+        
     With ActiveWindow
         If .Panes.Count > 1 Then .ActivePane.Close
     End With
@@ -1774,6 +1761,66 @@ end1:
     End If
 End Sub
 Sub CreateIDFooterText( _
+        ThisFooter As Integer, _
+        IncludeTable As Boolean)
+    
+    Dim WhenExported As String
+    Dim rFooter As Range        ' the footer to build this time
+    
+    If IncludeTable Then
+        ActiveDocument.PageSetup.BottomMargin = _
+            InchesToPoints(DefaultBottomMargin) + 40    ' points
+    Else
+        ActiveDocument.PageSetup.BottomMargin = InchesToPoints(DefaultBottomMargin)
+    End If
+    
+    ' Set the rFooter variable to the relevant page footer,
+    ' and make an appropriate footer in it.
+    '
+    Set rFooter = Selection.Sections(1).Footers(ThisFooter).Range
+    rFooter.Select
+    rFooter.Delete
+    rFooter.Collapse
+    
+    ' Insert STYLEREF field to display the most recent ID line
+    '
+    InsFldStyleRef "id - File - Identification"
+    
+    If VariableGet("StatusCode") = "done" Then
+    InsFldStyleRef "sts - File - Status"
+    End If
+    
+    Selection.InsertAfter ", exported: "
+    Selection.Collapse Direction:=wdCollapseEnd
+    WhenExported = VariableGet("WhenExported")
+    
+    If WhenExported = "" Then
+        InsFldSaveDate
+    Else
+        Selection.InsertAfter WhenExported
+        Selection.Collapse Direction:=wdCollapseEnd
+    End If
+    
+    Selection.InsertAfter vbTab & "p. "
+    Selection.Collapse Direction:=wdCollapseEnd
+    Selection.Fields.Add Range:=Selection.Range, Type:=wdFieldPage
+    rFooter.Select
+    Selection.Style = ActiveDocument.Styles("_Footer")
+    
+    If IncludeTable Then
+        rFooter.Select
+        Selection.Collapse
+        AddCheckedByTable
+    End If
+    
+    Selection.Sections(1).Footers(ThisFooter).Range.Select
+    
+    ' Remove unwanted paragraph mark
+    '
+    Selection.MoveRight Unit:=wdCharacter, Count:=1
+    Selection.Delete Unit:=wdCharacter, Count:=1
+End Sub
+Sub BrokenCreateIDFooterText( _
         ThisFooter As Integer, _
         OtherFooter As Integer, _
         IncludeTable As Boolean)
@@ -3963,7 +4010,8 @@ Sub HideSelection()
     End With
 End Sub
 Sub HideFigToggle()
-Dim CurrentFigStyle As String
+   Dim CurrentFigStyle As String
+   
    With ActiveDocument.Styles("fig...fig* - Auxiliary - Figure/Illustration/Map").Font
       CurrentFigStyle = .Hidden
    End With
@@ -4193,6 +4241,51 @@ Wend
 
 InsertBookMarks = 1
 Abort: End Function
+Sub InsFldSaveDate()
+    ' Insert a SaveDate field from argument
+    ' Call with the place to insert the field selected.
+    ' Declare a variable for the Range object
+    Dim rng As Range
+    Const strDateFormat As String = "\@ ""MMMM d, yyyy""" ' Customize this format as needed
+    
+    ' Set the range to the current selection
+    Set rng = Selection.Range
+    
+    ' Insert the SAVEDATE field
+    ' The first argument is the Range where the field will be inserted.
+    ' The second argument specifies the Field Type (wdFieldSaveDate for SAVEDATE).
+    ' The third argument is the Field Code, which includes the date & time format.
+    ' The fourth argument determines whether the field result is preserved on update.
+    rng.Fields.Add Range:=rng, Type:=wdFieldSaveDate, Text:=strDateFormat, PreserveFormatting:=False
+
+    ' Optional: Update the field to display the result immediately
+    rng.Fields.Update
+    rng.Collapse Direction:=wdCollapseEnd
+End Sub
+Sub InsFldStyleRef(StyleName As String)
+    ' Insert a StyleRef field from argument
+    ' Call with the place to insert the field selected.
+    ' Declare a variable for the Range object
+    Dim rng As Range
+    
+    ' StyleName = "id - File - Identification"    ' for testing only !!!
+    
+    ' Set the range to the current selection
+    Set rng = Selection.Range
+    
+    ' Insert the STYLEREF field
+    ' The first argument is the Range where the field will be inserted.
+    ' The second argument specifies the Field Type (wdFieldStyleRef for STYLEREF).
+    ' The third argument is the Field Code, which includes the style name.
+    ' The fourth argument determines whether the field result is preserved on update.
+    rng.Fields.Add Range:=rng, Type:=wdFieldStyleRef, Text:="""" & StyleName & """", PreserveFormatting:=False
+                   
+    ' Optional: Update the field to display the result immediately
+    rng.Fields.Update
+    rng.Collapse Direction:=wdCollapseEnd
+    Selection.InsertAfter " "
+    Selection.Collapse Direction:=wdCollapseEnd
+End Sub
 Sub InsertTablesInFooters()
     ZoomSet
     CreateIDFootersInternal _
@@ -4389,6 +4482,7 @@ Sub MakeFrontPages()
             rStartOfText.Select
             rStartOfText.Copy
 '            Selection.Copy
+            DoEvents    ' so new versions of Word can catch up
             TitleCopied = True
             Exit Do
         End If
@@ -4412,6 +4506,7 @@ Sub MakeFrontPages()
         ' Word 2021 can't do Selection.Paste
         ' unless there is a delay first, so do ScreenRefresh first.
         Application.ScreenRefresh
+        DoEvents    ' so new versions of Word can catch up
         Selection.Paste
     Else
         Selection.Style = ActiveDocument.Styles("mt - Title - Major Title Level 1")
@@ -4748,7 +4843,8 @@ Sub MakeHeaders(Optional MakeSectionBreaks As Boolean)
     Set rNewPages = Selection.Range.Duplicate
     Selection.Start = Selection.End
     
-    On Error GoTo -1:  On Error GoTo error1
+    On Error GoTo -1
+    ' On Error GoTo error1
     
     ' Make sure there are enough pages in this section
     ' so we can make the headers
@@ -5100,6 +5196,9 @@ Sub MoveChapterAfterIDLines()
                     End If
                 Loop While True
                 
+                ' Word 2021 can't do Selection.Paste
+                ' unless there is a ScreenRefresh first, so do ScreenRefresh first.
+                Application.ScreenRefresh
                 Selection.Paste ' put chapter number above current line
             End If
             
@@ -6944,6 +7043,7 @@ End Sub
 Sub XcopyHeader()
     Selection.WholeStory
     Selection.Copy
+    DoEvents    ' so new versions of Word can catch up
     ActiveWindow.ActivePane.View.PreviousHeaderFooter
     Selection.WholeStory
     Selection.Paste

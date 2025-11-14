@@ -12,13 +12,17 @@ NEEDED
 -Research a way of having \s# and \ip# and \iex be in side boxes, 
 	(but not verse numbers in the margin -- that one's too hard).
 -Check Kim's loop in USFM2Styles with \b
--Add ability to print first and last verse numbers in page headers,
-	as well as chapter numbers.
 -Work out why attaching Silas to RTF attached to an email
 	can't find Custom_Styles.txt nor show folder name.
 -For each centred table style, make its paragraph centred.
 -Make Attach macro process Custom_Styles.txt also.
 -fix broken table formatting
+-fix footer width in proof printouts with wide margind
+-work around error making headers in Wd 2021
+
+Silas 3.0.10-1.04 by Jim, 2025-11-14
+========================
+-work around inability to Paste in Wd 2021
 
 Silas 3.0.10-1.02 by Jim, 23 Jun 2025
 =====================================
