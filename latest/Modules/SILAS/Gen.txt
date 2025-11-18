@@ -4392,10 +4392,10 @@ End Sub
 Sub MakeFrontPages()
     Dim Months(12) As String
     Dim StyleName As String
-    Dim TitleCopied As Boolean  ' Pastes the real Main Title or a dummy.
+    Dim TitleSelected As Boolean  ' Inserts the real Main Title or a dummy.
     Dim PassageRef As String
     Dim Village As String
-    Dim rStartOfText As Range
+    Dim rTitle As Range
     Dim Province As String
     Dim Country As String
     
@@ -4440,7 +4440,7 @@ Sub MakeFrontPages()
     ' Find Main Title lines and mark them for copying to the Title Page
     '
     Selection.HomeKey Unit:=wdStory
-    TitleCopied = False
+    TitleSelected = False
     
     Do
         StyleName = Selection.Paragraphs(1).Style
@@ -4461,7 +4461,7 @@ Sub MakeFrontPages()
                 Exit Do
             End If
         Else    ' Here is the first Main Title line.
-            Set rStartOfText = Selection.Range
+            Set rTitle = Selection.Range
             
             Do
                 StyleName = Selection.Paragraphs(1).Style
@@ -4478,12 +4478,8 @@ Sub MakeFrontPages()
             
             'Here is the start of the next line after Main Title lines.
             '
-            rStartOfText.End = Selection.Start
-            rStartOfText.Select
-            rStartOfText.Copy
-'            Selection.Copy
-            DoEvents    ' so new versions of Word can catch up
-            TitleCopied = True
+            rTitle.End = Selection.Start
+            rTitle.Select
             Exit Do
         End If
     Loop While True
@@ -4502,16 +4498,13 @@ Sub MakeFrontPages()
 
     ' Copy Main Title lines to start of file.
     '
-    If TitleCopied Then
-        ' Word 2021 can't do Selection.Paste
-        ' unless there is a delay first, so do ScreenRefresh first.
-        Application.ScreenRefresh
-        DoEvents    ' so new versions of Word can catch up
-        Selection.Paste
+    If TitleSelected Then
+        Selection.TypeText Text:=rTitle.Text
     Else
-        Selection.Style = ActiveDocument.Styles("mt - Title - Major Title Level 1")
         Selection.TypeText Text:="No \mt Main Title found"
     End If
+    
+    Selection.Style = ActiveDocument.Styles("mt - Title - Major Title Level 1")
     Selection.TypeParagraph
     Selection.TypeParagraph
     Selection.TypeParagraph
