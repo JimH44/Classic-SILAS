@@ -17,12 +17,16 @@ NEEDED
 -For each centred table style, make its paragraph centred.
 -Make Attach macro process Custom_Styles.txt also.
 -fix broken table formatting
--fix footer width in proof printouts with wide margind
+-fix footer width in proof printouts with wide margins
+
+Silas 3.0.10-1.05 by Jim, 2025-11-18
+========================
 -work around error making headers in Wd 2021
 
 Silas 3.0.10-1.04 by Jim, 2025-11-18
 ========================
--work around inability to Paste in Wd 2021
+-work around inability to paste in Wd 2021 for ID footers
+-work around inability to Paste in Wd 2021, for Title page
 
 Silas 3.0.10-1.02 by Jim, 23 Jun 2025
 =====================================
