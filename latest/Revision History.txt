@@ -16,7 +16,7 @@ NEEDED
 	can't find Custom_Styles.txt nor show folder name.
 -For each centred table style, make its paragraph centred.
 -Make Attach macro process Custom_Styles.txt also.
--fix broken table formatting
+-fix broken table formatting in recent version of Word
 -fix footer width in proof printouts with wide margins
 
 Silas 3.0.10-1.05 by Jim, 2025-11-18
