@@ -109,7 +109,8 @@ Public Sub EndMacro()
 ' Okay, I admit this is something of a kluge, seeing as how that End
 ' command would cause WordBasic to die if it ever saw it, but since
 ' WordBasic is an interpreted language, it will never see it.
-If InStr(WordBasic.[AppInfo$](2), "6.0") Or InStr(WordBasic.[AppInfo$](2), "7.0") Then
+' MsgBox "BASIC version is " & WordBasic.[AppInfo$](2)
+If WordBasic.[AppInfo$](2) = "6.0" Or WordBasic.[AppInfo$](2) = "7.0" Then
     Stop
 Else
     End

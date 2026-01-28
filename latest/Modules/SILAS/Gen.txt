@@ -7,7 +7,7 @@ Attribute VB_Name = "Gen"
 '
 Public Const UseUserTemplates As Boolean = True
 Public Const GenSilasVersion As String = "3.0.10"
-Public Const GenSilasBuild As String = "1.05"
+Public Const GenSilasBuild As String = "1.06"
 Public Const PageOrPrintView As Integer = 3 ' because different versions of Word use different names.
 Public Const HiddenColor = wdWhite
 ' Public Const HiddenColor = wdYellow
@@ -1819,6 +1819,61 @@ Sub CreateIDFooterText( _
     '
     Selection.MoveRight Unit:=wdCharacter, Count:=1
     Selection.Delete Unit:=wdCharacter, Count:=1
+End Sub
+Sub BrokenCreateIDFooterText( _
+        ThisFooter As Integer, _
+        OtherFooter As Integer, _
+        IncludeTable As Boolean)
+    
+    Dim WhenExported As String
+    Dim rFooter As Range
+    
+    If IncludeTable Then
+        ActiveDocument.PageSetup.BottomMargin = _
+            InchesToPoints(DefaultBottomMargin) + 40    ' points
+    Else
+        ActiveDocument.PageSetup.BottomMargin = InchesToPoints(DefaultBottomMargin)
+    End If
+    
+    ' Set the rFooter variable to the first page footer,
+    ' and make an appropriate footer in it.
+    '
+    Set rFooter = Selection.Sections(1).Footers(wdHeaderFooterFirstPage).Range
+    rFooter.Delete
+    
+    ' Insert a string of characters which will become fields later:
+    '
+    rFooter.Text = _
+        "{ STYLEREF " & Chr(34) & "id - File - Identification" & Chr(34) & " \* MERGEFORMAT }"
+    
+    If VariableGet("StatusCode") = "done" Then
+        rFooter.Text = rFooter.Text & _
+            " { STYLEREF " & Chr(34) & "sts - File - Status" & Chr(34) & " \* MERGEFORMAT }"
+    End If
+    
+    rFooter.Text = rFooter.Text & ", exported: "
+        
+    WhenExported = VariableGet("WhenExported")
+    
+    If WhenExported = "" Then
+        rFooter.InsertAfter "{ SAVEDATE \@ " & Chr(34) & "d-MMM-yyyy at HH:mm" & Chr(34)
+    Else
+        rFooter.InsertAfter WhenExported
+    End If
+        
+    rFooter.InsertAfter vbTab & "p. { Page \* MERGEFORMAT } "
+    rFooter.Select
+    Selection.Style = ActiveDocument.Styles("_Footer")
+    
+    ' Now convert these {...} strings into fields:
+    '
+    ConvertTextIntoFields NrFields:=2
+
+    If IncludeTable Then
+        rFooter.Select
+        Selection.Collapse
+        AddCheckedByTable
+    End If
 End Sub
 Sub DecreaseRightMargin()
     ' With ActiveDocument.PageSetup

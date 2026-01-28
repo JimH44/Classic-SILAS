@@ -4,7 +4,8 @@ Attribute VB_Name = "InsertVerseNumber"
 ' Prompts for a verse number, then inserts it with proper style applied.
 ' Also, subroutines here can reformat existing verse numbers.
 
-' The user can finish typing a sentence, run InsertVerseNumber, and continue typing. Alternatively, the user can place the insertion point anywhere between two words and then run this macro.
+' The user can finish typing a sentence, run InsertVerseNumber, and continue typing.
+' Alternatively, the user can place the insertion point anywhere between two words and then run this macro.
 ' The verse number entered can be a simple number or a range like 6-7. A comma is not supported.
 ' If text is selected before InsertVerseNumber is run, any selected digits are used for the verse number prompt.
 ' When the user enters a verse number and clicks OK, the macro first deletes any text previously selected, then deletes adjacent spaces, inserts the new verse number, and puts proper spaces around the new verse number.
@@ -482,6 +483,10 @@ Rem EndOfLine   'orig idea fails in Page view on drop cap with hidden BT
 
     ' Prompt user if out of sequence
     If flag Then
+        ' make selected verse number visible
+        ActiveWindow.ScrollIntoView Selection.Range, True
+        ActiveWindow.SmallScroll Up:=2
+        
         iRtn = WordBasic.MsgBox("The existing number '" + Num$ + "' is not in verse sequence." + CR$ + "Format it as a verse number?", sTitle$, 307)
         If iRtn = -1 Then   'YES
             If vtype = 1 Then vnumLast = num1 Else vnumLast = num2
