@@ -1820,6 +1820,61 @@ Sub CreateIDFooterText( _
     Selection.MoveRight Unit:=wdCharacter, Count:=1
     Selection.Delete Unit:=wdCharacter, Count:=1
 End Sub
+Sub BrokenCreateIDFooterText( _
+        ThisFooter As Integer, _
+        OtherFooter As Integer, _
+        IncludeTable As Boolean)
+    
+    Dim WhenExported As String
+    Dim rFooter As Range
+    
+    If IncludeTable Then
+        ActiveDocument.PageSetup.BottomMargin = _
+            InchesToPoints(DefaultBottomMargin) + 40    ' points
+    Else
+        ActiveDocument.PageSetup.BottomMargin = InchesToPoints(DefaultBottomMargin)
+    End If
+    
+    ' Set the rFooter variable to the first page footer,
+    ' and make an appropriate footer in it.
+    '
+    Set rFooter = Selection.Sections(1).Footers(wdHeaderFooterFirstPage).Range
+    rFooter.Delete
+    
+    ' Insert a string of characters which will become fields later:
+    '
+    rFooter.Text = _
+        "{ STYLEREF " & Chr(34) & "id - File - Identification" & Chr(34) & " \* MERGEFORMAT }"
+    
+    If VariableGet("StatusCode") = "done" Then
+        rFooter.Text = rFooter.Text & _
+            " { STYLEREF " & Chr(34) & "sts - File - Status" & Chr(34) & " \* MERGEFORMAT }"
+    End If
+    
+    rFooter.Text = rFooter.Text & ", exported: "
+        
+    WhenExported = VariableGet("WhenExported")
+    
+    If WhenExported = "" Then
+        rFooter.InsertAfter "{ SAVEDATE \@ " & Chr(34) & "d-MMM-yyyy at HH:mm" & Chr(34)
+    Else
+        rFooter.InsertAfter WhenExported
+    End If
+        
+    rFooter.InsertAfter vbTab & "p. { Page \* MERGEFORMAT } "
+    rFooter.Select
+    Selection.Style = ActiveDocument.Styles("_Footer")
+    
+    ' Now convert these {...} strings into fields:
+    '
+    ConvertTextIntoFields NrFields:=2
+
+    If IncludeTable Then
+        rFooter.Select
+        Selection.Collapse
+        AddCheckedByTable
+    End If
+End Sub
 Sub DecreaseRightMargin()
     ' With ActiveDocument.PageSetup
     Dim RightMargin As Single
@@ -2142,7 +2197,7 @@ Sub EnableSmartQuotes(Optional TurnOn As Variant)
         End With
     End If
 End Sub
-Sub ExportAllModules()
+Public Sub ExportAllModules()
     Dim strPath As String
     Dim vbc As Object
     With Application.FileDialog(msoFileDialogFolderPicker)
@@ -5727,7 +5782,7 @@ End Sub
 Sub Quotes_MakeSmart()
 ' ConvertToSmartQuotes, Created by Nico Doelman, Suriname Branch
 ' Version 1.0 for WinWord 6.0: December 16, 1993
-' ï¿½ Summer Institute of Linguistics
+' © Summer Institute of Linguistics
 ' See also AdjustHardReturns macro
 ' autoformat
 ' Run Tools->Autoformat to turn ordinary quotes into smart quotes.

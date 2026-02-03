@@ -194,6 +194,23 @@ Sub ChangeAt2Quote()
     Selection.Find.Execute Replace:=wdReplaceAll
     SetStandardFindOptions
 End Sub
+Sub ChangeLineBreaks2ParagraphMarks()
+    ' Change Manual Line Breaks to Paragraph Marks in the Selection.
+    '
+    NoAutoThings
+    SetStandardFindOptions
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "^l"
+        .Replacement.Text = "^p"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    SetStandardFindOptions
+End Sub
 Sub ChangeTildeToFixedSpace()
     ' Change tilde characters to fixed spaces.
     '
@@ -938,7 +955,7 @@ Sub FixCodes()
             Buttons:=vbCritical, _
             Prompt:="I need to replace the \ characters with something else" & vbCrLf & _
                     "so I can standardize the \ codes." & vbCrLf & _
-                    "I have tried % and # and $, but your text is using all of these already." & vbCrLf & _
+                    "I have tried % and # and |, but your text is using all of these already." & vbCrLf & _
                     "Please go through the text and replace all occurrences of % with something else," & vbCrLf & _
                     "and open the USFM to Styles menu and do the job USFM to Styles."
         Lib1.EndMacro

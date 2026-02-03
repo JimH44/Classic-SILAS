@@ -8,7 +8,7 @@ Attribute VB_Name = "InstallScrTemplate"
 
 ' Global variables
 Public Const SilasInstallVersion As String = "3.0.10" ' Matches version of USFM
-Public Const SilasInstallBuild As String = "1.05"   ' Build number within version
+Public Const SilasInstallBuild As String = "1.06"   ' Build number within version
 ' These two numbers must match the numbers in
 ' Silas.iss -- the distribution file builder
 ' AttachSILASTemplate, which gets copied to Normal.dot on installation and
