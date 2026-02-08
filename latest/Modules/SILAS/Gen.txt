@@ -2197,7 +2197,7 @@ Sub EnableSmartQuotes(Optional TurnOn As Variant)
         End With
     End If
 End Sub
-Public Sub ExportAllModules()
+Sub ExportAllModules()
     Dim strPath As String
     Dim vbc As Object
     With Application.FileDialog(msoFileDialogFolderPicker)
