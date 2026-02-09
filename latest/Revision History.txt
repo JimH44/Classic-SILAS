@@ -20,11 +20,14 @@ NEEDED
 -fix footer width in proof printouts with wide margins
 -work around error making headers in Wd 2021
 
+Silas 3.0.10-1.07 by Jim, 2026-02-09
+========================
+Stating to update stylenames in FixCodes macro
+
 Silas 3.0.10-1.06 by Jim, 2026-01-28
 ========================
 Giving up trying to fix Paste error in Wd 2021, as MS 365 handles it properly.
 Updated test for version of Word in EndMacro routine
-Made selected potential verse number scroll into view when formatting numbers
 
 Silas 3.0.10-1.04 by Jim, 2025-11-18
 ========================
