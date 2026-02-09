@@ -483,10 +483,6 @@ Rem EndOfLine   'orig idea fails in Page view on drop cap with hidden BT
 
     ' Prompt user if out of sequence
     If flag Then
-        ' make selected verse number visible
-        ActiveWindow.ScrollIntoView Selection.Range, True
-        ActiveWindow.SmallScroll Up:=2
-        
         iRtn = WordBasic.MsgBox("The existing number '" + Num$ + "' is not in verse sequence." + CR$ + "Format it as a verse number?", sTitle$, 307)
         If iRtn = -1 Then   'YES
             If vtype = 1 Then vnumLast = num1 Else vnumLast = num2

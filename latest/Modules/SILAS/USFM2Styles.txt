@@ -2110,10 +2110,6 @@ MayBeVerseNumber:
                 If VerseNum = VerseNext Then
                     MakeNumberAVerseNumber
                 Else
-                    ' make selected verse number visible
-                    ActiveWindow.ScrollIntoView Selection.Range, True
-                    ActiveWindow.SmallScroll Up:=2
-
                     Result = MsgBox( _
                             Title:="SILAS -- Format this number as a verse number?", _
                             Buttons:=vbYesNoCancel, _
