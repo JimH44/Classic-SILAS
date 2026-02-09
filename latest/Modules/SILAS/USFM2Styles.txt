@@ -291,7 +291,7 @@ DecideLessFrequent:
             Case "cl"
                 StyleName = "cl - Chapter - Publishing Label"
             Case "cls"
-                StyleName = "cls - Paragraph - Closure of an Epistle"
+                StyleName = "cls - Paragraph - Letter Closing"
             Case "conc"
                 StyleName = "conc Peripherals - Back Matter Concordance"
             Case "cov"
