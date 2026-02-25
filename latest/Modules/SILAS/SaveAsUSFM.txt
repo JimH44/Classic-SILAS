@@ -594,6 +594,11 @@ NotesError:
     ActiveDocument.Save
 End Sub
 Private Sub DecideCode()
+    ' Make the global variable Code contain the code letter(s)
+    ' from the begining of the style name.
+    ' Eg. for "mt - Title - Major Title Level 1"
+    ' Code will become "mt"
+    '
     Dim DotPosn As Long
     Dim SpacePosn As Long
     Dim Position As Long
@@ -627,6 +632,9 @@ Private Sub DecideCode()
         End If
     Next i
     
+    ' Find the end of the code letters
+    ' which could end with "." or with " ".
+    '
     DotPosn = InStr(StyleName, ".")
     SpacePosn = InStr(StyleName, " ")
     
