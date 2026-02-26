@@ -23,6 +23,7 @@ NEEDED
 Silas 3.0.10-1.07 by Jim, 2026-02-09
 ========================
 Stating to update stylenames in FixCodes macro
+Added new codes to CodeType sub 2026-02-26
 
 Silas 3.0.10-1.06 by Jim, 2026-01-28
 ========================
