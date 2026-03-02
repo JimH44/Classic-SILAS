@@ -230,7 +230,9 @@ Sub ChangeTildeToFixedSpace()
     SetStandardFindOptions
 End Sub
 Function CodeType(ByRef StyleName As String) As Integer
-' Returns true if this the global ranges point to a paragraph code
+' Returns true if this the global range points to a recognised code
+' Possible values are defined globally in module USFM2Styles:
+' para, Char, Note or Unknown (value 0)
 '
     Dim CodeReplaced As Boolean
     
@@ -307,10 +309,10 @@ DecideLessFrequent:
             Case "dc"
                 StyleName = "dc...dc* - Special Text - Deuterocanonical/LXX Additions"
             Case "ef"
-                CodeType = Char
+                CodeType = Note
                 StyleName = "ef...ef* - Study - Extended Footnote"
             Case "efe"
-                CodeType = Char
+                CodeType = Note
                 StyleName = "efe...efe* - Study - Extended Endnote"
             Case "efm"
                 CodeType = Char
@@ -327,7 +329,8 @@ DecideLessFrequent:
                 StyleName = "esbe - Study - Sidebar Ending"
             Case "ex"
                 StyleName = "ex - Study - Extended Cross Reference"
-            
+                CodeType = Note
+
             Case "f"
                 StyleName = "f...f* - Footnote"
                 ' StartNoteNow = True
@@ -355,7 +358,7 @@ DecideLessFrequent:
                 StyleName = "xot...xot* - Cross Reference - OT Target Refs (optional)"
             Case "xop"
                 StyleName = "xop - Cross Reference - Origin Reference Publishing Alternate"
-            
+                CodeType = Char
             Case "fig"
                 StyleName = "fig...fig* - Auxiliary - Figure/Illustration/Map"
             Case "fk"
@@ -903,14 +906,19 @@ DecideLessFrequent:
             Case "wr"
                 StyleName = "wr...wr* - Auxiliary - Wordlist/Glossary Reference "
             Case "xk"
+                CodeType = Char
                 StyleName = "xk - Cross Reference - Keyword"
             Case "xo"
                 StyleName = "xo - Cross Reference - Origin Reference"
+                CodeType = Char
             Case "xop"
                 StyleName = "xop - Cross Reference - Origin Reference Publishing Alternate"
+                CodeType = Char
             Case "xq"
                 StyleName = "xq - Cross Reference - Quotation"
+                CodeType = Char
             Case "xt"
+                CodeType = Char
                 StyleName = "xt - Cross Reference - Target References"
             Case "xta"
                 StyleName = "xta - Cross Reference - Target References Added Text"
