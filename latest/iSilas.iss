@@ -1,6 +1,6 @@
 [Setup]
 #define AppVersion "3.0.10"
-#define AppBuild "1.06"
+#define AppBuild "1.07"
 #define BookletVersion "2.56"
 AppName=Silas
 AppVerName=Silas Version {#AppVersion} build {#AppBuild}
