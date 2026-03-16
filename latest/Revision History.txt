@@ -18,11 +18,11 @@ NEEDED
 -Make Attach macro process Custom_Styles.txt also.
 -fix broken table formatting in recent version of Word
 -fix footer width in proof printouts with wide margins
--work around error making headers in Wd 2021
+-work around error making headers in Wd 2021 -- too hard. Use Microsoft 365.
 
-Silas 3.0.10-1.07 by Jim, 2026-02-09
+Silas 3.0.10-1.07 by Jim, 2026-03-16
 ========================
-Stating to update stylenames in FixCodes macro
+Updated stylenames in FixCodes macro
 Added new codes to CodeType sub 2026-02-26
 
 Silas 3.0.10-1.06 by Jim, 2026-01-28
